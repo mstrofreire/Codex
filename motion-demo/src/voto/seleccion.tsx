@@ -183,9 +183,11 @@ const SinEscano = () => {
             return (
               <div key={r.circ} style={{ opacity: Math.min(1, g * 3) }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
-                  <span style={{ fontSize: 40, fontWeight: 700 }}>{circ(r.circ)}</span>
-                  <span style={{ fontSize: 30, color: V.dim }}>
-                    {party(r.maxPerdedor!)} · {r.escanos} escaños
+                  <span style={{ fontSize: 40, fontWeight: 700 }}>
+                    {circ(r.circ)} <span style={{ fontSize: 28, fontWeight: 400, color: V.dim }}>· {r.escanos} escaños en juego</span>
+                  </span>
+                  <span style={{ fontSize: 30, color: V.text }}>
+                    {party(r.maxPerdedor!)} <span style={{ color: V.dim }}>· 0 escaños</span>
                   </span>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 20, marginTop: 12 }}>

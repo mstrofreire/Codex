@@ -124,16 +124,18 @@ export const CardSinEscano = () => {
       <div style={{ fontSize: 28, color: V.dim, marginTop: 18 }}>Mayor porcentaje sin escaño, por provincia</div>
       <div style={{ display: "flex", flexDirection: "column", gap: 24, marginTop: 40 }}>
         {rows.map((r) => (
-          <div key={r.circ} style={{ display: "grid", gridTemplateColumns: "300px 1fr", alignItems: "center", gap: 20 }}>
-            <div>
-              <div style={{ fontSize: 32, fontWeight: 700 }}>{circ(r.circ)}</div>
-              <div style={{ fontSize: 24, color: V.dim }}>
-                {party(r.maxPerdedor!)} · {r.escanos} escaños
-              </div>
+          <div key={r.circ}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+              <span style={{ fontSize: 32, fontWeight: 700 }}>
+                {circ(r.circ)} <span style={{ fontSize: 24, fontWeight: 400, color: V.dim }}>· {r.escanos} escaños en juego</span>
+              </span>
+              <span style={{ fontSize: 24, color: V.text }}>
+                {party(r.maxPerdedor!)} <span style={{ color: V.dim }}>· 0 escaños</span>
+              </span>
             </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-              <div style={{ height: 34, width: 430 * (r.maxPerdedorPct! / max), background: COLOR[r.maxPerdedor!] ?? V.dim, borderRadius: "0 6px 6px 0" }} />
-              <span style={{ fontFamily: MONO, fontSize: 32, whiteSpace: "nowrap" }}>{pct(r.maxPerdedorPct!)}</span>
+            <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 8 }}>
+              <div style={{ height: 30, width: 760 * (r.maxPerdedorPct! / max), background: COLOR[r.maxPerdedor!] ?? V.dim, borderRadius: "0 6px 6px 0" }} />
+              <span style={{ fontFamily: MONO, fontSize: 30, whiteSpace: "nowrap" }}>{pct(r.maxPerdedorPct!)}</span>
             </div>
           </div>
         ))}
