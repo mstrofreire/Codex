@@ -8,7 +8,7 @@ import { V } from "./theme";
 const A = "#3987E5";
 const B = "#D95926";
 export const HANDLE = "@tucuenta";
-const SRC = "Fuente: INE, cifras oficiales del Padrón a 1-1-2025 · Escaños: Real Decreto de convocatoria del 29-N";
+export const SRC = "Fuente: INE, cifras oficiales del Padrón a 1-1-2025 · Escaños: Real Decreto de convocatoria del 29-N";
 
 export const Frame = ({ children, kicker = "ELECCIONES 29-N · DATOS", src = SRC }: { children: React.ReactNode; kicker?: string; src?: string }) => (
   <AbsoluteFill style={{ background: V.bg, padding: "80px 80px 0", fontFamily: FONT, color: V.text }}>

@@ -5,23 +5,23 @@ import { Big, Frame, Headline, Seats } from "./cards";
 import { fmt } from "./fmt";
 import { V } from "./theme";
 
-const SRC23 = "Fuente: Ministerio del Interior, resultados oficiales del Congreso (23-J 2023). Cálculo propio con la ley D'Hondt (LOREG, art. 163).";
+export const SRC23 = "Fuente: Ministerio del Interior, resultados oficiales del Congreso (23-J 2023). Cálculo propio con la ley D'Hondt (LOREG, art. 163).";
 const SRC_POP = "Fuente: INE, cifras oficiales del Padrón a 1-1-2025 · Reparto de escaños según la LOREG, art. 162";
 const K23 = "23-J 2023 · RESULTADOS OFICIALES";
 
 // Orientative party colors, always shown next to the party's name.
-const COLOR: Record<string, string> = Object.fromEntries(
+export const COLOR: Record<string, string> = Object.fromEntries(
   Object.entries(grupos).filter(([k]) => k !== "_nota").map(([, g]) => [(g as { etiqueta: string }).etiqueta, (g as { color: string }).color]),
 );
 COLOR["EXISTE"] = "#2F9E6E";
 COLOR["SY"] = "#4C9A2A";
 const NAME: Record<string, string> = { SY: "Soria ¡Ya!", EXISTE: "Teruel Existe", VOX: "Vox", SUMAR: "Sumar", JUNTS: "Junts", CCa: "CC", "EAJ-PNV": "PNV" };
-const party = (s: string) => NAME[s] ?? s;
+export const party = (s: string) => NAME[s] ?? s;
 const CIRC: Record<string, string> = { "Araba/Álava": "Álava", "Castelló/Castellón": "Castellón", "Alacant/Alicante": "Alicante", "València/Valencia": "Valencia", "Santa Cruz de Tenerife": "S. C. de Tenerife" };
-const circ = (s: string) => CIRC[s] ?? s;
-const pct = (n: number) => n.toFixed(1).replace(".", ",") + " %";
+export const circ = (s: string) => CIRC[s] ?? s;
+export const pct = (n: number) => n.toFixed(1).replace(".", ",") + " %";
 
-const Chip = ({ p }: { p: string }) => (
+export const Chip = ({ p }: { p: string }) => (
   <span style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
     <span style={{ width: 18, height: 18, borderRadius: 4, background: COLOR[p] ?? V.dim, display: "inline-block" }} />
     {party(p)}
