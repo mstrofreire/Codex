@@ -3,13 +3,19 @@
   "private": true,
   "scripts": {
     "studio": "remotion studio",
-    "render": "remotion render Demo out/demo.mp4"
+    "render": "remotion render Demo out/demo.mp4",
+    "map": "node scripts/build-galicia.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.536",
+    "@types/d3-geo": "^3.1.0",
+    "@types/topojson-client": "^3.1.5",
+    "d3-geo": "^3.1.1",
+    "es-atlas": "^0.6.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "remotion": "4.0.536"
+    "remotion": "4.0.536",
+    "topojson-client": "^3.1.0"
   },
   "devDependencies": {
     "@types/react": "18.3.12",
