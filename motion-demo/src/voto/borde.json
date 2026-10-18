@@ -1,0 +1,72 @@
+[
+ {
+  "id": "13",
+  "name": "Ciudad Real",
+  "seats": 5,
+  "dir": "pierde",
+  "hab": 4004
+ },
+ {
+  "id": "38",
+  "name": "S. C. de Tenerife",
+  "seats": 7,
+  "dir": "gana",
+  "hab": 4102
+ },
+ {
+  "id": "31",
+  "name": "Navarra",
+  "seats": 5,
+  "dir": "gana",
+  "hab": 8296
+ },
+ {
+  "id": "42",
+  "name": "Soria",
+  "seats": 2,
+  "dir": "gana",
+  "hab": 9387
+ },
+ {
+  "id": "19",
+  "name": "Guadalajara",
+  "seats": 3,
+  "dir": "gana",
+  "hab": 11615
+ },
+ {
+  "id": "32",
+  "name": "Ourense",
+  "seats": 4,
+  "dir": "pierde",
+  "hab": 12374
+ },
+ {
+  "id": "43",
+  "name": "Tarragona",
+  "seats": 6,
+  "dir": "gana",
+  "hab": 14426
+ },
+ {
+  "id": "11",
+  "name": "Cádiz",
+  "seats": 8,
+  "dir": "gana",
+  "hab": 27227
+ },
+ {
+  "id": "06",
+  "name": "Badajoz",
+  "seats": 5,
+  "dir": "gana",
+  "hab": 27990
+ },
+ {
+  "id": "27",
+  "name": "Lugo",
+  "seats": 4,
+  "dir": "pierde",
+  "hab": 32240
+ }
+]

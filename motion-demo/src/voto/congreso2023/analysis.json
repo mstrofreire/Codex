@@ -1,0 +1,1174 @@
+{
+ "totales": {
+  "votosCandidaturas": 24487414,
+  "votosBlanco": 200673
+ },
+ "precio": [
+  {
+   "partido": "PP",
+   "votos": 8160837,
+   "escanos": 137,
+   "votosPorEscano": 59568
+  },
+  {
+   "partido": "PSOE",
+   "votos": 7821718,
+   "escanos": 121,
+   "votosPorEscano": 64642
+  },
+  {
+   "partido": "VOX",
+   "votos": 3057000,
+   "escanos": 33,
+   "votosPorEscano": 92636
+  },
+  {
+   "partido": "SUMAR",
+   "votos": 3044996,
+   "escanos": 31,
+   "votosPorEscano": 98226
+  },
+  {
+   "partido": "ERC",
+   "votos": 466020,
+   "escanos": 7,
+   "votosPorEscano": 66574
+  },
+  {
+   "partido": "JUNTS",
+   "votos": 395429,
+   "escanos": 7,
+   "votosPorEscano": 56490
+  },
+  {
+   "partido": "EH Bildu",
+   "votos": 335129,
+   "escanos": 6,
+   "votosPorEscano": 55855
+  },
+  {
+   "partido": "EAJ-PNV",
+   "votos": 277289,
+   "escanos": 5,
+   "votosPorEscano": 55458
+  },
+  {
+   "partido": "BNG",
+   "votos": 153995,
+   "escanos": 1,
+   "votosPorEscano": 153995
+  },
+  {
+   "partido": "CCa",
+   "votos": 116363,
+   "escanos": 1,
+   "votosPorEscano": 116363
+  },
+  {
+   "partido": "UPN",
+   "votos": 52188,
+   "escanos": 1,
+   "votosPorEscano": 52188
+  }
+ ],
+ "proporcional": [
+  {
+   "partido": "PP",
+   "real": 137,
+   "proporcional": 120,
+   "pct": 33.33
+  },
+  {
+   "partido": "PSOE",
+   "real": 121,
+   "proporcional": 115,
+   "pct": 31.94
+  },
+  {
+   "partido": "SUMAR",
+   "real": 31,
+   "proporcional": 45,
+   "pct": 12.43
+  },
+  {
+   "partido": "VOX",
+   "real": 33,
+   "proporcional": 45,
+   "pct": 12.48
+  },
+  {
+   "partido": "ERC",
+   "real": 7,
+   "proporcional": 6,
+   "pct": 1.9
+  },
+  {
+   "partido": "JUNTS",
+   "real": 7,
+   "proporcional": 5,
+   "pct": 1.61
+  },
+  {
+   "partido": "EH Bildu",
+   "real": 6,
+   "proporcional": 4,
+   "pct": 1.37
+  },
+  {
+   "partido": "EAJ-PNV",
+   "real": 5,
+   "proporcional": 4,
+   "pct": 1.13
+  },
+  {
+   "partido": "BNG",
+   "real": 1,
+   "proporcional": 2,
+   "pct": 0.63
+  },
+  {
+   "partido": "PACMA",
+   "real": 0,
+   "proporcional": 2,
+   "pct": 0.69
+  },
+  {
+   "partido": "UPN",
+   "real": 1,
+   "proporcional": 0,
+   "pct": 0.21
+  },
+  {
+   "partido": "CCa",
+   "real": 1,
+   "proporcional": 1,
+   "pct": 0.48
+  },
+  {
+   "partido": "CUP-PR",
+   "real": 0,
+   "proporcional": 1,
+   "pct": 0.41
+  }
+ ],
+ "ajustados": [
+  {
+   "circ": "Girona",
+   "gana": "PP",
+   "pierde": "JUNTS",
+   "votos": 285
+  },
+  {
+   "circ": "Cantabria",
+   "gana": "PP",
+   "pierde": "VOX",
+   "votos": 403
+  },
+  {
+   "circ": "Tarragona",
+   "gana": "PSOE",
+   "pierde": "JUNTS",
+   "votos": 1247
+  },
+  {
+   "circ": "Madrid",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 1340
+  },
+  {
+   "circ": "Albacete",
+   "gana": "VOX",
+   "pierde": "PSOE",
+   "votos": 1412
+  },
+  {
+   "circ": "Girona",
+   "gana": "PSOE",
+   "pierde": "JUNTS",
+   "votos": 1429
+  },
+  {
+   "circ": "Salamanca",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 1495
+  },
+  {
+   "circ": "Santa Cruz de Tenerife",
+   "gana": "SUMAR",
+   "pierde": "PSOE",
+   "votos": 1565
+  },
+  {
+   "circ": "Ceuta",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 1587
+  },
+  {
+   "circ": "Salamanca",
+   "gana": "VOX",
+   "pierde": "PP",
+   "votos": 1904
+  },
+  {
+   "circ": "Teruel",
+   "gana": "EXISTE",
+   "pierde": "PP",
+   "votos": 1946
+  },
+  {
+   "circ": "Málaga",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 2429
+  },
+  {
+   "circ": "Gipuzkoa",
+   "gana": "SUMAR",
+   "pierde": "EAJ-PNV",
+   "votos": 2433
+  },
+  {
+   "circ": "Cuenca",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 2728
+  },
+  {
+   "circ": "Tarragona",
+   "gana": "VOX",
+   "pierde": "JUNTS",
+   "votos": 2753
+  }
+ ],
+ "ajustadoPorCirc": [
+  {
+   "circ": "Girona",
+   "gana": "PP",
+   "pierde": "JUNTS",
+   "votos": 285
+  },
+  {
+   "circ": "Cantabria",
+   "gana": "PP",
+   "pierde": "VOX",
+   "votos": 403
+  },
+  {
+   "circ": "Tarragona",
+   "gana": "PSOE",
+   "pierde": "JUNTS",
+   "votos": 1247
+  },
+  {
+   "circ": "Madrid",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 1340
+  },
+  {
+   "circ": "Albacete",
+   "gana": "VOX",
+   "pierde": "PSOE",
+   "votos": 1412
+  },
+  {
+   "circ": "Salamanca",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 1495
+  },
+  {
+   "circ": "Santa Cruz de Tenerife",
+   "gana": "SUMAR",
+   "pierde": "PSOE",
+   "votos": 1565
+  },
+  {
+   "circ": "Ceuta",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 1587
+  },
+  {
+   "circ": "Teruel",
+   "gana": "EXISTE",
+   "pierde": "PP",
+   "votos": 1946
+  },
+  {
+   "circ": "Málaga",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 2429
+  },
+  {
+   "circ": "Gipuzkoa",
+   "gana": "SUMAR",
+   "pierde": "EAJ-PNV",
+   "votos": 2433
+  },
+  {
+   "circ": "Cuenca",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 2728
+  },
+  {
+   "circ": "Navarra",
+   "gana": "SUMAR",
+   "pierde": "PSOE",
+   "votos": 2855
+  },
+  {
+   "circ": "Guadalajara",
+   "gana": "PP",
+   "pierde": "VOX",
+   "votos": 3057
+  },
+  {
+   "circ": "Las Palmas",
+   "gana": "NC-bc",
+   "pierde": "PP",
+   "votos": 3190
+  },
+  {
+   "circ": "Lleida",
+   "gana": "PP",
+   "pierde": "PSOE",
+   "votos": 3509
+  },
+  {
+   "circ": "Castelló/Castellón",
+   "gana": "SUMAR",
+   "pierde": "VOX",
+   "votos": 4726
+  },
+  {
+   "circ": "Soria",
+   "gana": "SY",
+   "pierde": "PSOE",
+   "votos": 5269
+  },
+  {
+   "circ": "Huesca",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 5477
+  },
+  {
+   "circ": "Pontevedra",
+   "gana": "BNG",
+   "pierde": "PSOE",
+   "votos": 6085
+  },
+  {
+   "circ": "Ourense",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 6087
+  },
+  {
+   "circ": "Ávila",
+   "gana": "VOX",
+   "pierde": "PP",
+   "votos": 6117
+  },
+  {
+   "circ": "Lugo",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 6350
+  },
+  {
+   "circ": "Melilla",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 6504
+  },
+  {
+   "circ": "Araba/Álava",
+   "gana": "SUMAR",
+   "pierde": "EAJ-PNV",
+   "votos": 6515
+  },
+  {
+   "circ": "Badajoz",
+   "gana": "PSOE",
+   "pierde": "VOX",
+   "votos": 7003
+  },
+  {
+   "circ": "Palencia",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 7097
+  },
+  {
+   "circ": "Murcia",
+   "gana": "PP",
+   "pierde": "PSOE",
+   "votos": 7378
+  },
+  {
+   "circ": "Segovia",
+   "gana": "VOX",
+   "pierde": "PP",
+   "votos": 7438
+  },
+  {
+   "circ": "Sevilla",
+   "gana": "VOX",
+   "pierde": "SUMAR",
+   "votos": 7659
+  },
+  {
+   "circ": "Asturias",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 7768
+  },
+  {
+   "circ": "Burgos",
+   "gana": "VOX",
+   "pierde": "PSOE",
+   "votos": 9030
+  },
+  {
+   "circ": "Zamora",
+   "gana": "VOX",
+   "pierde": "PP",
+   "votos": 9447
+  },
+  {
+   "circ": "Granada",
+   "gana": "PSOE",
+   "pierde": "SUMAR",
+   "votos": 9839
+  },
+  {
+   "circ": "Cádiz",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 10504
+  },
+  {
+   "circ": "Huelva",
+   "gana": "SUMAR",
+   "pierde": "VOX",
+   "votos": 10820
+  },
+  {
+   "circ": "León",
+   "gana": "VOX",
+   "pierde": "PSOE",
+   "votos": 10839
+  },
+  {
+   "circ": "A Coruña",
+   "gana": "PSOE",
+   "pierde": "BNG",
+   "votos": 12062
+  },
+  {
+   "circ": "Cáceres",
+   "gana": "VOX",
+   "pierde": "PP",
+   "votos": 12741
+  },
+  {
+   "circ": "Barcelona",
+   "gana": "CUP-PR",
+   "pierde": "PSOE",
+   "votos": 13153
+  },
+  {
+   "circ": "La Rioja",
+   "gana": "PP",
+   "pierde": "PSOE",
+   "votos": 13768
+  },
+  {
+   "circ": "Valladolid",
+   "gana": "PP",
+   "pierde": "VOX",
+   "votos": 14674
+  },
+  {
+   "circ": "Córdoba",
+   "gana": "PP",
+   "pierde": "SUMAR",
+   "votos": 14806
+  },
+  {
+   "circ": "Alacant/Alicante",
+   "gana": "SUMAR",
+   "pierde": "PP",
+   "votos": 16331
+  },
+  {
+   "circ": "Toledo",
+   "gana": "SUMAR",
+   "pierde": "PP",
+   "votos": 16969
+  },
+  {
+   "circ": "Illes Balears",
+   "gana": "SUMAR",
+   "pierde": "PSOE",
+   "votos": 17704
+  },
+  {
+   "circ": "Almería",
+   "gana": "VOX",
+   "pierde": "PP",
+   "votos": 19319
+  },
+  {
+   "circ": "València/Valencia",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 22117
+  },
+  {
+   "circ": "Ciudad Real",
+   "gana": "PP",
+   "pierde": "VOX",
+   "votos": 23429
+  },
+  {
+   "circ": "Bizkaia",
+   "gana": "EAJ-PNV",
+   "pierde": "EH Bildu",
+   "votos": 24613
+  },
+  {
+   "circ": "Jaén",
+   "gana": "SUMAR",
+   "pierde": "VOX",
+   "votos": 24939
+  },
+  {
+   "circ": "Zaragoza",
+   "gana": "PSOE",
+   "pierde": "PP",
+   "votos": 26919
+  }
+ ],
+ "bloques": [
+  {
+   "bloque": "PP + Vox",
+   "escanos": 170,
+   "faltan": 6,
+   "votos": 22996,
+   "donde": [
+    [
+     "Albacete",
+     1,
+     1412,
+     "VOX 1412"
+    ],
+    [
+     "Girona",
+     1,
+     285,
+     "PP 285"
+    ],
+    [
+     "Lleida",
+     1,
+     3509,
+     "PP 3509"
+    ],
+    [
+     "Murcia",
+     1,
+     7378,
+     "PP 7378"
+    ],
+    [
+     "Sevilla",
+     1,
+     7659,
+     "VOX 7659"
+    ],
+    [
+     "Tarragona",
+     1,
+     2753,
+     "VOX 2753"
+    ]
+   ]
+  },
+  {
+   "bloque": "PSOE + Sumar",
+   "escanos": 152,
+   "faltan": 24,
+   "votos": 137136,
+   "donde": [
+    [
+     "A Coruña",
+     1,
+     12062,
+     "PSOE 12062"
+    ],
+    [
+     "Araba/Álava",
+     1,
+     6515,
+     "SUMAR 6515"
+    ],
+    [
+     "Asturias",
+     1,
+     7768,
+     "PSOE 7768"
+    ],
+    [
+     "Badajoz",
+     1,
+     7003,
+     "PSOE 7003"
+    ],
+    [
+     "Cádiz",
+     1,
+     10504,
+     "PSOE 10504"
+    ],
+    [
+     "Castelló/Castellón",
+     1,
+     4726,
+     "SUMAR 4726"
+    ],
+    [
+     "Ceuta",
+     1,
+     1587,
+     "PSOE 1587"
+    ],
+    [
+     "Cuenca",
+     1,
+     2728,
+     "PSOE 2728"
+    ],
+    [
+     "Gipuzkoa",
+     1,
+     2433,
+     "SUMAR 2433"
+    ],
+    [
+     "Girona",
+     1,
+     1429,
+     "PSOE 1429"
+    ],
+    [
+     "Guadalajara",
+     1,
+     7773,
+     "PSOE 7773"
+    ],
+    [
+     "Huelva",
+     1,
+     10820,
+     "SUMAR 10820"
+    ],
+    [
+     "Huesca",
+     1,
+     5477,
+     "PSOE 5477"
+    ],
+    [
+     "Las Palmas",
+     1,
+     6805,
+     "PSOE 6805"
+    ],
+    [
+     "Lugo",
+     1,
+     6350,
+     "PSOE 6350"
+    ],
+    [
+     "Madrid",
+     1,
+     1340,
+     "PSOE 1340"
+    ],
+    [
+     "Málaga",
+     1,
+     2429,
+     "PSOE 2429"
+    ],
+    [
+     "Melilla",
+     1,
+     6504,
+     "PSOE 6504"
+    ],
+    [
+     "Ourense",
+     1,
+     6087,
+     "PSOE 6087"
+    ],
+    [
+     "Palencia",
+     1,
+     7097,
+     "PSOE 7097"
+    ],
+    [
+     "Salamanca",
+     1,
+     1495,
+     "PSOE 1495"
+    ],
+    [
+     "Tarragona",
+     1,
+     1247,
+     "PSOE 1247"
+    ],
+    [
+     "Teruel",
+     1,
+     4361,
+     "PSOE 4361"
+    ],
+    [
+     "Zamora",
+     1,
+     12596,
+     "PSOE 12596"
+    ]
+   ]
+  }
+ ],
+ "umbral": [
+  {
+   "circ": "Soria",
+   "escanos": 2,
+   "minGanador": "PSOE",
+   "minPct": 29.48,
+   "maxPerdedor": "SY",
+   "maxPerdedorPct": 19.1
+  },
+  {
+   "circ": "Albacete",
+   "escanos": 4,
+   "minGanador": "PSOE",
+   "minPct": 34.51,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 16.61
+  },
+  {
+   "circ": "Cuenca",
+   "escanos": 3,
+   "minGanador": "PSOE",
+   "minPct": 37.37,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 15.55
+  },
+  {
+   "circ": "Ávila",
+   "escanos": 3,
+   "minGanador": "PSOE",
+   "minPct": 27.39,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 15.38
+  },
+  {
+   "circ": "Teruel",
+   "escanos": 3,
+   "minGanador": "PSOE",
+   "minPct": 29.28,
+   "maxPerdedor": "EXISTE",
+   "maxPerdedorPct": 14.95
+  },
+  {
+   "circ": "Salamanca",
+   "escanos": 4,
+   "minGanador": "PSOE",
+   "minPct": 30.49,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 14.67
+  },
+  {
+   "circ": "Castelló/Castellón",
+   "escanos": 5,
+   "minGanador": "VOX",
+   "minPct": 15.88,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 14.35
+  },
+  {
+   "circ": "Segovia",
+   "escanos": 3,
+   "minGanador": "PSOE",
+   "minPct": 30.6,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 14.12
+  },
+  {
+   "circ": "Cáceres",
+   "escanos": 4,
+   "minGanador": "PP",
+   "minPct": 38.0,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 13.6
+  },
+  {
+   "circ": "Zamora",
+   "escanos": 3,
+   "minGanador": "PSOE",
+   "minPct": 32.49,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 13.2
+  },
+  {
+   "circ": "Palencia",
+   "escanos": 3,
+   "minGanador": "PSOE",
+   "minPct": 34.67,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 12.9
+  },
+  {
+   "circ": "León",
+   "escanos": 4,
+   "minGanador": "PSOE",
+   "minPct": 33.64,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 12.88
+  },
+  {
+   "circ": "Navarra",
+   "escanos": 5,
+   "minGanador": "UPN",
+   "minPct": 15.27,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 12.85
+  },
+  {
+   "circ": "Lleida",
+   "escanos": 4,
+   "minGanador": "JUNTS",
+   "minPct": 18.01,
+   "maxPerdedor": "PP",
+   "maxPerdedorPct": 12.84
+  },
+  {
+   "circ": "Burgos",
+   "escanos": 4,
+   "minGanador": "PSOE",
+   "minPct": 34.45,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 12.77
+  },
+  {
+   "circ": "Araba/Álava",
+   "escanos": 4,
+   "minGanador": "EAJ-PNV",
+   "minPct": 16.6,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 12.75
+  },
+  {
+   "circ": "Huesca",
+   "escanos": 3,
+   "minGanador": "PSOE",
+   "minPct": 33.62,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 12.64
+  },
+  {
+   "circ": "Santa Cruz de Tenerife",
+   "escanos": 7,
+   "minGanador": "CCa",
+   "minPct": 16.75,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 10.85
+  },
+  {
+   "circ": "Gipuzkoa",
+   "escanos": 6,
+   "minGanador": "EAJ-PNV",
+   "minPct": 22.58,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 10.64
+  },
+  {
+   "circ": "Huelva",
+   "escanos": 5,
+   "minGanador": "VOX",
+   "minPct": 14.63,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 10.42
+  },
+  {
+   "circ": "Tarragona",
+   "escanos": 6,
+   "minGanador": "JUNTS",
+   "minPct": 11.08,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 10.34
+  },
+  {
+   "circ": "La Rioja",
+   "escanos": 4,
+   "minGanador": "PSOE",
+   "minPct": 35.68,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 9.77
+  },
+  {
+   "circ": "Girona",
+   "escanos": 6,
+   "minGanador": "SUMAR",
+   "minPct": 10.94,
+   "maxPerdedor": "PP",
+   "maxPerdedorPct": 9.7
+  },
+  {
+   "circ": "Pontevedra",
+   "escanos": 7,
+   "minGanador": "SUMAR",
+   "minPct": 13.19,
+   "maxPerdedor": "BNG",
+   "maxPerdedorPct": 9.39
+  },
+  {
+   "circ": "Guadalajara",
+   "escanos": 3,
+   "minGanador": "VOX",
+   "minPct": 19.25,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 9.16
+  },
+  {
+   "circ": "Valladolid",
+   "escanos": 5,
+   "minGanador": "VOX",
+   "minPct": 15.16,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 8.87
+  },
+  {
+   "circ": "Lugo",
+   "escanos": 4,
+   "minGanador": "PSOE",
+   "minPct": 30.3,
+   "maxPerdedor": "BNG",
+   "maxPerdedorPct": 8.66
+  },
+  {
+   "circ": "Cantabria",
+   "escanos": 5,
+   "minGanador": "VOX",
+   "minPct": 14.06,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 8.49
+  },
+  {
+   "circ": "Toledo",
+   "escanos": 6,
+   "minGanador": "VOX",
+   "minPct": 19.64,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 8.23
+  },
+  {
+   "circ": "Ourense",
+   "escanos": 4,
+   "minGanador": "PSOE",
+   "minPct": 30.08,
+   "maxPerdedor": "BNG",
+   "maxPerdedorPct": 8.22
+  },
+  {
+   "circ": "Las Palmas",
+   "escanos": 8,
+   "minGanador": "SUMAR",
+   "minPct": 10.27,
+   "maxPerdedor": "NC-bc",
+   "maxPerdedorPct": 8.02
+  },
+  {
+   "circ": "Jaén",
+   "escanos": 5,
+   "minGanador": "VOX",
+   "minPct": 14.75,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 7.99
+  },
+  {
+   "circ": "Badajoz",
+   "escanos": 5,
+   "minGanador": "VOX",
+   "minPct": 13.66,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 6.84
+  },
+  {
+   "circ": "Almería",
+   "escanos": 6,
+   "minGanador": "VOX",
+   "minPct": 21.28,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 6.69
+  },
+  {
+   "circ": "Ciudad Real",
+   "escanos": 5,
+   "minGanador": "VOX",
+   "minPct": 16.27,
+   "maxPerdedor": "SUMAR",
+   "maxPerdedorPct": 6.15
+  },
+  {
+   "circ": "A Coruña",
+   "escanos": 8,
+   "minGanador": "BNG",
+   "minPct": 9.98,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 5.08
+  },
+  {
+   "circ": "Bizkaia",
+   "escanos": 8,
+   "minGanador": "SUMAR",
+   "minPct": 10.92,
+   "maxPerdedor": "VOX",
+   "maxPerdedorPct": 2.64
+  },
+  {
+   "circ": "Barcelona",
+   "escanos": 32,
+   "minGanador": "VOX",
+   "minPct": 7.56,
+   "maxPerdedor": "CUP-PR",
+   "maxPerdedorPct": 2.52
+  },
+  {
+   "circ": "Zaragoza",
+   "escanos": 7,
+   "minGanador": "SUMAR",
+   "minPct": 13.48,
+   "maxPerdedor": "EXISTE",
+   "maxPerdedorPct": 1.5
+  },
+  {
+   "circ": "Cádiz",
+   "escanos": 9,
+   "minGanador": "SUMAR",
+   "minPct": 12.89,
+   "maxPerdedor": "ADELANTE ANDALUCÍA",
+   "maxPerdedorPct": 1.44
+  },
+  {
+   "circ": "Málaga",
+   "escanos": 11,
+   "minGanador": "SUMAR",
+   "minPct": 12.26,
+   "maxPerdedor": "PACMA",
+   "maxPerdedorPct": 1.08
+  },
+  {
+   "circ": "Illes Balears",
+   "escanos": 8,
+   "minGanador": "VOX",
+   "minPct": 15.21,
+   "maxPerdedor": "PACMA",
+   "maxPerdedorPct": 0.99
+  },
+  {
+   "circ": "Sevilla",
+   "escanos": 12,
+   "minGanador": "VOX",
+   "minPct": 13.32,
+   "maxPerdedor": "PACMA",
+   "maxPerdedorPct": 0.88
+  },
+  {
+   "circ": "Alacant/Alicante",
+   "escanos": 12,
+   "minGanador": "SUMAR",
+   "minPct": 12.88,
+   "maxPerdedor": "PACMA",
+   "maxPerdedorPct": 0.82
+  },
+  {
+   "circ": "València/Valencia",
+   "escanos": 16,
+   "minGanador": "VOX",
+   "minPct": 15.21,
+   "maxPerdedor": "PACMA",
+   "maxPerdedorPct": 0.72
+  },
+  {
+   "circ": "Murcia",
+   "escanos": 10,
+   "minGanador": "SUMAR",
+   "minPct": 9.57,
+   "maxPerdedor": "PACMA",
+   "maxPerdedorPct": 0.68
+  },
+  {
+   "circ": "Granada",
+   "escanos": 7,
+   "minGanador": "SUMAR",
+   "minPct": 11.65,
+   "maxPerdedor": "PACMA",
+   "maxPerdedorPct": 0.63
+  },
+  {
+   "circ": "Córdoba",
+   "escanos": 6,
+   "minGanador": "SUMAR",
+   "minPct": 13.73,
+   "maxPerdedor": "PACMA",
+   "maxPerdedorPct": 0.6
+  },
+  {
+   "circ": "Madrid",
+   "escanos": 37,
+   "minGanador": "VOX",
+   "minPct": 14.03,
+   "maxPerdedor": "PACMA",
+   "maxPerdedorPct": 0.6
+  },
+  {
+   "circ": "Asturias",
+   "escanos": 7,
+   "minGanador": "VOX",
+   "minPct": 12.49,
+   "maxPerdedor": "PACMA",
+   "maxPerdedorPct": 0.53
+  }
+ ],
+ "reparto2026": [
+  {
+   "circ": "Madrid",
+   "partido": "PSOE",
+   "antes": 10,
+   "despues": 11
+  },
+  {
+   "circ": "Cádiz",
+   "partido": "PP",
+   "antes": 4,
+   "despues": 3
+  }
+ ]
+}

@@ -8,25 +8,25 @@ import { V } from "./theme";
 // Two validated categorical hues (dark mode) for side-by-side comparisons.
 const A = "#3987E5";
 const B = "#D95926";
-const HANDLE = "@tucuenta";
+export const HANDLE = "@tucuenta";
 const SRC = "Fuente: INE, cifras oficiales del Padrón a 1-1-2025 · Escaños: Real Decreto de convocatoria del 29-N";
 
-const Frame = ({ children, kicker = "ELECCIONES 29-N · DATOS" }: { children: React.ReactNode; kicker?: string }) => (
+export const Frame = ({ children, kicker = "ELECCIONES 29-N · DATOS", src = SRC }: { children: React.ReactNode; kicker?: string; src?: string }) => (
   <AbsoluteFill style={{ background: V.bg, padding: "80px 80px 0", fontFamily: FONT, color: V.text }}>
     <div style={{ fontSize: 28, fontWeight: 600, letterSpacing: 6, color: V.dim }}>{kicker}</div>
     {children}
     <div style={{ position: "absolute", left: 80, right: 80, bottom: 60, display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 40 }}>
-      <div style={{ fontSize: 21, lineHeight: 1.4, color: V.dim, maxWidth: 700 }}>{SRC}</div>
+      <div style={{ fontSize: 21, lineHeight: 1.4, color: V.dim, maxWidth: 700 }}>{src}</div>
       <div style={{ fontSize: 28, fontWeight: 600, color: V.text, whiteSpace: "nowrap" }}>{HANDLE}</div>
     </div>
   </AbsoluteFill>
 );
 
-const Headline = ({ children, size = 76 }: { children: React.ReactNode; size?: number }) => (
+export const Headline = ({ children, size = 76 }: { children: React.ReactNode; size?: number }) => (
   <div style={{ fontFamily: DISPLAY, fontSize: size, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2.5, marginTop: 28 }}>{children}</div>
 );
 
-const Seats = ({ n, color, per = 10, size = 30 }: { n: number; color: string; per?: number; size?: number }) => (
+export const Seats = ({ n, color, per = 10, size = 30 }: { n: number; color: string; per?: number; size?: number }) => (
   <div style={{ display: "grid", gridTemplateColumns: `repeat(${per}, ${size}px)`, gap: 8 }}>
     {Array.from({ length: n }, (_, i) => (
       <div key={i} style={{ width: size, height: size, borderRadius: "50%", background: color }} />
@@ -97,7 +97,7 @@ export const CardRegiones = () => {
   );
 };
 
-const Big = ({ value, unit, color }: { value: string; unit: string; color: string }) => (
+export const Big = ({ value, unit, color }: { value: string; unit: string; color: string }) => (
   <div style={{ marginTop: 60 }}>
     <div style={{ fontFamily: DISPLAY, fontSize: 230, fontWeight: 700, letterSpacing: -9, lineHeight: 1, color }}>{value}</div>
     <div style={{ fontSize: 40, color: V.dim, marginTop: 10 }}>{unit}</div>
