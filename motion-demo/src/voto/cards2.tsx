@@ -1,7 +1,8 @@
 import { DISPLAY, FONT, MONO } from "../theme";
 import a from "./congreso2023/analysis.json";
 import grupos from "./congreso2023/grupos.json";
-import { Big, Frame, Headline, Seats } from "./cards";
+import { Frame, Headline } from "./cards";
+import { DhondtTable } from "./DhondtTable";
 import { fmt } from "./fmt";
 import { V } from "./theme";
 
@@ -32,33 +33,27 @@ const Note = ({ children }: { children: React.ReactNode }) => (
   <div style={{ fontSize: 28, lineHeight: 1.4, color: V.dim, marginTop: 40 }}>{children}</div>
 );
 
-// 1 · The tightest seat of 2023
+// 1 · The tightest seat of 2023, with the D'Hondt table
 export const CardGirona = () => {
   const f = a.ajustados[0];
   return (
     <Frame kicker="23-J 2023 · EL ESCAÑO MÁS AJUSTADO" src={SRC23}>
-      <Headline>En {circ(f.circ)}, un diputado se decidió por</Headline>
-      <Big value={fmt(f.votos)} unit="votos" color="#6DA7EC" />
-      <div style={{ display: "flex", flexDirection: "column", gap: 22, marginTop: 60 }}>
-        <Quot p="JUNTS" votes={63251} div={2} won />
-        <Quot p="PP" votes={31341} div={1} />
+      <Headline>
+        En {circ(f.circ)}, un diputado se decidió por <span style={{ color: "#6DA7EC" }}>{fmt(f.votos)} votos</span>.
+      </Headline>
+      <div style={{ fontSize: 28, lineHeight: 1.4, marginTop: 30 }}>
+        La ley D'Hondt divide los votos de cada partido entre 1, 2, 3… Los <b>6 cocientes más altos</b> se llevan los 6 escaños.
+      </div>
+      <div style={{ marginTop: 40 }}>
+        <DhondtTable code="17" lit={() => 1} scale={0.86} />
       </div>
       <Note>
-        Junts se llevó el último escaño de {circ(f.circ)}. Con {fmt(f.votos)} votos más, habría sido para el PP.
+        <span style={{ color: V.text }}>Junts</span> ya tenía un escaño, así que competía con sus votos ÷ 2 (31.625,5).{" "}
+        <span style={{ color: V.text }}>El PP</span>, con sus votos enteros (31.341). Le faltaron {fmt(f.votos)}.
       </Note>
     </Frame>
   );
 };
-
-const Quot = ({ p, votes, div, won }: { p: string; votes: number; div: number; won?: boolean }) => (
-  <div style={{ background: V.panel, borderRadius: 20, padding: "26px 32px", display: "flex", alignItems: "center", justifyContent: "space-between", fontSize: 34 }}>
-    <Chip p={p} />
-    <span style={{ fontFamily: MONO, fontSize: 32, color: V.dim }}>
-      {fmt(votes)} ÷ {div} = <span style={{ color: V.text }}>{fmt(Math.floor(votes / div))}{votes % div ? ",5" : ""}</span>
-    </span>
-    <span style={{ fontSize: 28, color: won ? V.text : V.dim, width: 150, textAlign: "right" }}>{won ? "Escaño" : "Fuera"}</span>
-  </div>
-);
 
 // 2 · Closest seats, one per constituency
 export const CardAjustados = () => {

@@ -8,6 +8,7 @@ import { COLOR, Chip, SRC23, circ, party, pct } from "./cards2";
 import { fmt } from "./fmt";
 import { smallBlock } from "./insights";
 import { V } from "./theme";
+import { DhondtTable } from "./DhondtTable";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const up = (v: number, d = 40) => `translateY(${interpolate(v, [0, 1], [d, 0])}px)`;
@@ -43,45 +44,32 @@ const Hook = () => {
   );
 };
 
-// 1 · Girona: 285 votes
+// 1 · Girona: 285 votes, with the D'Hondt table explained
+const SEAT_T0 = 120;
+const SEAT_STEP = 16;
 const Girona = () => {
   const frame = useCurrentFrame();
   const t = useEnter(0);
-  const n = count(frame, 20, 75, a.ajustados[0].votos);
-  const bars = interpolate(frame, [95, 150], [0, 1], clamp);
-  const e = 1 - Math.pow(1 - bars, 3);
-  const note = useEnter(170);
-  const Q = ({ p, votes, div, q, won, delay }: { p: string; votes: number; div: number; q: string; won?: boolean; delay: number }) => {
-    const o = useEnter(90 + delay);
-    return (
-      <div style={{ opacity: o }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", fontSize: 40 }}>
-          <span style={{ fontWeight: 700 }}>
-            <Chip p={p} />
-          </span>
-          <span style={{ fontFamily: MONO, fontSize: 34, color: V.dim }}>
-            {fmt(votes)} ÷ {div} = <span style={{ color: V.text }}>{q}</span>
-          </span>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 20, marginTop: 14 }}>
-          <div style={{ height: 40, width: 660 * ((votes / div) / 31625.5) * e, background: COLOR[p], borderRadius: "0 8px 8px 0" }} />
-          <span style={{ fontSize: 30, color: won ? V.text : V.dim, opacity: bars }}>{won ? "Escaño" : "Fuera"}</span>
-        </div>
-      </div>
-    );
-  };
+  const n = count(frame, 16, 66, a.ajustados[0].votos);
+  const how = useEnter(84);
+  const lit = (rank: number) => interpolate(frame, [SEAT_T0 + (rank - 1) * SEAT_STEP, SEAT_T0 + (rank - 1) * SEAT_STEP + 12], [0, 1], clamp);
+  const note = useEnter(SEAT_T0 + 7 * SEAT_STEP + 10);
   return (
     <Scene>
-      <Page kicker="23-J 2023 · GIRONA" src={SRC23}>
-        <Title o={t}>Un diputado se decidió por</Title>
-        <div style={{ fontFamily: DISPLAY, fontSize: 330, fontWeight: 700, letterSpacing: -14, lineHeight: 1, color: BLUE, marginTop: 30 }}>{fmt(n)}</div>
-        <div style={{ fontSize: 56, color: V.dim, marginTop: 6 }}>votos</div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 44, marginTop: 90 }}>
-          <Q p="JUNTS" votes={63251} div={2} q="31.625,5" won delay={0} />
-          <Q p="PP" votes={31341} div={1} q="31.341" delay={10} />
+      <Page kicker="23-J 2023 · GIRONA" src={SRC23} top={180}>
+        <Title o={t} size={76}>Un diputado se decidió por</Title>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 24, marginTop: 10 }}>
+          <span style={{ fontFamily: DISPLAY, fontSize: 230, fontWeight: 700, letterSpacing: -10, lineHeight: 1, color: BLUE }}>{fmt(n)}</span>
+          <span style={{ fontSize: 56, color: V.dim }}>votos</span>
         </div>
-        <div style={{ fontSize: 40, lineHeight: 1.35, marginTop: 70, opacity: note, transform: up(note) }}>
-          Junts se llevó el último escaño. Con 285 votos más, habría sido para el PP.
+        <div style={{ fontSize: 36, lineHeight: 1.35, marginTop: 40, opacity: how, transform: up(how) }}>
+          La ley D'Hondt divide los votos de cada partido entre 1, 2, 3… Los <b>6 cocientes más altos</b> se llevan los 6 escaños de Girona.
+        </div>
+        <div style={{ marginTop: 44, opacity: how }}>
+          <DhondtTable code="17" lit={lit} />
+        </div>
+        <div style={{ fontSize: 36, lineHeight: 1.35, marginTop: 50, opacity: note, transform: up(note) }}>
+          El 6.º escaño fue para Junts (sus votos ÷ 2, porque ya tenía uno). El PP, sin escaño aún, competía con sus votos enteros: <span style={{ color: BLUE }}>le faltaron 285</span>.
         </div>
       </Page>
     </Scene>
@@ -277,7 +265,7 @@ const Outro = () => {
 
 const SCENES = [
   { C: Hook, len: 90 },
-  { C: Girona, len: 270 },
+  { C: Girona, len: 370 },
   { C: Ajustados, len: 240 },
   { C: Mayoria, len: 300 },
   { C: SinEscano, len: 240 },
