@@ -1,7 +1,6 @@
 import { DISPLAY, FONT, MONO } from "../theme";
 import a from "./congreso2023/analysis.json";
 import grupos from "./congreso2023/grupos.json";
-import borde from "./borde.json";
 import { Big, Frame, Headline, Seats } from "./cards";
 import { fmt } from "./fmt";
 import { V } from "./theme";
@@ -249,27 +248,5 @@ export const CardFijos = () => (
     <Note>
       <span style={{ color: V.text }}>2 fijos por provincia</span> (50 × 2) y <span style={{ color: V.text }}>1 para Ceuta y otro para Melilla</span>. Solo los otros 248 se reparten según la población.
     </Note>
-  </Frame>
-);
-
-// 9 · Provinces on the edge
-export const CardBorde = () => (
-  <Frame kicker="29-N · ESCAÑOS AL LÍMITE" src={SRC_POP}>
-    <Headline size={68}>Las provincias a punto de ganar o perder un diputado</Headline>
-    <div style={{ fontSize: 28, color: V.dim, marginTop: 16 }}>Habitantes que cambiarían su número de escaños</div>
-    <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 40 }}>
-      {borde.slice(0, 8).map((b) => (
-        <div key={b.id} style={{ display: "grid", gridTemplateColumns: "310px 1fr 190px", alignItems: "center", background: V.panel, borderRadius: 16, padding: "22px 26px", borderLeft: `8px solid ${b.dir === "gana" ? "#6DA7EC" : "#E66767"}` }}>
-          <div style={{ fontSize: 32, fontWeight: 700 }}>{b.name}</div>
-          <div style={{ fontSize: 26, color: V.dim }}>
-            {b.dir === "gana" ? `ganaría el ${b.seats + 1}.º` : `perdería el ${b.seats}.º`}
-          </div>
-          <div style={{ fontFamily: MONO, fontSize: 36, textAlign: "right" }}>
-            {b.dir === "gana" ? "+" : "−"}
-            {fmt(b.hab)}
-          </div>
-        </div>
-      ))}
-    </div>
   </Frame>
 );

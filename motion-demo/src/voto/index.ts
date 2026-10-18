@@ -1,14 +1,14 @@
 import { Composition, Still, registerRoot } from "remotion";
 import { createElement, Fragment } from "react";
 import { VotoReel, VOTO_DURATION } from "./VotoReel";
-import { CardAlicante, CardRegiones, CardSoria, CardUltimo, CardValencia } from "./cards";
-import { CardAjustados, CardBorde, CardCadiz, CardFijos, CardGirona, CardMayoria, CardPrecio, CardProporcional, CardSinEscano } from "./cards2";
+import { CardAlicante, CardRegiones, CardValencia } from "./cards";
+import { CardAjustados, CardCadiz, CardFijos, CardGirona, CardMayoria, CardPrecio, CardProporcional, CardSinEscano } from "./cards2";
 
 const card = { width: 1080, height: 1350 };
 const CARDS = {
-  Alicante: CardAlicante, Valencia: CardValencia, Regiones: CardRegiones, Ultimo: CardUltimo, Soria: CardSoria,
+  Alicante: CardAlicante, Valencia: CardValencia, Regiones: CardRegiones,
   Girona: CardGirona, Ajustados: CardAjustados, Mayoria: CardMayoria, SinEscano: CardSinEscano, Proporcional: CardProporcional,
-  Precio: CardPrecio, Cadiz: CardCadiz, Fijos: CardFijos, Borde: CardBorde,
+  Precio: CardPrecio, Cadiz: CardCadiz, Fijos: CardFijos,
 };
 
 registerRoot(() =>

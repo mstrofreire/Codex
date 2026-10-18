@@ -10,9 +10,6 @@ Todas en 4:5 (1080×1350). Cifras calculadas desde datos oficiales; el código e
 | `Alicante.png` | Soria, Teruel, Segovia, Palencia, Ávila, Zamora, Cuenca, Huesca, Guadalajara y Ourense juntas tienen menos habitantes que Alicante. Eligen 30 diputados. Alicante, 12. #29N |
 | `Valencia.png` | 12 provincias juntas tienen menos habitantes que la de Valencia. Eligen 38 diputados, los mismos que Madrid. Valencia elige 16. #29N |
 | `Regiones.png` | Castilla y León: 2,40 millones de habitantes, 31 diputados. País Vasco: 2,24 millones, 18. #29N |
-| `Ultimo.png` | El último diputado del reparto para el 29-N se decidió por unos 4.000 habitantes. Ciudad Real se lo llevó; a Tenerife le faltaron 4.102. #29N |
-| `Borde.png` | Las provincias que están a un puñado de habitantes de ganar o perder un diputado. #29N |
-| `Soria.png` | 9.387. Es lo que le falta a Soria para tener un tercer diputado. #29N |
 
 ## Resultados de 2023 (votos)
 

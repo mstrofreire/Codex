@@ -1,8 +1,7 @@
 import { AbsoluteFill } from "remotion";
 import { DISPLAY, FONT, MONO } from "../theme";
-import { byId } from "./data";
 import { fmt } from "./fmt";
-import { popToFlip, region, smallBlock } from "./insights";
+import { region, smallBlock } from "./insights";
 import { V } from "./theme";
 
 // Two validated categorical hues (dark mode) for side-by-side comparisons.
@@ -103,56 +102,3 @@ export const Big = ({ value, unit, color }: { value: string; unit: string; color
     <div style={{ fontSize: 40, color: V.dim, marginTop: 10 }}>{unit}</div>
   </div>
 );
-
-export const CardUltimo = () => {
-  const cr = byId["13"];
-  const tf = byId["38"];
-  const keep = popToFlip("13", -1);
-  const miss = popToFlip("38", 1);
-  return (
-    <Frame kicker="ELECCIONES 29-N · EL ÚLTIMO ESCAÑO">
-      <Headline>El último diputado del reparto se decidió por unos 4.000 habitantes.</Headline>
-      <div style={{ display: "flex", flexDirection: "column", gap: 28, marginTop: 60 }}>
-        <Row color={A} name={cr.name} text={`Se lleva su ${cr.seats}.º diputado. Con ${fmt(keep)} habitantes menos, lo habría perdido.`} />
-        <Row color={B} name={tf.name} text={`Se queda en ${tf.seats}. Con ${fmt(miss)} habitantes más, habría tenido el ${tf.seats + 1}.º.`} />
-      </div>
-      <div style={{ fontSize: 30, lineHeight: 1.4, color: V.dim, marginTop: 44 }}>
-        Tras los 2 fijos por provincia, quedan 248 escaños que se reparten por población. Los últimos van a quien tenga mayor resto en la división.
-      </div>
-    </Frame>
-  );
-};
-
-const Row = ({ color, name, text }: { color: string; name: string; text: string }) => (
-  <div style={{ background: V.panel, borderRadius: 24, padding: "34px 40px", borderLeft: `10px solid ${color}` }}>
-    <div style={{ fontFamily: DISPLAY, fontSize: 56, fontWeight: 700, letterSpacing: -1.5 }}>{name}</div>
-    <div style={{ fontSize: 34, lineHeight: 1.35, marginTop: 12 }}>{text}</div>
-  </div>
-);
-
-export const CardSoria = () => {
-  const s = byId["42"];
-  const need = popToFlip("42", 1);
-  return (
-    <Frame kicker="ELECCIONES 29-N · SORIA">
-      <Headline>A Soria le faltan</Headline>
-      <Big value={fmt(need)} unit="habitantes para tener un tercer diputado" color={A} />
-      <div style={{ display: "flex", gap: 90, marginTop: 70, alignItems: "flex-end" }}>
-        <div>
-          <div style={{ fontSize: 28, color: V.dim, marginBottom: 16 }}>Hoy · {fmt(s.pop)} hab.</div>
-          <Seats n={2} color={A} size={70} per={2} />
-        </div>
-        <div>
-          <div style={{ fontSize: 28, color: V.dim, marginBottom: 16 }}>Con {fmt(s.pop + need)} hab.</div>
-          <div style={{ display: "flex", gap: 8 }}>
-            <Seats n={2} color={A} size={70} per={2} />
-            <div style={{ width: 70, height: 70, borderRadius: "50%", border: `5px dashed ${A}`, boxSizing: "border-box" }} />
-          </div>
-        </div>
-      </div>
-      <div style={{ fontSize: 30, lineHeight: 1.4, color: V.dim, marginTop: 60 }}>
-        Es la provincia menos poblada de España: {s.seats} diputados, 1 por cada {fmt(s.perSeat)} habitantes.
-      </div>
-    </Frame>
-  );
-};
