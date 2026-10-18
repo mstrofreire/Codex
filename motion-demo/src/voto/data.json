@@ -1,0 +1,422 @@
+{
+ "total": 49114494,
+ "avgPerSeat": 140327,
+ "provs": [
+  {
+   "id": "42",
+   "name": "Soria",
+   "seats": 2,
+   "pop": 90234,
+   "perSeat": 45117,
+   "weight": 3.11
+  },
+  {
+   "id": "44",
+   "name": "Teruel",
+   "seats": 3,
+   "pop": 136197,
+   "perSeat": 45399,
+   "weight": 3.091
+  },
+  {
+   "id": "40",
+   "name": "Segovia",
+   "seats": 3,
+   "pop": 158470,
+   "perSeat": 52823,
+   "weight": 2.657
+  },
+  {
+   "id": "34",
+   "name": "Palencia",
+   "seats": 3,
+   "pop": 158687,
+   "perSeat": 52896,
+   "weight": 2.653
+  },
+  {
+   "id": "05",
+   "name": "Ávila",
+   "seats": 3,
+   "pop": 159887,
+   "perSeat": 53296,
+   "weight": 2.633
+  },
+  {
+   "id": "49",
+   "name": "Zamora",
+   "seats": 3,
+   "pop": 165275,
+   "perSeat": 55092,
+   "weight": 2.547
+  },
+  {
+   "id": "16",
+   "name": "Cuenca",
+   "seats": 3,
+   "pop": 198216,
+   "perSeat": 66072,
+   "weight": 2.124
+  },
+  {
+   "id": "32",
+   "name": "Ourense",
+   "seats": 4,
+   "pop": 305573,
+   "perSeat": 76393,
+   "weight": 1.837
+  },
+  {
+   "id": "22",
+   "name": "Huesca",
+   "seats": 3,
+   "pop": 230624,
+   "perSeat": 76875,
+   "weight": 1.825
+  },
+  {
+   "id": "27",
+   "name": "Lugo",
+   "seats": 4,
+   "pop": 325759,
+   "perSeat": 81440,
+   "weight": 1.723
+  },
+  {
+   "id": "26",
+   "name": "La Rioja",
+   "seats": 4,
+   "pop": 327286,
+   "perSeat": 81822,
+   "weight": 1.715
+  },
+  {
+   "id": "37",
+   "name": "Salamanca",
+   "seats": 4,
+   "pop": 328779,
+   "perSeat": 82195,
+   "weight": 1.707
+  },
+  {
+   "id": "51",
+   "name": "Ceuta",
+   "seats": 1,
+   "pop": 83595,
+   "perSeat": 83595,
+   "weight": 1.679
+  },
+  {
+   "id": "01",
+   "name": "Álava",
+   "seats": 4,
+   "pop": 342161,
+   "perSeat": 85540,
+   "weight": 1.64
+  },
+  {
+   "id": "52",
+   "name": "Melilla",
+   "seats": 1,
+   "pop": 86780,
+   "perSeat": 86780,
+   "weight": 1.617
+  },
+  {
+   "id": "09",
+   "name": "Burgos",
+   "seats": 4,
+   "pop": 361556,
+   "perSeat": 90389,
+   "weight": 1.552
+  },
+  {
+   "id": "19",
+   "name": "Guadalajara",
+   "seats": 3,
+   "pop": 285390,
+   "perSeat": 95130,
+   "weight": 1.475
+  },
+  {
+   "id": "10",
+   "name": "Cáceres",
+   "seats": 4,
+   "pop": 387752,
+   "perSeat": 96938,
+   "weight": 1.448
+  },
+  {
+   "id": "02",
+   "name": "Albacete",
+   "seats": 4,
+   "pop": 390406,
+   "perSeat": 97602,
+   "weight": 1.438
+  },
+  {
+   "id": "13",
+   "name": "Ciudad Real",
+   "seats": 5,
+   "pop": 494407,
+   "perSeat": 98881,
+   "weight": 1.419
+  },
+  {
+   "id": "47",
+   "name": "Valladolid",
+   "seats": 5,
+   "pop": 528841,
+   "perSeat": 105768,
+   "weight": 1.327
+  },
+  {
+   "id": "21",
+   "name": "Huelva",
+   "seats": 5,
+   "pop": 535703,
+   "perSeat": 107141,
+   "weight": 1.31
+  },
+  {
+   "id": "24",
+   "name": "León",
+   "seats": 4,
+   "pop": 446771,
+   "perSeat": 111693,
+   "weight": 1.256
+  },
+  {
+   "id": "25",
+   "name": "Lleida",
+   "seats": 4,
+   "pop": 456106,
+   "perSeat": 114027,
+   "weight": 1.231
+  },
+  {
+   "id": "39",
+   "name": "Cantabria",
+   "seats": 5,
+   "pop": 593964,
+   "perSeat": 118793,
+   "weight": 1.181
+  },
+  {
+   "id": "20",
+   "name": "Gipuzkoa",
+   "seats": 6,
+   "pop": 733365,
+   "perSeat": 122228,
+   "weight": 1.148
+  },
+  {
+   "id": "23",
+   "name": "Jaén",
+   "seats": 5,
+   "pop": 617604,
+   "perSeat": 123521,
+   "weight": 1.136
+  },
+  {
+   "id": "45",
+   "name": "Toledo",
+   "seats": 6,
+   "pop": 750815,
+   "perSeat": 125136,
+   "weight": 1.121
+  },
+  {
+   "id": "12",
+   "name": "Castellón",
+   "seats": 5,
+   "pop": 627173,
+   "perSeat": 125435,
+   "weight": 1.119
+  },
+  {
+   "id": "14",
+   "name": "Córdoba",
+   "seats": 6,
+   "pop": 772153,
+   "perSeat": 128692,
+   "weight": 1.09
+  },
+  {
+   "id": "04",
+   "name": "Almería",
+   "seats": 6,
+   "pop": 773577,
+   "perSeat": 128930,
+   "weight": 1.088
+  },
+  {
+   "id": "06",
+   "name": "Badajoz",
+   "seats": 5,
+   "pop": 663886,
+   "perSeat": 132777,
+   "weight": 1.057
+  },
+  {
+   "id": "18",
+   "name": "Granada",
+   "seats": 7,
+   "pop": 942618,
+   "perSeat": 134660,
+   "weight": 1.042
+  },
+  {
+   "id": "36",
+   "name": "Pontevedra",
+   "seats": 7,
+   "pop": 946225,
+   "perSeat": 135175,
+   "weight": 1.038
+  },
+  {
+   "id": "31",
+   "name": "Navarra",
+   "seats": 5,
+   "pop": 683500,
+   "perSeat": 136700,
+   "weight": 1.027
+  },
+  {
+   "id": "17",
+   "name": "Girona",
+   "seats": 6,
+   "pop": 832026,
+   "perSeat": 138671,
+   "weight": 1.012
+  },
+  {
+   "id": "50",
+   "name": "Zaragoza",
+   "seats": 7,
+   "pop": 991991,
+   "perSeat": 141713,
+   "weight": 0.99
+  },
+  {
+   "id": "15",
+   "name": "A Coruña",
+   "seats": 8,
+   "pop": 1135612,
+   "perSeat": 141952,
+   "weight": 0.989
+  },
+  {
+   "id": "33",
+   "name": "Asturias",
+   "seats": 7,
+   "pop": 1013529,
+   "perSeat": 144790,
+   "weight": 0.969
+  },
+  {
+   "id": "43",
+   "name": "Tarragona",
+   "seats": 6,
+   "pop": 874808,
+   "perSeat": 145801,
+   "weight": 0.962
+  },
+  {
+   "id": "48",
+   "name": "Bizkaia",
+   "seats": 8,
+   "pop": 1166816,
+   "perSeat": 145852,
+   "weight": 0.962
+  },
+  {
+   "id": "35",
+   "name": "Las Palmas",
+   "seats": 8,
+   "pop": 1167555,
+   "perSeat": 145944,
+   "weight": 0.962
+  },
+  {
+   "id": "38",
+   "name": "S. C. de Tenerife",
+   "seats": 7,
+   "pop": 1082421,
+   "perSeat": 154632,
+   "weight": 0.907
+  },
+  {
+   "id": "07",
+   "name": "Baleares",
+   "seats": 8,
+   "pop": 1237480,
+   "perSeat": 154685,
+   "weight": 0.907
+  },
+  {
+   "id": "11",
+   "name": "Cádiz",
+   "seats": 8,
+   "pop": 1257041,
+   "perSeat": 157130,
+   "weight": 0.893
+  },
+  {
+   "id": "30",
+   "name": "Murcia",
+   "seats": 10,
+   "pop": 1589138,
+   "perSeat": 158914,
+   "weight": 0.883
+  },
+  {
+   "id": "29",
+   "name": "Málaga",
+   "seats": 11,
+   "pop": 1791092,
+   "perSeat": 162827,
+   "weight": 0.862
+  },
+  {
+   "id": "41",
+   "name": "Sevilla",
+   "seats": 12,
+   "pop": 1976624,
+   "perSeat": 164719,
+   "weight": 0.852
+  },
+  {
+   "id": "03",
+   "name": "Alicante",
+   "seats": 12,
+   "pop": 2030037,
+   "perSeat": 169170,
+   "weight": 0.83
+  },
+  {
+   "id": "46",
+   "name": "Valencia",
+   "seats": 16,
+   "pop": 2758633,
+   "perSeat": 172415,
+   "weight": 0.814
+  },
+  {
+   "id": "08",
+   "name": "Barcelona",
+   "seats": 32,
+   "pop": 5983325,
+   "perSeat": 186979,
+   "weight": 0.75
+  },
+  {
+   "id": "28",
+   "name": "Madrid",
+   "seats": 38,
+   "pop": 7137031,
+   "perSeat": 187817,
+   "weight": 0.747
+  }
+ ]
+}

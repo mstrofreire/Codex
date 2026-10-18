@@ -1,0 +1,52 @@
+INE2854;01 Araba/Álava;;Total;Todas las edades;2025;342.161
+INE2855;02 Albacete;;Total;Todas las edades;2025;390.406
+INE2856;03 Alicante/Alacant;;Total;Todas las edades;2025;2.030.037
+INE2857;04 Almería;;Total;Todas las edades;2025;773.577
+INE2858;05 Ávila;;Total;Todas las edades;2025;159.887
+INE2859;06 Badajoz;;Total;Todas las edades;2025;663.886
+INE2860;07 Balears, Illes;;Total;Todas las edades;2025;1.237.480
+INE2861;08 Barcelona;;Total;Todas las edades;2025;5.983.325
+INE2862;09 Burgos;;Total;Todas las edades;2025;361.556
+INE2863;10 Cáceres;;Total;Todas las edades;2025;387.752
+INE2864;11 Cádiz;;Total;Todas las edades;2025;1.257.041
+INE2865;12 Castellón/Castelló;;Total;Todas las edades;2025;627.173
+INE2866;13 Ciudad Real;;Total;Todas las edades;2025;494.407
+INE2869;16 Cuenca;;Total;Todas las edades;2025;198.216
+INE2870;17 Girona;;Total;Todas las edades;2025;832.026
+INE2871;18 Granada;;Total;Todas las edades;2025;942.618
+INE2872;19 Guadalajara;;Total;Todas las edades;2025;285.390
+INE2873;20 Gipuzkoa;;Total;Todas las edades;2025;733.365
+INE2874;21 Huelva;;Total;Todas las edades;2025;535.703
+INE2875;22 Huesca;;Total;Todas las edades;2025;230.624
+INE2876;23 Jaén;;Total;Todas las edades;2025;617.604
+INE2877;24 León;;Total;Todas las edades;2025;446.771
+INE2878;25 Lleida;;Total;Todas las edades;2025;456.106
+INE2879;26 Rioja, La;;Total;Todas las edades;2025;327.286
+INE2880;27 Lugo;;Total;Todas las edades;2025;325.759
+INE2881;28 Madrid;;Total;Todas las edades;2025;7.137.031
+INE2882;29 Málaga;;Total;Todas las edades;2025;1.791.092
+INE2883;30 Murcia;;Total;Todas las edades;2025;1.589.138
+INE2884;31 Navarra;;Total;Todas las edades;2025;683.500
+INE2885;32 Ourense;;Total;Todas las edades;2025;305.573
+INE2886;33 Asturias;;Total;Todas las edades;2025;1.013.529
+INE2889;35 Palmas, Las;;Total;Todas las edades;2025;1.167.555
+INE2890;36 Pontevedra;;Total;Todas las edades;2025;946.225
+INE2891;37 Salamanca;;Total;Todas las edades;2025;328.779
+INE2892;38 Santa Cruz de Tenerife;;Total;Todas las edades;2025;1.082.421
+INE2893;39 Cantabria;;Total;Todas las edades;2025;593.964
+INE2894;40 Segovia;;Total;Todas las edades;2025;158.470
+INE2895;41 Sevilla;;Total;Todas las edades;2025;1.976.624
+INE2896;42 Soria;;Total;Todas las edades;2025;90.234
+INE2900;43 Tarragona;;Total;Todas las edades;2025;874.808
+INE2901;14 Córdoba;;Total;Todas las edades;2025;772.153
+INE2902;45 Toledo;;Total;Todas las edades;2025;750.815
+INE2903;46 Valencia/València;;Total;Todas las edades;2025;2.758.633
+INE2904;47 Valladolid;;Total;Todas las edades;2025;528.841
+INE2905;48 Bizkaia;;Total;Todas las edades;2025;1.166.816
+INE2906;49 Zamora;;Total;Todas las edades;2025;165.275
+INE2907;50 Zaragoza;;Total;Todas las edades;2025;991.991
+INE2908;51 Ceuta;;Total;Todas las edades;2025;83.595
+INE2909;52 Melilla;;Total;Todas las edades;2025;86.780
+INE2868;15 Coruña, A;;Total;Todas las edades;2025;1.135.612
+INE2888;34 Palencia;;Total;Todas las edades;2025;158.687
+INE2899;44 Teruel;;Total;Todas las edades;2025;136.197

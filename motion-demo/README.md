@@ -19,3 +19,17 @@ npm run render   # exporta out/demo.mp4
 | 510–599 | `S5Close` | Cierre |
 
 Para cambiar tiempos, colores o textos basta con editar los valores de cada escena o `src/theme.ts` y volver a renderizar.
+
+## "Cuánto pesa tu voto" (`src/voto/`)
+
+Vídeo vertical (1080×1920, 32 s) para las generales del 29-N 2026: habitantes por diputado en cada provincia.
+
+- `seats2026.mjs`: diputados por circunscripción (Real Decreto de convocatoria).
+- `ine-cifras-oficiales-2025.txt`: población oficial por provincia (INE, tablas 2854–2909, Padrón a 1-1-2025).
+- `compute.mjs` cruza ambos en `data.json`. Comprobado: aplicar el art. 162 de la LOREG a esa población reproduce exactamente el reparto del Real Decreto.
+
+```bash
+node src/voto/build-map.mjs                                    # mapa (península + recuadro de Canarias)
+node src/voto/compute.mjs src/voto/ine-cifras-oficiales-2025.txt
+npx remotion render src/voto/index.ts Voto out/cuanto-pesa-tu-voto.mp4
+```
