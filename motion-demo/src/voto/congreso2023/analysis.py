@@ -105,7 +105,10 @@ def bloc(heads, name):
                     t = min(need, s + g)
                     if dp[s][0] + cost < new[t][0]:
                         who = "+".join(f"{label(next(head(p) for c in CIRC if c['nombre'] == circ for p in c['candidaturas'] if p['codigo'] == k))} {v}" for k, v in extra.items() if v)
-                        new[t] = (dp[s][0] + cost, dp[s][1] + [(circ, g, cost, who)])
+                        cc = next(c for c in CIRC if c["nombre"] == circ)
+                        b0, b1 = allocate(cc), allocate(cc, extra)
+                        lost = "+".join(label(head(p)) for p in cc["candidaturas"] if b1[p["codigo"]] < b0[p["codigo"]])
+                        new[t] = (dp[s][0] + cost, dp[s][1] + [(circ, g, cost, who, lost)])
         dp = new
     return {"bloque": name, "escanos": seats, "faltan": need, "votos": dp[need][0], "donde": dp[need][1]}
 

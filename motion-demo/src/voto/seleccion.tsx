@@ -106,43 +106,62 @@ const Ajustados = () => {
   );
 };
 
-// 3 · Absolute majority: running total over the 6 seats
+// 3 · Absolute majority: 6 seats short, one per province, and what they cost
 const STEP = 28;
+const M0 = 70;
 const Mayoria = () => {
   const frame = useCurrentFrame();
   const t = useEnter(0);
   const [pv, ps] = a.bloques;
-  const items = pv.donde as [string, number, number, string][];
+  const items = pv.donde as [string, number, number, string, string][];
   let total = 0;
   items.forEach((d, i) => {
-    const s = 40 + i * STEP;
+    const s = M0 + i * STEP;
     total += interpolate(frame, [s, s + STEP - 4], [0, d[2]], clamp);
   });
-  const note = useEnter(40 + items.length * STEP + 20);
+  const filled = items.filter((_, i) => frame >= M0 + i * STEP + 10).length;
+  const bar = useEnter(30);
+  const note = useEnter(M0 + items.length * STEP + 20);
   return (
     <Scene>
-      <Page kicker="23-J 2023 · MAYORÍA ABSOLUTA (176)" src={SRC23}>
-        <Title o={t} size={88}>
-          A PP y Vox les faltaron
+      <Page kicker="23-J 2023 · MAYORÍA ABSOLUTA" src={SRC23} top={170}>
+        <Title o={t} size={78}>
+          A PP y Vox les faltaron {pv.faltan} diputados para la mayoría absoluta.
         </Title>
-        <div style={{ fontFamily: DISPLAY, fontSize: 230, fontWeight: 700, letterSpacing: -9, lineHeight: 1, color: BLUE, marginTop: 24 }}>{fmt(total)}</div>
-        <div style={{ fontSize: 50, color: V.dim, marginTop: 6, opacity: t }}>votos para la mayoría absoluta</div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginTop: 60 }}>
-          {items.map(([c, , v, who], i) => {
-            const o = useEnter(40 + i * STEP);
+        <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 40, opacity: bar }}>
+          <span style={{ fontFamily: MONO, fontSize: 40 }}>{pv.escanos}</span>
+          <span style={{ fontSize: 34, color: V.dim }}>+</span>
+          {items.map((_, i) => (
+            <div key={i} style={{ width: 56, height: 56, borderRadius: "50%", border: `4px solid ${BLUE}`, background: i < filled ? BLUE : "transparent", boxSizing: "border-box" }} />
+          ))}
+          <span style={{ fontSize: 34, color: V.dim }}>=</span>
+          <span style={{ fontFamily: MONO, fontSize: 40 }}>176</span>
+        </div>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 20, marginTop: 40 }}>
+          <span style={{ fontFamily: DISPLAY, fontSize: 170, fontWeight: 700, letterSpacing: -7, lineHeight: 1, color: BLUE }}>{fmt(total)}</span>
+          <span style={{ fontSize: 44, color: V.dim }}>votos</span>
+        </div>
+        <div style={{ fontSize: 34, color: V.dim, marginTop: 8, opacity: bar }}>es lo que costaban esos {pv.faltan} diputados, uno en cada provincia:</div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginTop: 34 }}>
+          {items.map(([c, , v, who, lost], i) => {
+            const o = useEnter(M0 + i * STEP);
             return (
-              <div key={c} style={{ background: V.panel, borderRadius: 20, padding: "24px 28px", opacity: o, transform: up(o, 30) }}>
-                <div style={{ fontSize: 40, fontWeight: 700 }}>{circ(c)}</div>
-                <div style={{ fontSize: 30, color: V.dim, marginTop: 8, display: "flex", justifyContent: "space-between" }}>
-                  <Chip p={who.split(" ")[0]} />
-                  <span style={{ fontFamily: MONO, color: V.text }}>+{fmt(v)}</span>
+              <div key={c} style={{ background: V.panel, borderRadius: 20, padding: "20px 26px", opacity: o, transform: up(o, 30) }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+                  <span style={{ fontSize: 36, fontWeight: 700 }}>{circ(c)}</span>
+                  <span style={{ fontSize: 26, color: BLUE, fontWeight: 600 }}>+1 diputado</span>
                 </div>
+                <div style={{ fontSize: 28, marginTop: 10, display: "flex", justifyContent: "space-between" }}>
+                  <Chip p={who.split(" ")[0]} />
+                  <span style={{ fontFamily: MONO }}>+{fmt(v)} votos</span>
+                </div>
+                <div style={{ fontSize: 24, color: V.dim, marginTop: 6 }}>se lo quitaría a {party(lost)}</div>
               </div>
             );
           })}
         </div>
-        <div style={{ fontSize: 36, lineHeight: 1.4, color: V.dim, marginTop: 50, opacity: note }}>
-          Sumaron {pv.escanos} escaños. Votos nuevos, sin quitárselos a nadie. Con el mismo cálculo, PSOE y Sumar ({ps.escanos}) habrían necesitado {fmt(ps.votos)}.
+        <div style={{ fontSize: 30, lineHeight: 1.4, color: V.dim, marginTop: 30, opacity: note }}>
+          Votos nuevos, sin quitárselos a nadie. PSOE y Sumar ({ps.escanos}) habrían necesitado {ps.faltan} diputados y {fmt(ps.votos)} votos.
         </div>
       </Page>
     </Scene>
@@ -267,7 +286,7 @@ const SCENES = [
   { C: Hook, len: 90 },
   { C: Girona, len: 370 },
   { C: Ajustados, len: 240 },
-  { C: Mayoria, len: 300 },
+  { C: Mayoria, len: 360 },
   { C: SinEscano, len: 240 },
   { C: Alicante, len: 270 },
   { C: Outro, len: 120 },

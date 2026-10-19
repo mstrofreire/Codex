@@ -75,30 +75,42 @@ export const CardAjustados = () => {
   );
 };
 
-// 3 · Absolute majority
+// 3 · Absolute majority: 6 seats short, one per province
 export const CardMayoria = () => {
   const [pv, ps] = a.bloques;
+  const items = pv.donde as [string, number, number, string, string][];
   return (
-    <Frame kicker="23-J 2023 · MAYORÍA ABSOLUTA (176)" src={SRC23}>
-      <Headline>
-        A PP y Vox les faltaron {fmt(pv.votos)} votos para la mayoría absoluta.
+    <Frame kicker="23-J 2023 · MAYORÍA ABSOLUTA" src={SRC23}>
+      <Headline size={68}>
+        A PP y Vox les faltaron {pv.faltan} diputados para la mayoría absoluta. Costaban <span style={{ color: "#6DA7EC" }}>{fmt(pv.votos)} votos</span>.
       </Headline>
-      <div style={{ fontSize: 30, color: V.dim, marginTop: 18 }}>
-        Sumaron {pv.escanos} escaños. Los {pv.faltan} que faltaban estaban aquí:
+      <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 30 }}>
+        <span style={{ fontFamily: MONO, fontSize: 34 }}>{pv.escanos}</span>
+        <span style={{ fontSize: 28, color: V.dim }}>+</span>
+        {items.map((_, i) => (
+          <div key={i} style={{ width: 44, height: 44, borderRadius: "50%", background: "#6DA7EC" }} />
+        ))}
+        <span style={{ fontSize: 28, color: V.dim }}>=</span>
+        <span style={{ fontFamily: MONO, fontSize: 34 }}>176</span>
+        <span style={{ fontSize: 26, color: V.dim, marginLeft: 10 }}>uno en cada provincia:</span>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginTop: 34 }}>
-        {pv.donde.map(([c, , v, who]) => (
-          <div key={c as string} style={{ background: V.panel, borderRadius: 18, padding: "20px 26px" }}>
-            <div style={{ fontSize: 32, fontWeight: 700 }}>{circ(c as string)}</div>
-            <div style={{ fontSize: 26, color: V.dim, marginTop: 6, display: "flex", justifyContent: "space-between" }}>
-              <Chip p={(who as string).split(" ")[0]} />
-              <span style={{ fontFamily: MONO, color: V.text }}>+{fmt(v as number)}</span>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginTop: 30 }}>
+        {items.map(([c, , v, who, lost]) => (
+          <div key={c} style={{ background: V.panel, borderRadius: 18, padding: "18px 24px" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+              <span style={{ fontSize: 32, fontWeight: 700 }}>{circ(c)}</span>
+              <span style={{ fontSize: 22, color: "#6DA7EC", fontWeight: 600 }}>+1 diputado</span>
             </div>
+            <div style={{ fontSize: 26, marginTop: 8, display: "flex", justifyContent: "space-between" }}>
+              <Chip p={who.split(" ")[0]} />
+              <span style={{ fontFamily: MONO }}>+{fmt(v)}</span>
+            </div>
+            <div style={{ fontSize: 22, color: V.dim, marginTop: 4 }}>se lo quitaría a {party(lost)}</div>
           </div>
         ))}
       </div>
       <Note>
-        Votos nuevos, sin quitárselos a nadie. Con el mismo cálculo, PSOE y Sumar ({ps.escanos} escaños) habrían necesitado {fmt(ps.votos)} para llegar a 176.
+        Votos nuevos, sin quitárselos a nadie. PSOE y Sumar ({ps.escanos}) habrían necesitado {ps.faltan} diputados y {fmt(ps.votos)} votos.
       </Note>
     </Frame>
   );
