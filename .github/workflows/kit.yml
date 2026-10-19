@@ -1,0 +1,42 @@
+# Genera el kit 29-N de las provincias que pidas, desde la pestaña Actions de GitHub.
+# Actions → "Kit 29-N por provincia" → Run workflow. El resultado se descarga como artefacto (zip).
+name: Kit 29-N por provincia
+
+on:
+  workflow_dispatch:
+    inputs:
+      provincias:
+        description: "Provincias separadas por espacios (nombre, slug o código INE), o all para las 52"
+        required: true
+        default: "girona"
+      marca:
+        description: "Cuenta o nombre que sale en la esquina"
+        required: true
+        default: "@tucuenta"
+
+jobs:
+  kit:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: motion-demo
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: motion-demo/package-lock.json
+      - name: Fuentes de las tarjetas (Inter, DejaVu Sans Mono)
+        run: sudo apt-get update -q && sudo apt-get install -y -q fonts-inter fonts-dejavu-core
+      - run: npm ci
+      - run: npm test
+      - name: Renderizar
+        env:
+          PROVINCIAS: ${{ inputs.provincias }}
+          MARCA: ${{ inputs.marca }}
+        run: node kit/render.mjs $PROVINCIAS --marca "$MARCA" --out out/kit-actions
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kit-29N
+          path: motion-demo/out/kit-actions
