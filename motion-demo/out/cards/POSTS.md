@@ -17,7 +17,7 @@ Todas en 4:5 (1080×1350). Cifras calculadas desde datos oficiales; el código e
 |---|---|
 | `Girona.png` | 285 votos. Es lo que decidió un diputado en Girona en 2023. Junts se lo llevó; el PP se quedó a 285 votos. #29N |
 | `Ajustados.png` | Los 8 diputados de 2023 que se decidieron por menos votos. En Girona, 285. En Cantabria, 403. ¿Sigues pensando que tu voto no cuenta? #29N |
-| `Mayoria.png` | A PP y Vox les faltaron 22.996 votos, bien repartidos en 6 provincias, para la mayoría absoluta en 2023. PSOE y Sumar habrían necesitado 137.136. #29N |
+| `Mayoria.png` | A PP y Vox les faltaron 22.996 votos, bien repartidos en 6 provincias, para la mayoría absoluta en 2023. PSOE y Sumar habrían necesitado 137.138. #29N |
 | `SinEscano.png` | En Soria, Soria ¡Ya! sacó el 19,1 % y se quedó sin diputado. Con 2 escaños en juego, casi uno de cada cinco votos no elige a nadie. #29N |
 | `Proporcional.png` | Si todos los votos valieran lo mismo: PP 120 (no 137), PSOE 115 (no 121), Vox 45 (no 33), Sumar 45 (no 31). #29N |
 | `Precio.png` | Cuántos votos costó cada diputado en 2023: de 52.188 (UPN) a 153.995 (BNG). #29N |

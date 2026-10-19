@@ -14,8 +14,6 @@ const K23 = "23-J 2023 · RESULTADOS OFICIALES";
 export const COLOR: Record<string, string> = Object.fromEntries(
   Object.entries(grupos).filter(([k]) => k !== "_nota").map(([, g]) => [(g as { etiqueta: string }).etiqueta, (g as { color: string }).color]),
 );
-COLOR["EXISTE"] = "#2F9E6E";
-COLOR["SY"] = "#4C9A2A";
 const NAME: Record<string, string> = { SY: "Soria ¡Ya!", EXISTE: "Teruel Existe", VOX: "Vox", SUMAR: "Sumar", JUNTS: "Junts", CCa: "CC", "EAJ-PNV": "PNV" };
 export const party = (s: string) => NAME[s] ?? s;
 const CIRC: Record<string, string> = { "Araba/Álava": "Álava", "Castelló/Castellón": "Castellón", "Alacant/Alicante": "Alicante", "València/Valencia": "Valencia", "Santa Cruz de Tenerife": "S. C. de Tenerife" };
@@ -29,7 +27,7 @@ export const Chip = ({ p }: { p: string }) => (
   </span>
 );
 
-const Note = ({ children }: { children: React.ReactNode }) => (
+export const Note = ({ children }: { children: React.ReactNode }) => (
   <div style={{ fontSize: 28, lineHeight: 1.4, color: V.dim, marginTop: 40 }}>{children}</div>
 );
 

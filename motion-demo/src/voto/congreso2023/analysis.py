@@ -2,7 +2,7 @@
 import json
 from fractions import Fraction
 from itertools import product
-from dhondt import CIRC, allocate, head, HERE
+from dhondt import CIRC, allocate, head, min_to_gain, HERE
 
 G = json.loads((HERE / "grupos.json").read_text())
 SIGLAS = {}
@@ -40,19 +40,6 @@ out["proporcional"] = sorted(
 
 
 # 3) Minimum NEW votes for a candidature to win one more seat in its constituency
-def min_to_gain(c, code, target):
-    lo, hi = 0, c["votosCandidaturas"] * 2
-    if allocate(c, {code: hi})[code] < target:
-        return None
-    while lo < hi:
-        m = (lo + hi) // 2
-        if allocate(c, {code: m})[code] >= target:
-            hi = m
-        else:
-            lo = m + 1
-    return lo
-
-
 flips = []
 for c in CIRC:
     base = allocate(c)

@@ -16,5 +16,7 @@
   "000032": { "etiqueta": "NC-bc", "color": "#7AA6C2" },
   "000055": { "etiqueta": "PDeCAT", "color": "#1F4E8C" },
   "000039": { "etiqueta": "UPL", "color": "#B5121B" },
-  "000073": { "etiqueta": "GBAI", "color": "#E6007E" }
+  "000073": { "etiqueta": "GBAI", "color": "#E6007E" },
+  "000023": { "etiqueta": "EXISTE", "color": "#2F9E6E" },
+  "000043": { "etiqueta": "SY", "color": "#4C9A2A" }
 }
