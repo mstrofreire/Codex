@@ -286,7 +286,7 @@ const SCENES = [
   { C: Hook, len: 90 },
   { C: Girona, len: 370 },
   { C: Ajustados, len: 240 },
-  { C: Mayoria, len: 300 },
+  { C: Mayoria, len: 360 },
   { C: SinEscano, len: 240 },
   { C: Alicante, len: 270 },
   { C: Outro, len: 120 },
