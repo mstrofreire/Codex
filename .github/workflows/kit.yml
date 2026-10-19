@@ -8,7 +8,7 @@ on:
       provincias:
         description: "Provincias separadas por espacios (nombre, slug o código INE), o all para las 52"
         required: true
-        default: "girona"
+        default: "sevilla"
       marca:
         description: "Cuenta o nombre que sale en la esquina"
         required: true
