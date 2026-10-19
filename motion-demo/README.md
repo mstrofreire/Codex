@@ -33,3 +33,13 @@ node src/voto/build-map.mjs                                    # mapa (penínsul
 node src/voto/compute.mjs src/voto/ine-cifras-oficiales-2025.txt
 npx remotion render src/voto/index.ts Voto out/cuanto-pesa-tu-voto.mp4
 ```
+
+## Kit por provincia y radar Grok (`kit/`)
+
+Cuatro tarjetas por circunscripción (52 × 4) con marca blanca, generadas desde `src/voto/congreso2023/provincias.json` (`provincias.py`: resultados oficiales de 2023, escaños del 29-N y población del INE), y un radar que pide a Grok qué se discute en X para elegir la tarjeta y el texto. Muestras en `out/kit/`. Uso y filtros en [`kit/README.md`](kit/README.md).
+
+```bash
+node kit/render.mjs girona --marca @medio   # out/kit/girona/*.png + POSTS.md
+node kit/radar.mjs prompt girona            # prompt para pegar en Grok
+npm test
+```

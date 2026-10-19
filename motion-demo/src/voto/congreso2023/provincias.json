@@ -1,0 +1,5362 @@
+{
+ "_nota": "Generado por provincias.py. Votos 2023: Ministerio del Interior (Infoelectoral). Escaños 2026: Real Decreto 806/2026. Población: INE, Padrón a 1-1-2025.",
+ "mediaHabPorEscano": 140327,
+ "provincias": {
+  "01": {
+   "code": "01",
+   "slug": "araba-alava",
+   "nombre": "Álava",
+   "nombreOficial": "Araba/Álava",
+   "escanos2026": 4,
+   "escanos2023": 4,
+   "mayoritaria": false,
+   "poblacion": 342161,
+   "habPorEscano": 85540,
+   "peso": 1.64,
+   "rankPeso": 14,
+   "rankMas": 39,
+   "difMedia": -39,
+   "censo": 260214,
+   "votantes": 170538,
+   "participacion": 65.5,
+   "validos": 169107,
+   "blanco": 722,
+   "pctSinEscano": 17.9,
+   "partidos": [
+    {
+     "codigo": "000076",
+     "siglas": "PSE-EE (PSOE)",
+     "nombre": "PSE-EE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 46775,
+     "pct": 27.7,
+     "escanos": 1,
+     "faltan": 9375,
+     "quitaria": "PNV"
+    },
+    {
+     "codigo": "000071",
+     "siglas": "EH Bildu",
+     "nombre": "EH Bildu",
+     "art": "",
+     "color": "#B5CF18",
+     "votos": 32987,
+     "pct": 19.5,
+     "escanos": 1,
+     "faltan": 23163,
+     "quitaria": "PNV"
+    },
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 30212,
+     "pct": 17.9,
+     "escanos": 1,
+     "faltan": 25938,
+     "quitaria": "PNV"
+    },
+    {
+     "codigo": "000075",
+     "siglas": "EAJ-PNV",
+     "nombre": "PNV",
+     "art": "el",
+     "color": "#2E8B57",
+     "votos": 28075,
+     "pct": 16.6,
+     "escanos": 1,
+     "faltan": 32349,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 21561,
+     "pct": 12.7,
+     "escanos": 0,
+     "faltan": 6515,
+     "quitaria": "PNV"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 6573,
+     "pct": 3.9,
+     "escanos": 0,
+     "faltan": 21503,
+     "quitaria": "PNV"
+    }
+   ],
+   "ajustado": {
+    "gana": "Sumar",
+    "pierde": "PNV",
+    "votos": 6515,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 28075,
+      "divisor": 1,
+      "cociente": 28075.0
+     },
+     "gana": {
+      "votos": 21561,
+      "divisor": 1,
+      "cociente": 21561.0,
+      "puesto": 6
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "02": {
+   "code": "02",
+   "slug": "albacete",
+   "nombre": "Albacete",
+   "nombreOficial": "Albacete",
+   "escanos2026": 4,
+   "escanos2023": 4,
+   "mayoritaria": false,
+   "poblacion": 390406,
+   "habPorEscano": 97602,
+   "peso": 1.438,
+   "rankPeso": 19,
+   "rankMas": 34,
+   "difMedia": -30,
+   "censo": 307988,
+   "votantes": 223917,
+   "participacion": 72.7,
+   "validos": 221191,
+   "blanco": 1834,
+   "pctSinEscano": 24.7,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 88299,
+     "pct": 39.9,
+     "escanos": 2,
+     "faltan": 26184,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 76322,
+     "pct": 34.5,
+     "escanos": 2,
+     "faltan": 56127,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 36750,
+     "pct": 16.6,
+     "escanos": 0,
+     "faltan": 1412,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 15834,
+     "pct": 7.2,
+     "escanos": 0,
+     "faltan": 22328,
+     "quitaria": "PSOE"
+    }
+   ],
+   "ajustado": {
+    "gana": "Vox",
+    "pierde": "PSOE",
+    "votos": 1412,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 76322,
+      "divisor": 2,
+      "cociente": 38161.0
+     },
+     "gana": {
+      "votos": 36750,
+      "divisor": 1,
+      "cociente": 36750.0,
+      "puesto": 5
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "03": {
+   "code": "03",
+   "slug": "alacant-alicante",
+   "nombre": "Alicante",
+   "nombreOficial": "Alacant/Alicante",
+   "escanos2026": 12,
+   "escanos2023": 12,
+   "mayoritaria": false,
+   "poblacion": 2030037,
+   "habPorEscano": 169170,
+   "peso": 0.83,
+   "rankPeso": 49,
+   "rankMas": 4,
+   "difMedia": 21,
+   "censo": 1306311,
+   "votantes": 908842,
+   "participacion": 69.6,
+   "validos": 899192,
+   "blanco": 6575,
+   "pctSinEscano": 1.4,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 330293,
+     "pct": 36.7,
+     "escanos": 5,
+     "faltan": 101313,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 287737,
+     "pct": 32.0,
+     "escanos": 4,
+     "faltan": 42557,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 146133,
+     "pct": 16.3,
+     "escanos": 2,
+     "faltan": 52043,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000082",
+     "siglas": "SUMAR - COMPROMÍS",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 115787,
+     "pct": 12.9,
+     "escanos": 1,
+     "faltan": 16331,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "Sumar",
+    "pierde": "PP",
+    "votos": 16331,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 330293,
+      "divisor": 5,
+      "cociente": 66058.6
+     },
+     "gana": {
+      "votos": 115787,
+      "divisor": 2,
+      "cociente": 57893.5,
+      "puesto": 13
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "04": {
+   "code": "04",
+   "slug": "almeria",
+   "nombre": "Almería",
+   "nombreOficial": "Almería",
+   "escanos2026": 6,
+   "escanos2023": 6,
+   "mayoritaria": false,
+   "poblacion": 773577,
+   "habPorEscano": 128930,
+   "peso": 1.088,
+   "rankPeso": 31,
+   "rankMas": 22,
+   "difMedia": -8,
+   "censo": 516114,
+   "votantes": 324405,
+   "participacion": 62.9,
+   "validos": 321242,
+   "blanco": 2464,
+   "pctSinEscano": 8.0,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 131524,
+     "pct": 40.9,
+     "escanos": 3,
+     "faltan": 55040,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 93282,
+     "pct": 29.0,
+     "escanos": 2,
+     "faltan": 38243,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 68364,
+     "pct": 21.3,
+     "escanos": 1,
+     "faltan": 19319,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000011",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 21485,
+     "pct": 6.7,
+     "escanos": 0,
+     "faltan": 22357,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "Vox",
+    "pierde": "PP",
+    "votos": 19319,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 131524,
+      "divisor": 3,
+      "cociente": 43841.3
+     },
+     "gana": {
+      "votos": 68364,
+      "divisor": 2,
+      "cociente": 34182.0,
+      "puesto": 7
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "05": {
+   "code": "05",
+   "slug": "avila",
+   "nombre": "Ávila",
+   "nombreOficial": "Ávila",
+   "escanos2026": 3,
+   "escanos2023": 3,
+   "mayoritaria": false,
+   "poblacion": 159887,
+   "habPorEscano": 53296,
+   "peso": 2.633,
+   "rankPeso": 5,
+   "rankMas": 48,
+   "difMedia": -62,
+   "censo": 136669,
+   "votantes": 99120,
+   "participacion": 72.5,
+   "validos": 97956,
+   "blanco": 632,
+   "pctSinEscano": 28.7,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 42369,
+     "pct": 43.3,
+     "escanos": 2,
+     "faltan": 38115,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 26828,
+     "pct": 27.4,
+     "escanos": 1,
+     "faltan": 15542,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 15068,
+     "pct": 15.4,
+     "escanos": 0,
+     "faltan": 6117,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000035",
+     "siglas": "XAV",
+     "nombre": "XAV",
+     "art": "",
+     "color": null,
+     "votos": 7362,
+     "pct": 7.5,
+     "escanos": 0,
+     "faltan": 13823,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 5027,
+     "pct": 5.1,
+     "escanos": 0,
+     "faltan": 16158,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "Vox",
+    "pierde": "PP",
+    "votos": 6117,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 42369,
+      "divisor": 2,
+      "cociente": 21184.5
+     },
+     "gana": {
+      "votos": 15068,
+      "divisor": 1,
+      "cociente": 15068.0,
+      "puesto": 4
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "06": {
+   "code": "06",
+   "slug": "badajoz",
+   "nombre": "Badajoz",
+   "nombreOficial": "Badajoz",
+   "escanos2026": 5,
+   "escanos2023": 5,
+   "mayoritaria": false,
+   "poblacion": 663886,
+   "habPorEscano": 132777,
+   "peso": 1.057,
+   "rankPeso": 32,
+   "rankMas": 21,
+   "difMedia": -5,
+   "censo": 550702,
+   "votantes": 398233,
+   "participacion": 72.3,
+   "validos": 391461,
+   "blanco": 3225,
+   "pctSinEscano": 8.5,
+   "partidos": [
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 153473,
+     "pct": 39.2,
+     "escanos": 2,
+     "faltan": 7003,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 148068,
+     "pct": 37.8,
+     "escanos": 2,
+     "faltan": 12408,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 53492,
+     "pct": 13.7,
+     "escanos": 1,
+     "faltan": 94577,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 26778,
+     "pct": 6.8,
+     "escanos": 0,
+     "faltan": 26715,
+     "quitaria": "Vox"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "Vox",
+    "votos": 7003,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 53492,
+      "divisor": 1,
+      "cociente": 53492.0
+     },
+     "gana": {
+      "votos": 153473,
+      "divisor": 3,
+      "cociente": 51157.7,
+      "puesto": 6
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "07": {
+   "code": "07",
+   "slug": "illes-balears",
+   "nombre": "Baleares",
+   "nombreOficial": "Illes Balears",
+   "escanos2026": 8,
+   "escanos2023": 8,
+   "mayoritaria": false,
+   "poblacion": 1237480,
+   "habPorEscano": 154685,
+   "peso": 0.907,
+   "rankPeso": 44,
+   "rankMas": 9,
+   "difMedia": 10,
+   "censo": 828755,
+   "votantes": 508233,
+   "participacion": 61.3,
+   "validos": 503280,
+   "blanco": 4704,
+   "pctSinEscano": 1.5,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 179303,
+     "pct": 35.6,
+     "escanos": 3,
+     "faltan": 23079,
+     "quitaria": "PSIB"
+    },
+    {
+     "codigo": "000029",
+     "siglas": "PSIB-PSOE",
+     "nombre": "PSIB",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 151786,
+     "pct": 30.2,
+     "escanos": 3,
+     "faltan": 87285,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000030",
+     "siglas": "MÉS PER MALLORCA-MÉS PER MENORCA-SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 83487,
+     "pct": 16.6,
+     "escanos": 1,
+     "faltan": 17704,
+     "quitaria": "PSIB"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 76547,
+     "pct": 15.2,
+     "escanos": 1,
+     "faltan": 24644,
+     "quitaria": "PSIB"
+    }
+   ],
+   "ajustado": {
+    "gana": "Sumar",
+    "pierde": "PSIB",
+    "votos": 17704,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 151786,
+      "divisor": 3,
+      "cociente": 50595.3
+     },
+     "gana": {
+      "votos": 83487,
+      "divisor": 2,
+      "cociente": 41743.5,
+      "puesto": 10
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "08": {
+   "code": "08",
+   "slug": "barcelona",
+   "nombre": "Barcelona",
+   "nombreOficial": "Barcelona",
+   "escanos2026": 32,
+   "escanos2023": 32,
+   "mayoritaria": false,
+   "poblacion": 5983325,
+   "habPorEscano": 186979,
+   "peso": 0.75,
+   "rankPeso": 51,
+   "rankMas": 2,
+   "difMedia": 33,
+   "censo": 4243500,
+   "votantes": 2688720,
+   "participacion": 63.4,
+   "validos": 2667478,
+   "blanco": 21059,
+   "pctSinEscano": 4.9,
+   "partidos": [
+    {
+     "codigo": "000047",
+     "siglas": "PSC",
+     "nombre": "PSC",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 952347,
+     "pct": 35.7,
+     "escanos": 13,
+     "faltan": 76707,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000051",
+     "siglas": "SUMAR - ECP",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 405993,
+     "pct": 15.2,
+     "escanos": 5,
+     "faltan": 33552,
+     "quitaria": "PSC"
+    },
+    {
+     "codigo": "000048",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 367519,
+     "pct": 13.8,
+     "escanos": 5,
+     "faltan": 72026,
+     "quitaria": "PSC"
+    },
+    {
+     "codigo": "000050",
+     "siglas": "ERC",
+     "nombre": "ERC",
+     "art": "",
+     "color": "#FFB232",
+     "votos": 328697,
+     "pct": 12.3,
+     "escanos": 4,
+     "faltan": 37591,
+     "quitaria": "PSC"
+    },
+    {
+     "codigo": "000057",
+     "siglas": "JxCAT - JUNTS",
+     "nombre": "Junts",
+     "art": "",
+     "color": "#00C3B2",
+     "votos": 258159,
+     "pct": 9.7,
+     "escanos": 3,
+     "faltan": 34871,
+     "quitaria": "PSC"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 201775,
+     "pct": 7.6,
+     "escanos": 2,
+     "faltan": 17998,
+     "quitaria": "PSC"
+    },
+    {
+     "codigo": "000053",
+     "siglas": "CUP-PR",
+     "nombre": "CUP",
+     "art": "la",
+     "color": "#FFED00",
+     "votos": 67266,
+     "pct": 2.5,
+     "escanos": 0,
+     "faltan": 13153,
+     "quitaria": "PSC"
+    },
+    {
+     "codigo": "000058",
+     "siglas": "PACMA",
+     "nombre": "PACMA",
+     "art": "",
+     "color": "#8DB33A",
+     "votos": 28201,
+     "pct": 1.1,
+     "escanos": 0,
+     "faltan": 53427,
+     "quitaria": "PSC"
+    }
+   ],
+   "ajustado": {
+    "gana": "CUP",
+    "pierde": "PSC",
+    "votos": 13153,
+    "barrera": true,
+    "duelo": null,
+    "umbral": {
+     "conVotos": 80419,
+     "pierde": {
+      "votos": 952347,
+      "divisor": 13,
+      "cociente": 73257.5
+     }
+    }
+   },
+   "reparto2026": []
+  },
+  "09": {
+   "code": "09",
+   "slug": "burgos",
+   "nombre": "Burgos",
+   "nombreOficial": "Burgos",
+   "escanos2026": 4,
+   "escanos2023": 4,
+   "mayoritaria": false,
+   "poblacion": 361556,
+   "habPorEscano": 90389,
+   "peso": 1.552,
+   "rankPeso": 16,
+   "rankMas": 37,
+   "difMedia": -36,
+   "censo": 296401,
+   "votantes": 204886,
+   "participacion": 69.1,
+   "validos": 202569,
+   "blanco": 1851,
+   "pctSinEscano": 24.0,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 82329,
+     "pct": 40.6,
+     "escanos": 2,
+     "faltan": 22334,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 69775,
+     "pct": 34.4,
+     "escanos": 2,
+     "faltan": 53719,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 25858,
+     "pct": 12.8,
+     "escanos": 0,
+     "faltan": 9030,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 17508,
+     "pct": 8.6,
+     "escanos": 0,
+     "faltan": 17380,
+     "quitaria": "PSOE"
+    }
+   ],
+   "ajustado": {
+    "gana": "Vox",
+    "pierde": "PSOE",
+    "votos": 9030,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 69775,
+      "divisor": 2,
+      "cociente": 34887.5
+     },
+     "gana": {
+      "votos": 25858,
+      "divisor": 1,
+      "cociente": 25858.0,
+      "puesto": 6
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "10": {
+   "code": "10",
+   "slug": "caceres",
+   "nombre": "Cáceres",
+   "nombreOficial": "Cáceres",
+   "escanos2026": 4,
+   "escanos2023": 4,
+   "mayoritaria": false,
+   "poblacion": 387752,
+   "habPorEscano": 96938,
+   "peso": 1.448,
+   "rankPeso": 18,
+   "rankMas": 35,
+   "difMedia": -31,
+   "censo": 339491,
+   "votantes": 239747,
+   "participacion": 70.6,
+   "validos": 235851,
+   "blanco": 1721,
+   "pctSinEscano": 22.4,
+   "partidos": [
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 91692,
+     "pct": 38.9,
+     "escanos": 2,
+     "faltan": 42758,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 89633,
+     "pct": 38.0,
+     "escanos": 2,
+     "faltan": 47905,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 32076,
+     "pct": 13.6,
+     "escanos": 0,
+     "faltan": 12741,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 16354,
+     "pct": 6.9,
+     "escanos": 0,
+     "faltan": 28463,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "Vox",
+    "pierde": "PP",
+    "votos": 12741,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 89633,
+      "divisor": 2,
+      "cociente": 44816.5
+     },
+     "gana": {
+      "votos": 32076,
+      "divisor": 1,
+      "cociente": 32076.0,
+      "puesto": 5
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "11": {
+   "code": "11",
+   "slug": "cadiz",
+   "nombre": "Cádiz",
+   "nombreOficial": "Cádiz",
+   "escanos2026": 8,
+   "escanos2023": 9,
+   "mayoritaria": false,
+   "poblacion": 1257041,
+   "habPorEscano": 157130,
+   "peso": 0.893,
+   "rankPeso": 45,
+   "rankMas": 8,
+   "difMedia": 12,
+   "censo": 1017958,
+   "votantes": 644801,
+   "participacion": 63.3,
+   "validos": 637098,
+   "blanco": 7103,
+   "pctSinEscano": 2.9,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 221703,
+     "pct": 34.8,
+     "escanos": 4,
+     "faltan": 130297,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 211200,
+     "pct": 33.2,
+     "escanos": 3,
+     "faltan": 10504,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 96720,
+     "pct": 15.2,
+     "escanos": 1,
+     "faltan": 14132,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000011",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 82115,
+     "pct": 12.9,
+     "escanos": 1,
+     "faltan": 28737,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000012",
+     "siglas": "ADELANTE ANDALUCÍA",
+     "nombre": "Adelante Andalucía",
+     "art": "",
+     "color": null,
+     "votos": 9191,
+     "pct": 1.4,
+     "escanos": 0,
+     "faltan": 46235,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "PP",
+    "votos": 10504,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 221703,
+      "divisor": 4,
+      "cociente": 55425.8
+     },
+     "gana": {
+      "votos": 211200,
+      "divisor": 4,
+      "cociente": 52800.0,
+      "puesto": 10
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": [
+    {
+     "partido": "PP",
+     "antes": 4,
+     "despues": 3
+    }
+   ]
+  },
+  "12": {
+   "code": "12",
+   "slug": "castello-castellon",
+   "nombre": "Castellón",
+   "nombreOficial": "Castelló/Castellón",
+   "escanos2026": 5,
+   "escanos2023": 5,
+   "mayoritaria": false,
+   "poblacion": 627173,
+   "habPorEscano": 125435,
+   "peso": 1.119,
+   "rankPeso": 29,
+   "rankMas": 24,
+   "difMedia": -11,
+   "censo": 430830,
+   "votantes": 311581,
+   "participacion": 72.3,
+   "validos": 307930,
+   "blanco": 2655,
+   "pctSinEscano": 15.4,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 108302,
+     "pct": 35.2,
+     "escanos": 2,
+     "faltan": 38437,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 100530,
+     "pct": 32.6,
+     "escanos": 2,
+     "faltan": 46209,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 48913,
+     "pct": 15.9,
+     "escanos": 1,
+     "faltan": 51618,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000082",
+     "siglas": "SUMAR - COMPROMÍS",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 44187,
+     "pct": 14.3,
+     "escanos": 0,
+     "faltan": 4727,
+     "quitaria": "Vox"
+    }
+   ],
+   "ajustado": {
+    "gana": "Sumar",
+    "pierde": "Vox",
+    "votos": 4727,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 48913,
+      "divisor": 1,
+      "cociente": 48913.0
+     },
+     "gana": {
+      "votos": 44187,
+      "divisor": 1,
+      "cociente": 44187.0,
+      "puesto": 6
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "13": {
+   "code": "13",
+   "slug": "ciudad-real",
+   "nombre": "Ciudad Real",
+   "nombreOficial": "Ciudad Real",
+   "escanos2026": 5,
+   "escanos2023": 5,
+   "mayoritaria": false,
+   "poblacion": 494407,
+   "habPorEscano": 98881,
+   "peso": 1.419,
+   "rankPeso": 20,
+   "rankMas": 33,
+   "difMedia": -30,
+   "censo": 391495,
+   "votantes": 286895,
+   "participacion": 73.3,
+   "validos": 282979,
+   "blanco": 2353,
+   "pctSinEscano": 7.0,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 114709,
+     "pct": 40.5,
+     "escanos": 2,
+     "faltan": 23429,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 100102,
+     "pct": 35.4,
+     "escanos": 2,
+     "faltan": 38036,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 46046,
+     "pct": 16.3,
+     "escanos": 1,
+     "faltan": 54057,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 17405,
+     "pct": 6.2,
+     "escanos": 0,
+     "faltan": 28642,
+     "quitaria": "Vox"
+    }
+   ],
+   "ajustado": {
+    "gana": "PP",
+    "pierde": "Vox",
+    "votos": 23429,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 46046,
+      "divisor": 1,
+      "cociente": 46046.0
+     },
+     "gana": {
+      "votos": 114709,
+      "divisor": 3,
+      "cociente": 38236.3,
+      "puesto": 6
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "14": {
+   "code": "14",
+   "slug": "cordoba",
+   "nombre": "Córdoba",
+   "nombreOficial": "Córdoba",
+   "escanos2026": 6,
+   "escanos2023": 6,
+   "mayoritaria": false,
+   "poblacion": 772153,
+   "habPorEscano": 128692,
+   "peso": 1.09,
+   "rankPeso": 30,
+   "rankMas": 23,
+   "difMedia": -8,
+   "censo": 645288,
+   "votantes": 455564,
+   "participacion": 70.6,
+   "validos": 448602,
+   "blanco": 4348,
+   "pctSinEscano": 1.4,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 169976,
+     "pct": 37.9,
+     "escanos": 2,
+     "faltan": 14806,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 144080,
+     "pct": 32.1,
+     "escanos": 2,
+     "faltan": 40702,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 62526,
+     "pct": 13.9,
+     "escanos": 1,
+     "faltan": 60662,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000011",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 61594,
+     "pct": 13.7,
+     "escanos": 1,
+     "faltan": 63458,
+     "quitaria": "Vox"
+    }
+   ],
+   "ajustado": {
+    "gana": "PP",
+    "pierde": "Sumar",
+    "votos": 14806,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 61594,
+      "divisor": 1,
+      "cociente": 61594.0
+     },
+     "gana": {
+      "votos": 169976,
+      "divisor": 3,
+      "cociente": 56658.7,
+      "puesto": 7
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "15": {
+   "code": "15",
+   "slug": "a-coruna",
+   "nombre": "A Coruña",
+   "nombreOficial": "A Coruña",
+   "escanos2026": 8,
+   "escanos2023": 8,
+   "mayoritaria": false,
+   "poblacion": 1135612,
+   "habPorEscano": 141952,
+   "peso": 0.989,
+   "rankPeso": 38,
+   "rankMas": 15,
+   "difMedia": 1,
+   "censo": 1085673,
+   "votantes": 683187,
+   "participacion": 62.9,
+   "validos": 677702,
+   "blanco": 5197,
+   "pctSinEscano": 5.8,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 292272,
+     "pct": 43.1,
+     "escanos": 4,
+     "faltan": 45993,
+     "quitaria": "BNG"
+    },
+    {
+     "codigo": "000064",
+     "siglas": "PSdeG-PSOE",
+     "nombre": "PSdeG",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 190897,
+     "pct": 28.2,
+     "escanos": 2,
+     "faltan": 12062,
+     "quitaria": "BNG"
+    },
+    {
+     "codigo": "000066",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 82618,
+     "pct": 12.2,
+     "escanos": 1,
+     "faltan": 52688,
+     "quitaria": "BNG"
+    },
+    {
+     "codigo": "000065",
+     "siglas": "B.N.G.",
+     "nombre": "BNG",
+     "art": "el",
+     "color": "#7FB3E0",
+     "votos": 67653,
+     "pct": 10.0,
+     "escanos": 1,
+     "faltan": 78484,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 34410,
+     "pct": 5.1,
+     "escanos": 0,
+     "faltan": 33244,
+     "quitaria": "BNG"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSdeG",
+    "pierde": "BNG",
+    "votos": 12062,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 67653,
+      "divisor": 1,
+      "cociente": 67653.0
+     },
+     "gana": {
+      "votos": 190897,
+      "divisor": 3,
+      "cociente": 63632.3,
+      "puesto": 9
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "16": {
+   "code": "16",
+   "slug": "cuenca",
+   "nombre": "Cuenca",
+   "nombreOficial": "Cuenca",
+   "escanos2026": 3,
+   "escanos2023": 3,
+   "mayoritaria": false,
+   "poblacion": 198216,
+   "habPorEscano": 66072,
+   "peso": 2.124,
+   "rankPeso": 7,
+   "rankMas": 46,
+   "difMedia": -53,
+   "censo": 152694,
+   "votantes": 115280,
+   "participacion": 75.5,
+   "validos": 113808,
+   "blanco": 969,
+   "pctSinEscano": 22.0,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 45255,
+     "pct": 39.8,
+     "escanos": 2,
+     "faltan": 82329,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 42528,
+     "pct": 37.4,
+     "escanos": 1,
+     "faltan": 2728,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 17700,
+     "pct": 15.6,
+     "escanos": 0,
+     "faltan": 4928,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 6325,
+     "pct": 5.6,
+     "escanos": 0,
+     "faltan": 16303,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "PP",
+    "votos": 2728,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 45255,
+      "divisor": 2,
+      "cociente": 22627.5
+     },
+     "gana": {
+      "votos": 42528,
+      "divisor": 2,
+      "cociente": 21264.0,
+      "puesto": 4
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "17": {
+   "code": "17",
+   "slug": "girona",
+   "nombre": "Girona",
+   "nombreOficial": "Girona",
+   "escanos2026": 6,
+   "escanos2023": 6,
+   "mayoritaria": false,
+   "poblacion": 832026,
+   "habPorEscano": 138671,
+   "peso": 1.012,
+   "rankPeso": 36,
+   "rankMas": 17,
+   "difMedia": -1,
+   "censo": 546370,
+   "votantes": 327159,
+   "participacion": 59.9,
+   "validos": 322988,
+   "blanco": 2981,
+   "pctSinEscano": 24.9,
+   "partidos": [
+    {
+     "codigo": "000047",
+     "siglas": "PSC",
+     "nombre": "PSC",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 93448,
+     "pct": 28.9,
+     "escanos": 2,
+     "faltan": 1429,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000057",
+     "siglas": "JxCAT - JUNTS",
+     "nombre": "Junts",
+     "art": "",
+     "color": "#00C3B2",
+     "votos": 63251,
+     "pct": 19.6,
+     "escanos": 2,
+     "faltan": 42781,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000050",
+     "siglas": "ERC",
+     "nombre": "ERC",
+     "art": "",
+     "color": "#FFB232",
+     "votos": 47531,
+     "pct": 14.7,
+     "escanos": 1,
+     "faltan": 15721,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000051",
+     "siglas": "SUMAR - ECP",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 35344,
+     "pct": 10.9,
+     "escanos": 1,
+     "faltan": 27908,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000056",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 31341,
+     "pct": 9.7,
+     "escanos": 0,
+     "faltan": 285,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 22706,
+     "pct": 7.0,
+     "escanos": 0,
+     "faltan": 8920,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000053",
+     "siglas": "CUP-PR",
+     "nombre": "CUP",
+     "art": "la",
+     "color": "#FFED00",
+     "votos": 18229,
+     "pct": 5.6,
+     "escanos": 0,
+     "faltan": 13397,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000058",
+     "siglas": "PACMA",
+     "nombre": "PACMA",
+     "art": "",
+     "color": "#8DB33A",
+     "votos": 3531,
+     "pct": 1.1,
+     "escanos": 0,
+     "faltan": 28095,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000055",
+     "siglas": "PDeCAT-E-CiU",
+     "nombre": "PDeCAT",
+     "art": "el",
+     "color": "#1F4E8C",
+     "votos": 3388,
+     "pct": 1.0,
+     "escanos": 0,
+     "faltan": 28238,
+     "quitaria": "Junts"
+    }
+   ],
+   "ajustado": {
+    "gana": "PP",
+    "pierde": "Junts",
+    "votos": 285,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 63251,
+      "divisor": 2,
+      "cociente": 31625.5
+     },
+     "gana": {
+      "votos": 31341,
+      "divisor": 1,
+      "cociente": 31341.0,
+      "puesto": 7
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "18": {
+   "code": "18",
+   "slug": "granada",
+   "nombre": "Granada",
+   "nombreOficial": "Granada",
+   "escanos2026": 7,
+   "escanos2023": 7,
+   "mayoritaria": false,
+   "poblacion": 942618,
+   "habPorEscano": 134660,
+   "peso": 1.042,
+   "rankPeso": 33,
+   "rankMas": 20,
+   "difMedia": -4,
+   "censo": 765478,
+   "votantes": 509486,
+   "participacion": 66.6,
+   "validos": 502845,
+   "blanco": 4057,
+   "pctSinEscano": 1.4,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 185996,
+     "pct": 37.0,
+     "escanos": 3,
+     "faltan": 48272,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 165862,
+     "pct": 33.0,
+     "escanos": 2,
+     "faltan": 9839,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 81080,
+     "pct": 16.1,
+     "escanos": 1,
+     "faltan": 36054,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 58567,
+     "pct": 11.6,
+     "escanos": 1,
+     "faltan": 65431,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "Sumar",
+    "votos": 9839,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 58567,
+      "divisor": 1,
+      "cociente": 58567.0
+     },
+     "gana": {
+      "votos": 165862,
+      "divisor": 3,
+      "cociente": 55287.3,
+      "puesto": 8
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "19": {
+   "code": "19",
+   "slug": "guadalajara",
+   "nombre": "Guadalajara",
+   "nombreOficial": "Guadalajara",
+   "escanos2026": 3,
+   "escanos2023": 3,
+   "mayoritaria": false,
+   "poblacion": 285390,
+   "habPorEscano": 95130,
+   "peso": 1.475,
+   "rankPeso": 17,
+   "rankMas": 36,
+   "difMedia": -32,
+   "censo": 196983,
+   "votantes": 142744,
+   "participacion": 72.5,
+   "validos": 140913,
+   "blanco": 1143,
+   "pctSinEscano": 10.6,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 51195,
+     "pct": 36.3,
+     "escanos": 1,
+     "faltan": 3057,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 46479,
+     "pct": 33.0,
+     "escanos": 1,
+     "faltan": 7773,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 27126,
+     "pct": 19.3,
+     "escanos": 1,
+     "faltan": 65832,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 12907,
+     "pct": 9.2,
+     "escanos": 0,
+     "faltan": 14220,
+     "quitaria": "Vox"
+    }
+   ],
+   "ajustado": {
+    "gana": "PP",
+    "pierde": "Vox",
+    "votos": 3057,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 27126,
+      "divisor": 1,
+      "cociente": 27126.0
+     },
+     "gana": {
+      "votos": 51195,
+      "divisor": 2,
+      "cociente": 25597.5,
+      "puesto": 4
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "20": {
+   "code": "20",
+   "slug": "gipuzkoa",
+   "nombre": "Gipuzkoa",
+   "nombreOficial": "Gipuzkoa",
+   "escanos2026": 6,
+   "escanos2023": 6,
+   "mayoritaria": false,
+   "poblacion": 733365,
+   "habPorEscano": 122228,
+   "peso": 1.148,
+   "rankPeso": 26,
+   "rankMas": 27,
+   "difMedia": -13,
+   "censo": 585873,
+   "votantes": 378965,
+   "participacion": 64.7,
+   "validos": 376621,
+   "blanco": 2005,
+   "pctSinEscano": 22.5,
+   "partidos": [
+    {
+     "codigo": "000071",
+     "siglas": "EH Bildu",
+     "nombre": "EH Bildu",
+     "art": "",
+     "color": "#B5CF18",
+     "votos": 117321,
+     "pct": 31.2,
+     "escanos": 2,
+     "faltan": 10218,
+     "quitaria": "PNV"
+    },
+    {
+     "codigo": "000076",
+     "siglas": "PSE-EE (PSOE)",
+     "nombre": "PSE-EE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 87709,
+     "pct": 23.3,
+     "escanos": 2,
+     "faltan": 39830,
+     "quitaria": "PNV"
+    },
+    {
+     "codigo": "000075",
+     "siglas": "EAJ-PNV",
+     "nombre": "PNV",
+     "art": "el",
+     "color": "#2E8B57",
+     "votos": 85026,
+     "pct": 22.6,
+     "escanos": 2,
+     "faltan": 46538,
+     "quitaria": "PSE-EE"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 40081,
+     "pct": 10.6,
+     "escanos": 0,
+     "faltan": 2433,
+     "quitaria": "PNV"
+    },
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 32721,
+     "pct": 8.7,
+     "escanos": 0,
+     "faltan": 9793,
+     "quitaria": "PNV"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 7877,
+     "pct": 2.1,
+     "escanos": 0,
+     "faltan": 34637,
+     "quitaria": "PNV"
+    }
+   ],
+   "ajustado": {
+    "gana": "Sumar",
+    "pierde": "PNV",
+    "votos": 2433,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 85026,
+      "divisor": 2,
+      "cociente": 42513.0
+     },
+     "gana": {
+      "votos": 40081,
+      "divisor": 1,
+      "cociente": 40081.0,
+      "puesto": 7
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "21": {
+   "code": "21",
+   "slug": "huelva",
+   "nombre": "Huelva",
+   "nombreOficial": "Huelva",
+   "escanos2026": 5,
+   "escanos2023": 5,
+   "mayoritaria": false,
+   "poblacion": 535703,
+   "habPorEscano": 107141,
+   "peso": 1.31,
+   "rankPeso": 22,
+   "rankMas": 31,
+   "difMedia": -24,
+   "censo": 402504,
+   "votantes": 260861,
+   "participacion": 64.8,
+   "validos": 256804,
+   "blanco": 2410,
+   "pctSinEscano": 12.0,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 93565,
+     "pct": 36.4,
+     "escanos": 2,
+     "faltan": 19151,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 92326,
+     "pct": 36.0,
+     "escanos": 2,
+     "faltan": 20390,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 37572,
+     "pct": 14.6,
+     "escanos": 1,
+     "faltan": 54755,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000011",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 26752,
+     "pct": 10.4,
+     "escanos": 0,
+     "faltan": 10821,
+     "quitaria": "Vox"
+    }
+   ],
+   "ajustado": {
+    "gana": "Sumar",
+    "pierde": "Vox",
+    "votos": 10821,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 37572,
+      "divisor": 1,
+      "cociente": 37572.0
+     },
+     "gana": {
+      "votos": 26752,
+      "divisor": 1,
+      "cociente": 26752.0,
+      "puesto": 8
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "22": {
+   "code": "22",
+   "slug": "huesca",
+   "nombre": "Huesca",
+   "nombreOficial": "Huesca",
+   "escanos2026": 3,
+   "escanos2023": 3,
+   "mayoritaria": false,
+   "poblacion": 230624,
+   "habPorEscano": 76875,
+   "peso": 1.825,
+   "rankPeso": 9,
+   "rankMas": 44,
+   "difMedia": -45,
+   "censo": 173391,
+   "votantes": 121148,
+   "participacion": 69.9,
+   "validos": 119895,
+   "blanco": 1217,
+   "pctSinEscano": 27.2,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 45783,
+     "pct": 38.2,
+     "escanos": 2,
+     "faltan": 75138,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 40307,
+     "pct": 33.6,
+     "escanos": 1,
+     "faltan": 5477,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 15155,
+     "pct": 12.6,
+     "escanos": 0,
+     "faltan": 7737,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000021",
+     "siglas": "SUMAR ARAGÓN",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 13774,
+     "pct": 11.5,
+     "escanos": 0,
+     "faltan": 9118,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000023",
+     "siglas": "EXISTE",
+     "nombre": "Teruel Existe",
+     "art": "",
+     "color": "#2F9E6E",
+     "votos": 1312,
+     "pct": 1.1,
+     "escanos": 0,
+     "faltan": 21580,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "PP",
+    "votos": 5477,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 45783,
+      "divisor": 2,
+      "cociente": 22891.5
+     },
+     "gana": {
+      "votos": 40307,
+      "divisor": 2,
+      "cociente": 20153.5,
+      "puesto": 4
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "23": {
+   "code": "23",
+   "slug": "jaen",
+   "nombre": "Jaén",
+   "nombreOficial": "Jaén",
+   "escanos2026": 5,
+   "escanos2023": 5,
+   "mayoritaria": false,
+   "poblacion": 617604,
+   "habPorEscano": 123521,
+   "peso": 1.136,
+   "rankPeso": 27,
+   "rankMas": 26,
+   "difMedia": -12,
+   "censo": 518371,
+   "votantes": 373657,
+   "participacion": 72.1,
+   "validos": 368731,
+   "blanco": 2497,
+   "pctSinEscano": 11.0,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 137617,
+     "pct": 37.3,
+     "escanos": 2,
+     "faltan": 25583,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 133819,
+     "pct": 36.3,
+     "escanos": 2,
+     "faltan": 29381,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 54400,
+     "pct": 14.8,
+     "escanos": 1,
+     "faltan": 79420,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000011",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 29461,
+     "pct": 8.0,
+     "escanos": 0,
+     "faltan": 24940,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000018",
+     "siglas": "JM+",
+     "nombre": "JM+",
+     "art": "",
+     "color": null,
+     "votos": 8293,
+     "pct": 2.2,
+     "escanos": 0,
+     "faltan": 46108,
+     "quitaria": "Vox"
+    }
+   ],
+   "ajustado": {
+    "gana": "Sumar",
+    "pierde": "Vox",
+    "votos": 24940,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 54400,
+      "divisor": 1,
+      "cociente": 54400.0
+     },
+     "gana": {
+      "votos": 29461,
+      "divisor": 1,
+      "cociente": 29461.0,
+      "puesto": 10
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "24": {
+   "code": "24",
+   "slug": "leon",
+   "nombre": "León",
+   "nombreOficial": "León",
+   "escanos2026": 4,
+   "escanos2023": 4,
+   "mayoritaria": false,
+   "poblacion": 446771,
+   "habPorEscano": 111693,
+   "peso": 1.256,
+   "rankPeso": 23,
+   "rankMas": 30,
+   "difMedia": -20,
+   "censo": 422917,
+   "votantes": 277726,
+   "participacion": 65.7,
+   "validos": 275240,
+   "blanco": 1577,
+   "pctSinEscano": 28.9,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 101605,
+     "pct": 36.9,
+     "escanos": 2,
+     "faltan": 37262,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 92578,
+     "pct": 33.6,
+     "escanos": 2,
+     "faltan": 59830,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 35451,
+     "pct": 12.9,
+     "escanos": 0,
+     "faltan": 10839,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000039",
+     "siglas": "U.P.L.",
+     "nombre": "UPL",
+     "art": "",
+     "color": "#B5121B",
+     "votos": 22675,
+     "pct": 8.2,
+     "escanos": 0,
+     "faltan": 23615,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 18577,
+     "pct": 6.7,
+     "escanos": 0,
+     "faltan": 27713,
+     "quitaria": "PSOE"
+    }
+   ],
+   "ajustado": {
+    "gana": "Vox",
+    "pierde": "PSOE",
+    "votos": 10839,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 92578,
+      "divisor": 2,
+      "cociente": 46289.0
+     },
+     "gana": {
+      "votos": 35451,
+      "divisor": 1,
+      "cociente": 35451.0,
+      "puesto": 5
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "25": {
+   "code": "25",
+   "slug": "lleida",
+   "nombre": "Lleida",
+   "nombreOficial": "Lleida",
+   "escanos2026": 4,
+   "escanos2023": 4,
+   "mayoritaria": false,
+   "poblacion": 456106,
+   "habPorEscano": 114027,
+   "peso": 1.231,
+   "rankPeso": 24,
+   "rankMas": 29,
+   "difMedia": -19,
+   "censo": 317225,
+   "votantes": 186929,
+   "participacion": 58.9,
+   "validos": 184539,
+   "blanco": 2059,
+   "pctSinEscano": 32.8,
+   "partidos": [
+    {
+     "codigo": "000047",
+     "siglas": "PSC",
+     "nombre": "PSC",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 54414,
+     "pct": 29.5,
+     "escanos": 2,
+     "faltan": 45270,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000050",
+     "siglas": "ERC",
+     "nombre": "ERC",
+     "art": "",
+     "color": "#FFB232",
+     "votos": 34331,
+     "pct": 18.6,
+     "escanos": 1,
+     "faltan": 20084,
+     "quitaria": "PSC"
+    },
+    {
+     "codigo": "000057",
+     "siglas": "JxCAT - JUNTS",
+     "nombre": "Junts",
+     "art": "",
+     "color": "#00C3B2",
+     "votos": 33228,
+     "pct": 18.0,
+     "escanos": 1,
+     "faltan": 21187,
+     "quitaria": "PSC"
+    },
+    {
+     "codigo": "000048",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 23699,
+     "pct": 12.8,
+     "escanos": 0,
+     "faltan": 3509,
+     "quitaria": "PSC"
+    },
+    {
+     "codigo": "000051",
+     "siglas": "SUMAR - ECP",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 14561,
+     "pct": 7.9,
+     "escanos": 0,
+     "faltan": 12647,
+     "quitaria": "PSC"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 12560,
+     "pct": 6.8,
+     "escanos": 0,
+     "faltan": 14648,
+     "quitaria": "PSC"
+    },
+    {
+     "codigo": "000053",
+     "siglas": "CUP-PR",
+     "nombre": "CUP",
+     "art": "la",
+     "color": "#FFED00",
+     "votos": 5449,
+     "pct": 3.0,
+     "escanos": 0,
+     "faltan": 21759,
+     "quitaria": "PSC"
+    },
+    {
+     "codigo": "000055",
+     "siglas": "PDeCAT-E-CiU",
+     "nombre": "PDeCAT",
+     "art": "el",
+     "color": "#1F4E8C",
+     "votos": 1865,
+     "pct": 1.0,
+     "escanos": 0,
+     "faltan": 25343,
+     "quitaria": "PSC"
+    }
+   ],
+   "ajustado": {
+    "gana": "PP",
+    "pierde": "PSC",
+    "votos": 3509,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 54414,
+      "divisor": 2,
+      "cociente": 27207.0
+     },
+     "gana": {
+      "votos": 23699,
+      "divisor": 1,
+      "cociente": 23699.0,
+      "puesto": 5
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "26": {
+   "code": "26",
+   "slug": "la-rioja",
+   "nombre": "La Rioja",
+   "nombreOficial": "La Rioja",
+   "escanos2026": 4,
+   "escanos2023": 4,
+   "mayoritaria": false,
+   "poblacion": 327286,
+   "habPorEscano": 81822,
+   "peso": 1.715,
+   "rankPeso": 11,
+   "rankMas": 42,
+   "difMedia": -42,
+   "censo": 252091,
+   "votantes": 176945,
+   "participacion": 70.2,
+   "validos": 174663,
+   "blanco": 1608,
+   "pctSinEscano": 17.8,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 79715,
+     "pct": 45.6,
+     "escanos": 2,
+     "faltan": 13768,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 62322,
+     "pct": 35.7,
+     "escanos": 2,
+     "faltan": 57251,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 17056,
+     "pct": 9.8,
+     "escanos": 0,
+     "faltan": 14106,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 11470,
+     "pct": 6.6,
+     "escanos": 0,
+     "faltan": 19692,
+     "quitaria": "PSOE"
+    }
+   ],
+   "ajustado": {
+    "gana": "PP",
+    "pierde": "PSOE",
+    "votos": 13768,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 62322,
+      "divisor": 2,
+      "cociente": 31161.0
+     },
+     "gana": {
+      "votos": 79715,
+      "divisor": 3,
+      "cociente": 26571.7,
+      "puesto": 5
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "27": {
+   "code": "27",
+   "slug": "lugo",
+   "nombre": "Lugo",
+   "nombreOficial": "Lugo",
+   "escanos2026": 4,
+   "escanos2023": 4,
+   "mayoritaria": false,
+   "poblacion": 325759,
+   "habPorEscano": 81440,
+   "peso": 1.723,
+   "rankPeso": 10,
+   "rankMas": 43,
+   "difMedia": -42,
+   "censo": 337755,
+   "votantes": 200709,
+   "participacion": 59.4,
+   "validos": 198566,
+   "blanco": 1251,
+   "pctSinEscano": 18.8,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 99769,
+     "pct": 50.2,
+     "escanos": 3,
+     "faltan": 140883,
+     "quitaria": "PSdeG"
+    },
+    {
+     "codigo": "000064",
+     "siglas": "PSdeG-PSOE",
+     "nombre": "PSdeG",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 60163,
+     "pct": 30.3,
+     "escanos": 1,
+     "faltan": 6350,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000065",
+     "siglas": "B.N.G.",
+     "nombre": "BNG",
+     "art": "el",
+     "color": "#7FB3E0",
+     "votos": 17197,
+     "pct": 8.7,
+     "escanos": 0,
+     "faltan": 16060,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000066",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 10287,
+     "pct": 5.2,
+     "escanos": 0,
+     "faltan": 22970,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 8643,
+     "pct": 4.4,
+     "escanos": 0,
+     "faltan": 24614,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSdeG",
+    "pierde": "PP",
+    "votos": 6350,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 99769,
+      "divisor": 3,
+      "cociente": 33256.3
+     },
+     "gana": {
+      "votos": 60163,
+      "divisor": 2,
+      "cociente": 30081.5,
+      "puesto": 5
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "28": {
+   "code": "28",
+   "slug": "madrid",
+   "nombre": "Madrid",
+   "nombreOficial": "Madrid",
+   "escanos2026": 38,
+   "escanos2023": 37,
+   "mayoritaria": false,
+   "poblacion": 7137031,
+   "habPorEscano": 187817,
+   "peso": 0.747,
+   "rankPeso": 52,
+   "rankMas": 1,
+   "difMedia": 34,
+   "censo": 5224561,
+   "votantes": 3639500,
+   "participacion": 69.7,
+   "validos": 3608673,
+   "blanco": 28960,
+   "pctSinEscano": 1.3,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 1463183,
+     "pct": 40.5,
+     "escanos": 16,
+     "faltan": 117194,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 1004599,
+     "pct": 27.8,
+     "escanos": 10,
+     "faltan": 1340,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 557780,
+     "pct": 15.5,
+     "escanos": 6,
+     "faltan": 82363,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 506164,
+     "pct": 14.0,
+     "escanos": 5,
+     "faltan": 42530,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "PP",
+    "votos": 1340,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 1463183,
+      "divisor": 16,
+      "cociente": 91448.9
+     },
+     "gana": {
+      "votos": 1004599,
+      "divisor": 11,
+      "cociente": 91327.2,
+      "puesto": 38
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": [
+    {
+     "partido": "PSOE",
+     "antes": 10,
+     "despues": 11
+    }
+   ]
+  },
+  "29": {
+   "code": "29",
+   "slug": "malaga",
+   "nombre": "Málaga",
+   "nombreOficial": "Málaga",
+   "escanos2026": 11,
+   "escanos2023": 11,
+   "mayoritaria": false,
+   "poblacion": 1791092,
+   "habPorEscano": 162827,
+   "peso": 0.862,
+   "rankPeso": 47,
+   "rankMas": 6,
+   "difMedia": 16,
+   "censo": 1239846,
+   "votantes": 798557,
+   "participacion": 64.4,
+   "validos": 788338,
+   "blanco": 7509,
+   "pctSinEscano": 1.7,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 302000,
+     "pct": 38.3,
+     "escanos": 5,
+     "faltan": 87274,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 239172,
+     "pct": 30.3,
+     "escanos": 3,
+     "faltan": 2429,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 129758,
+     "pct": 16.5,
+     "escanos": 2,
+     "faltan": 51443,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000011",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 96652,
+     "pct": 12.3,
+     "escanos": 1,
+     "faltan": 24149,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000007",
+     "siglas": "PACMA",
+     "nombre": "PACMA",
+     "art": "",
+     "color": "#8DB33A",
+     "votos": 8487,
+     "pct": 1.1,
+     "escanos": 0,
+     "faltan": 51914,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "PP",
+    "votos": 2429,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 302000,
+      "divisor": 5,
+      "cociente": 60400.0
+     },
+     "gana": {
+      "votos": 239172,
+      "divisor": 4,
+      "cociente": 59793.0,
+      "puesto": 12
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "30": {
+   "code": "30",
+   "slug": "murcia",
+   "nombre": "Murcia",
+   "nombreOficial": "Murcia",
+   "escanos2026": 10,
+   "escanos2023": 10,
+   "mayoritaria": false,
+   "poblacion": 1589138,
+   "habPorEscano": 158914,
+   "peso": 0.883,
+   "rankPeso": 46,
+   "rankMas": 7,
+   "difMedia": 13,
+   "censo": 1099703,
+   "votantes": 755255,
+   "participacion": 68.7,
+   "validos": 747797,
+   "blanco": 5034,
+   "pctSinEscano": 1.5,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 307972,
+     "pct": 41.2,
+     "escanos": 4,
+     "faltan": 7378,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 189210,
+     "pct": 25.3,
+     "escanos": 3,
+     "faltan": 97102,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 163124,
+     "pct": 21.8,
+     "escanos": 2,
+     "faltan": 26087,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 71578,
+     "pct": 9.6,
+     "escanos": 1,
+     "faltan": 54563,
+     "quitaria": "PSOE"
+    }
+   ],
+   "ajustado": {
+    "gana": "PP",
+    "pierde": "PSOE",
+    "votos": 7378,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 189210,
+      "divisor": 3,
+      "cociente": 63070.0
+     },
+     "gana": {
+      "votos": 307972,
+      "divisor": 5,
+      "cociente": 61594.4,
+      "puesto": 11
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "31": {
+   "code": "31",
+   "slug": "navarra",
+   "nombre": "Navarra",
+   "nombreOficial": "Navarra",
+   "escanos2026": 5,
+   "escanos2023": 5,
+   "mayoritaria": false,
+   "poblacion": 683500,
+   "habPorEscano": 136700,
+   "peso": 1.027,
+   "rankPeso": 35,
+   "rankMas": 18,
+   "difMedia": -3,
+   "censo": 519918,
+   "votantes": 345095,
+   "participacion": 66.4,
+   "validos": 341844,
+   "blanco": 2890,
+   "pctSinEscano": 22.6,
+   "partidos": [
+    {
+     "codigo": "000072",
+     "siglas": "PSN-PSOE",
+     "nombre": "PSN",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 93553,
+     "pct": 27.4,
+     "escanos": 2,
+     "faltan": 63011,
+     "quitaria": "UPN"
+    },
+    {
+     "codigo": "000071",
+     "siglas": "EH Bildu",
+     "nombre": "EH Bildu",
+     "art": "",
+     "color": "#B5CF18",
+     "votos": 58954,
+     "pct": 17.2,
+     "escanos": 1,
+     "faltan": 34600,
+     "quitaria": "PSN"
+    },
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 57134,
+     "pct": 16.7,
+     "escanos": 1,
+     "faltan": 36420,
+     "quitaria": "PSN"
+    },
+    {
+     "codigo": "000074",
+     "siglas": "U.P.N.",
+     "nombre": "UPN",
+     "art": "",
+     "color": "#2A52BE",
+     "votos": 52188,
+     "pct": 15.3,
+     "escanos": 1,
+     "faltan": 41366,
+     "quitaria": "PSN"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 43922,
+     "pct": 12.8,
+     "escanos": 0,
+     "faltan": 2855,
+     "quitaria": "PSN"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 19491,
+     "pct": 5.7,
+     "escanos": 0,
+     "faltan": 27286,
+     "quitaria": "PSN"
+    },
+    {
+     "codigo": "000073",
+     "siglas": "GBAI",
+     "nombre": "GBAI",
+     "art": "",
+     "color": "#E6007E",
+     "votos": 9938,
+     "pct": 2.9,
+     "escanos": 0,
+     "faltan": 36839,
+     "quitaria": "PSN"
+    }
+   ],
+   "ajustado": {
+    "gana": "Sumar",
+    "pierde": "PSN",
+    "votos": 2855,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 93553,
+      "divisor": 2,
+      "cociente": 46776.5
+     },
+     "gana": {
+      "votos": 43922,
+      "divisor": 1,
+      "cociente": 43922.0,
+      "puesto": 6
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "32": {
+   "code": "32",
+   "slug": "ourense",
+   "nombre": "Ourense",
+   "nombreOficial": "Ourense",
+   "escanos2026": 4,
+   "escanos2023": 4,
+   "mayoritaria": false,
+   "poblacion": 305573,
+   "habPorEscano": 76393,
+   "peso": 1.837,
+   "rankPeso": 8,
+   "rankMas": 45,
+   "difMedia": -46,
+   "censo": 355765,
+   "votantes": 188065,
+   "participacion": 52.9,
+   "validos": 186271,
+   "blanco": 1109,
+   "pctSinEscano": 19.3,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 93182,
+     "pct": 50.0,
+     "escanos": 3,
+     "faltan": 130958,
+     "quitaria": "PSdeG"
+    },
+    {
+     "codigo": "000064",
+     "siglas": "PSdeG-PSOE",
+     "nombre": "PSdeG",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 56035,
+     "pct": 30.1,
+     "escanos": 1,
+     "faltan": 6087,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000065",
+     "siglas": "B.N.G.",
+     "nombre": "BNG",
+     "art": "el",
+     "color": "#7FB3E0",
+     "votos": 15317,
+     "pct": 8.2,
+     "escanos": 0,
+     "faltan": 15744,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000066",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 10171,
+     "pct": 5.5,
+     "escanos": 0,
+     "faltan": 20890,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 9080,
+     "pct": 4.9,
+     "escanos": 0,
+     "faltan": 21981,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSdeG",
+    "pierde": "PP",
+    "votos": 6087,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 93182,
+      "divisor": 3,
+      "cociente": 31060.7
+     },
+     "gana": {
+      "votos": 56035,
+      "divisor": 2,
+      "cociente": 28017.5,
+      "puesto": 5
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "33": {
+   "code": "33",
+   "slug": "asturias",
+   "nombre": "Asturias",
+   "nombreOficial": "Asturias",
+   "escanos2026": 7,
+   "escanos2023": 7,
+   "mayoritaria": false,
+   "poblacion": 1013529,
+   "habPorEscano": 144790,
+   "peso": 0.969,
+   "rankPeso": 39,
+   "rankMas": 14,
+   "difMedia": 3,
+   "censo": 959023,
+   "votantes": 603183,
+   "participacion": 62.9,
+   "validos": 597032,
+   "blanco": 6079,
+   "pctSinEscano": 1.7,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 212816,
+     "pct": 35.6,
+     "escanos": 3,
+     "faltan": 85468,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 205049,
+     "pct": 34.3,
+     "escanos": 2,
+     "faltan": 7768,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 88630,
+     "pct": 14.8,
+     "escanos": 1,
+     "faltan": 53248,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 74571,
+     "pct": 12.5,
+     "escanos": 1,
+     "faltan": 67307,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "PP",
+    "votos": 7768,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 212816,
+      "divisor": 3,
+      "cociente": 70938.7
+     },
+     "gana": {
+      "votos": 205049,
+      "divisor": 3,
+      "cociente": 68349.7,
+      "puesto": 8
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "34": {
+   "code": "34",
+   "slug": "palencia",
+   "nombre": "Palencia",
+   "nombreOficial": "Palencia",
+   "escanos2026": 3,
+   "escanos2023": 3,
+   "mayoritaria": false,
+   "poblacion": 158687,
+   "habPorEscano": 52896,
+   "peso": 2.653,
+   "rankPeso": 4,
+   "rankMas": 49,
+   "difMedia": -62,
+   "censo": 137642,
+   "votantes": 98079,
+   "participacion": 71.3,
+   "validos": 96962,
+   "blanco": 833,
+   "pctSinEscano": 22.5,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 40709,
+     "pct": 42.0,
+     "escanos": 2,
+     "faltan": 60130,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 33613,
+     "pct": 34.7,
+     "escanos": 1,
+     "faltan": 7097,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 12504,
+     "pct": 12.9,
+     "escanos": 0,
+     "faltan": 7851,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 5877,
+     "pct": 6.1,
+     "escanos": 0,
+     "faltan": 14478,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000040",
+     "siglas": "VP",
+     "nombre": "VP",
+     "art": "",
+     "color": null,
+     "votos": 1917,
+     "pct": 2.0,
+     "escanos": 0,
+     "faltan": 18438,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "PP",
+    "votos": 7097,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 40709,
+      "divisor": 2,
+      "cociente": 20354.5
+     },
+     "gana": {
+      "votos": 33613,
+      "divisor": 2,
+      "cociente": 16806.5,
+      "puesto": 4
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "35": {
+   "code": "35",
+   "slug": "las-palmas",
+   "nombre": "Las Palmas",
+   "nombreOficial": "Las Palmas",
+   "escanos2026": 8,
+   "escanos2023": 8,
+   "mayoritaria": false,
+   "poblacion": 1167555,
+   "habPorEscano": 145944,
+   "peso": 0.962,
+   "rankPeso": 42,
+   "rankMas": 11,
+   "difMedia": 4,
+   "censo": 898882,
+   "votantes": 534912,
+   "participacion": 59.5,
+   "validos": 529337,
+   "blanco": 3062,
+   "pctSinEscano": 15.5,
+   "partidos": [
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 175671,
+     "pct": 33.2,
+     "escanos": 3,
+     "faltan": 6805,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 136857,
+     "pct": 25.9,
+     "escanos": 3,
+     "faltan": 80619,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 77343,
+     "pct": 14.6,
+     "escanos": 1,
+     "faltan": 13896,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000033",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 54369,
+     "pct": 10.3,
+     "escanos": 1,
+     "faltan": 36870,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000032",
+     "siglas": "NC-bc",
+     "nombre": "NC-BC",
+     "art": "",
+     "color": "#7AA6C2",
+     "votos": 42430,
+     "pct": 8.0,
+     "escanos": 0,
+     "faltan": 3190,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000031",
+     "siglas": "CCa",
+     "nombre": "CC",
+     "art": "",
+     "color": "#F2C200",
+     "votos": 33558,
+     "pct": 6.3,
+     "escanos": 0,
+     "faltan": 12062,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "NC-BC",
+    "pierde": "PP",
+    "votos": 3190,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 136857,
+      "divisor": 3,
+      "cociente": 45619.0
+     },
+     "gana": {
+      "votos": 42430,
+      "divisor": 1,
+      "cociente": 42430.0,
+      "puesto": 10
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "36": {
+   "code": "36",
+   "slug": "pontevedra",
+   "nombre": "Pontevedra",
+   "nombreOficial": "Pontevedra",
+   "escanos2026": 7,
+   "escanos2023": 7,
+   "mayoritaria": false,
+   "poblacion": 946225,
+   "habPorEscano": 135175,
+   "peso": 1.038,
+   "rankPeso": 34,
+   "rankMas": 19,
+   "difMedia": -4,
+   "censo": 909434,
+   "votantes": 579125,
+   "participacion": 63.7,
+   "validos": 573124,
+   "blanco": 3865,
+   "pctSinEscano": 15.0,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 227658,
+     "pct": 39.7,
+     "escanos": 3,
+     "faltan": 11992,
+     "quitaria": "PSdeG"
+    },
+    {
+     "codigo": "000064",
+     "siglas": "PSdeG-PSOE",
+     "nombre": "PSdeG",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 179737,
+     "pct": 31.4,
+     "escanos": 3,
+     "faltan": 122723,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000066",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 75615,
+     "pct": 13.2,
+     "escanos": 1,
+     "faltan": 44210,
+     "quitaria": "PSdeG"
+    },
+    {
+     "codigo": "000065",
+     "siglas": "B.N.G.",
+     "nombre": "BNG",
+     "art": "el",
+     "color": "#7FB3E0",
+     "votos": 53828,
+     "pct": 9.4,
+     "escanos": 0,
+     "faltan": 6085,
+     "quitaria": "PSdeG"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 27539,
+     "pct": 4.8,
+     "escanos": 0,
+     "faltan": 32374,
+     "quitaria": "PSdeG"
+    }
+   ],
+   "ajustado": {
+    "gana": "BNG",
+    "pierde": "PSdeG",
+    "votos": 6085,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 179737,
+      "divisor": 3,
+      "cociente": 59912.3
+     },
+     "gana": {
+      "votos": 53828,
+      "divisor": 1,
+      "cociente": 53828.0,
+      "puesto": 9
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "37": {
+   "code": "37",
+   "slug": "salamanca",
+   "nombre": "Salamanca",
+   "nombreOficial": "Salamanca",
+   "escanos2026": 4,
+   "escanos2023": 4,
+   "mayoritaria": false,
+   "poblacion": 328779,
+   "habPorEscano": 82195,
+   "peso": 1.707,
+   "rankPeso": 12,
+   "rankMas": 41,
+   "difMedia": -41,
+   "censo": 300506,
+   "votantes": 201419,
+   "participacion": 67.0,
+   "validos": 199110,
+   "blanco": 1649,
+   "pctSinEscano": 21.8,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 93318,
+     "pct": 46.9,
+     "escanos": 3,
+     "faltan": 149554,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 60718,
+     "pct": 30.5,
+     "escanos": 1,
+     "faltan": 1495,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 29203,
+     "pct": 14.7,
+     "escanos": 0,
+     "faltan": 1904,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 11012,
+     "pct": 5.5,
+     "escanos": 0,
+     "faltan": 20095,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "PP",
+    "votos": 1495,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 93318,
+      "divisor": 3,
+      "cociente": 31106.0
+     },
+     "gana": {
+      "votos": 60718,
+      "divisor": 2,
+      "cociente": 30359.0,
+      "puesto": 5
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "38": {
+   "code": "38",
+   "slug": "santa-cruz-de-tenerife",
+   "nombre": "Santa Cruz de Tenerife",
+   "nombreOficial": "Santa Cruz de Tenerife",
+   "escanos2026": 7,
+   "escanos2023": 7,
+   "mayoritaria": false,
+   "poblacion": 1082421,
+   "habPorEscano": 154632,
+   "peso": 0.907,
+   "rankPeso": 43,
+   "rankMas": 10,
+   "difMedia": 10,
+   "censo": 881217,
+   "votantes": 500777,
+   "participacion": 56.8,
+   "validos": 494373,
+   "blanco": 5088,
+   "pctSinEscano": 13.4,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 174770,
+     "pct": 35.4,
+     "escanos": 3,
+     "faltan": 46017,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 165590,
+     "pct": 33.5,
+     "escanos": 3,
+     "faltan": 67437,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000031",
+     "siglas": "CCa",
+     "nombre": "CC",
+     "art": "",
+     "color": "#F2C200",
+     "votos": 82805,
+     "pct": 16.7,
+     "escanos": 1,
+     "faltan": 27589,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000033",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 53632,
+     "pct": 10.8,
+     "escanos": 0,
+     "faltan": 1565,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000007",
+     "siglas": "PACMA",
+     "nombre": "PACMA",
+     "art": "",
+     "color": "#8DB33A",
+     "votos": 6147,
+     "pct": 1.2,
+     "escanos": 0,
+     "faltan": 49050,
+     "quitaria": "PSOE"
+    }
+   ],
+   "ajustado": {
+    "gana": "Sumar",
+    "pierde": "PSOE",
+    "votos": 1565,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 165590,
+      "divisor": 3,
+      "cociente": 55196.7
+     },
+     "gana": {
+      "votos": 53632,
+      "divisor": 1,
+      "cociente": 53632.0,
+      "puesto": 8
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "39": {
+   "code": "39",
+   "slug": "cantabria",
+   "nombre": "Cantabria",
+   "nombreOficial": "Cantabria",
+   "escanos2026": 5,
+   "escanos2023": 5,
+   "mayoritaria": false,
+   "poblacion": 593964,
+   "habPorEscano": 118793,
+   "peso": 1.181,
+   "rankPeso": 25,
+   "rankMas": 28,
+   "difMedia": -15,
+   "censo": 507818,
+   "votantes": 355145,
+   "participacion": 69.9,
+   "validos": 350150,
+   "blanco": 3262,
+   "pctSinEscano": 9.6,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 147326,
+     "pct": 42.1,
+     "escanos": 2,
+     "faltan": 403,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 116596,
+     "pct": 33.3,
+     "escanos": 2,
+     "faltan": 31133,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 49243,
+     "pct": 14.1,
+     "escanos": 1,
+     "faltan": 67354,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 29713,
+     "pct": 8.5,
+     "escanos": 0,
+     "faltan": 19531,
+     "quitaria": "Vox"
+    }
+   ],
+   "ajustado": {
+    "gana": "PP",
+    "pierde": "Vox",
+    "votos": 403,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 49243,
+      "divisor": 1,
+      "cociente": 49243.0
+     },
+     "gana": {
+      "votos": 147326,
+      "divisor": 3,
+      "cociente": 49108.7,
+      "puesto": 6
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "40": {
+   "code": "40",
+   "slug": "segovia",
+   "nombre": "Segovia",
+   "nombreOficial": "Segovia",
+   "escanos2026": 3,
+   "escanos2023": 3,
+   "mayoritaria": false,
+   "poblacion": 158470,
+   "habPorEscano": 52823,
+   "peso": 2.657,
+   "rankPeso": 3,
+   "rankMas": 50,
+   "difMedia": -62,
+   "censo": 119454,
+   "votantes": 89945,
+   "participacion": 75.3,
+   "validos": 88613,
+   "blanco": 875,
+   "pctSinEscano": 23.4,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 39894,
+     "pct": 45.0,
+     "escanos": 2,
+     "faltan": 41445,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 27113,
+     "pct": 30.6,
+     "escanos": 1,
+     "faltan": 12782,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 12510,
+     "pct": 14.1,
+     "escanos": 0,
+     "faltan": 7438,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 7137,
+     "pct": 8.1,
+     "escanos": 0,
+     "faltan": 12811,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "Vox",
+    "pierde": "PP",
+    "votos": 7438,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 39894,
+      "divisor": 2,
+      "cociente": 19947.0
+     },
+     "gana": {
+      "votos": 12510,
+      "divisor": 1,
+      "cociente": 12510.0,
+      "puesto": 6
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "41": {
+   "code": "41",
+   "slug": "sevilla",
+   "nombre": "Sevilla",
+   "nombreOficial": "Sevilla",
+   "escanos2026": 12,
+   "escanos2023": 12,
+   "mayoritaria": false,
+   "poblacion": 1976624,
+   "habPorEscano": 164719,
+   "peso": 0.852,
+   "rankPeso": 48,
+   "rankMas": 5,
+   "difMedia": 17,
+   "censo": 1564082,
+   "votantes": 1075133,
+   "participacion": 68.7,
+   "validos": 1059358,
+   "blanco": 10951,
+   "pctSinEscano": 1.6,
+   "partidos": [
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 387760,
+     "pct": 36.6,
+     "escanos": 5,
+     "faltan": 58475,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 353663,
+     "pct": 33.4,
+     "escanos": 4,
+     "faltan": 18200,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000011",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 148745,
+     "pct": 14.0,
+     "escanos": 2,
+     "faltan": 83912,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 141087,
+     "pct": 13.3,
+     "escanos": 1,
+     "faltan": 7659,
+     "quitaria": "Sumar"
+    }
+   ],
+   "ajustado": {
+    "gana": "Vox",
+    "pierde": "Sumar",
+    "votos": 7659,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 148745,
+      "divisor": 2,
+      "cociente": 74372.5
+     },
+     "gana": {
+      "votos": 141087,
+      "divisor": 2,
+      "cociente": 70543.5,
+      "puesto": 14
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "42": {
+   "code": "42",
+   "slug": "soria",
+   "nombre": "Soria",
+   "nombreOficial": "Soria",
+   "escanos2026": 2,
+   "escanos2023": 2,
+   "mayoritaria": false,
+   "poblacion": 90234,
+   "habPorEscano": 45117,
+   "peso": 3.11,
+   "rankPeso": 1,
+   "rankMas": 52,
+   "difMedia": -68,
+   "censo": 75768,
+   "votantes": 51157,
+   "participacion": 67.5,
+   "validos": 50769,
+   "blanco": 285,
+   "pctSinEscano": 32.7,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 18895,
+     "pct": 37.2,
+     "escanos": 1,
+     "faltan": 11037,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 14966,
+     "pct": 29.5,
+     "escanos": 1,
+     "faltan": 22824,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000043",
+     "siglas": "SY",
+     "nombre": "Soria ¡Ya!",
+     "art": "",
+     "color": "#4C9A2A",
+     "votos": 9697,
+     "pct": 19.1,
+     "escanos": 0,
+     "faltan": 5270,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 4978,
+     "pct": 9.8,
+     "escanos": 0,
+     "faltan": 9989,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 1711,
+     "pct": 3.4,
+     "escanos": 0,
+     "faltan": 13256,
+     "quitaria": "PSOE"
+    }
+   ],
+   "ajustado": {
+    "gana": "Soria ¡Ya!",
+    "pierde": "PSOE",
+    "votos": 5270,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 14966,
+      "divisor": 1,
+      "cociente": 14966.0
+     },
+     "gana": {
+      "votos": 9697,
+      "divisor": 1,
+      "cociente": 9697.0,
+      "puesto": 3
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "43": {
+   "code": "43",
+   "slug": "tarragona",
+   "nombre": "Tarragona",
+   "nombreOficial": "Tarragona",
+   "escanos2026": 6,
+   "escanos2023": 6,
+   "mayoritaria": false,
+   "poblacion": 874808,
+   "habPorEscano": 145801,
+   "peso": 0.962,
+   "rankPeso": 40,
+   "rankMas": 13,
+   "difMedia": 4,
+   "censo": 596689,
+   "votantes": 372426,
+   "participacion": 62.4,
+   "validos": 368024,
+   "blanco": 3168,
+   "pctSinEscano": 14.9,
+   "partidos": [
+    {
+     "codigo": "000047",
+     "siglas": "PSC",
+     "nombre": "PSC",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 121126,
+     "pct": 32.9,
+     "escanos": 2,
+     "faltan": 1247,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000050",
+     "siglas": "ERC",
+     "nombre": "ERC",
+     "art": "",
+     "color": "#FFB232",
+     "votos": 55461,
+     "pct": 15.1,
+     "escanos": 1,
+     "faltan": 26121,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000056",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 51061,
+     "pct": 13.9,
+     "escanos": 1,
+     "faltan": 30521,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000051",
+     "siglas": "SUMAR - ECP",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 41719,
+     "pct": 11.3,
+     "escanos": 1,
+     "faltan": 39863,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000057",
+     "siglas": "JxCAT - JUNTS",
+     "nombre": "Junts",
+     "art": "",
+     "color": "#00C3B2",
+     "votos": 40791,
+     "pct": 11.1,
+     "escanos": 1,
+     "faltan": 42647,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 38039,
+     "pct": 10.3,
+     "escanos": 0,
+     "faltan": 2753,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000053",
+     "siglas": "CUP-PR",
+     "nombre": "CUP",
+     "art": "la",
+     "color": "#FFED00",
+     "votos": 8700,
+     "pct": 2.4,
+     "escanos": 0,
+     "faltan": 32092,
+     "quitaria": "Junts"
+    },
+    {
+     "codigo": "000058",
+     "siglas": "PACMA",
+     "nombre": "PACMA",
+     "art": "",
+     "color": "#8DB33A",
+     "votos": 3797,
+     "pct": 1.0,
+     "escanos": 0,
+     "faltan": 36995,
+     "quitaria": "Junts"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSC",
+    "pierde": "Junts",
+    "votos": 1247,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 40791,
+      "divisor": 1,
+      "cociente": 40791.0
+     },
+     "gana": {
+      "votos": 121126,
+      "divisor": 3,
+      "cociente": 40375.3,
+      "puesto": 7
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "44": {
+   "code": "44",
+   "slug": "teruel",
+   "nombre": "Teruel",
+   "nombreOficial": "Teruel",
+   "escanos2026": 3,
+   "escanos2023": 3,
+   "mayoritaria": false,
+   "poblacion": 136197,
+   "habPorEscano": 45399,
+   "peso": 3.091,
+   "rankPeso": 2,
+   "rankMas": 51,
+   "difMedia": -68,
+   "censo": 106352,
+   "votantes": 76561,
+   "participacion": 72.0,
+   "validos": 75913,
+   "blanco": 410,
+   "pctSinEscano": 35.2,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 26586,
+     "pct": 35.0,
+     "escanos": 2,
+     "faltan": 40092,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 22226,
+     "pct": 29.3,
+     "escanos": 1,
+     "faltan": 4361,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000025",
+     "siglas": "EXISTE",
+     "nombre": "Teruel Existe",
+     "art": "",
+     "color": "#2F9E6E",
+     "votos": 11348,
+     "pct": 14.9,
+     "escanos": 0,
+     "faltan": 1946,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 9932,
+     "pct": 13.1,
+     "escanos": 0,
+     "faltan": 3362,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 4126,
+     "pct": 5.4,
+     "escanos": 0,
+     "faltan": 9168,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "Teruel Existe",
+    "pierde": "PP",
+    "votos": 1946,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 26586,
+      "divisor": 2,
+      "cociente": 13293.0
+     },
+     "gana": {
+      "votos": 11348,
+      "divisor": 1,
+      "cociente": 11348.0,
+      "puesto": 4
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "45": {
+   "code": "45",
+   "slug": "toledo",
+   "nombre": "Toledo",
+   "nombreOficial": "Toledo",
+   "escanos2026": 6,
+   "escanos2023": 6,
+   "mayoritaria": false,
+   "poblacion": 750815,
+   "habPorEscano": 125136,
+   "peso": 1.121,
+   "rankPeso": 28,
+   "rankMas": 25,
+   "difMedia": -11,
+   "censo": 542567,
+   "votantes": 392988,
+   "participacion": 72.4,
+   "validos": 387200,
+   "blanco": 2611,
+   "pctSinEscano": 9.3,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 146533,
+     "pct": 37.8,
+     "escanos": 3,
+     "faltan": 105611,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 126072,
+     "pct": 32.6,
+     "escanos": 2,
+     "faltan": 20462,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 76044,
+     "pct": 19.6,
+     "escanos": 1,
+     "faltan": 21645,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 31876,
+     "pct": 8.2,
+     "escanos": 0,
+     "faltan": 16969,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "Sumar",
+    "pierde": "PP",
+    "votos": 16969,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 146533,
+      "divisor": 3,
+      "cociente": 48844.3
+     },
+     "gana": {
+      "votos": 31876,
+      "divisor": 1,
+      "cociente": 31876.0,
+      "puesto": 10
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "46": {
+   "code": "46",
+   "slug": "valencia-valencia",
+   "nombre": "Valencia",
+   "nombreOficial": "València/Valencia",
+   "escanos2026": 16,
+   "escanos2023": 16,
+   "mayoritaria": false,
+   "poblacion": 2758633,
+   "habPorEscano": 172415,
+   "peso": 0.814,
+   "rankPeso": 50,
+   "rankMas": 3,
+   "difMedia": 23,
+   "censo": 1999340,
+   "votantes": 1451187,
+   "participacion": 72.6,
+   "validos": 1437161,
+   "blanco": 10810,
+   "pctSinEscano": 1.4,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 483469,
+     "pct": 33.6,
+     "escanos": 6,
+     "faltan": 83156,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 461353,
+     "pct": 32.1,
+     "escanos": 5,
+     "faltan": 22117,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000082",
+     "siglas": "SUMAR - COMPROMÍS",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 242839,
+     "pct": 16.9,
+     "escanos": 3,
+     "faltan": 79474,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 218657,
+     "pct": 15.2,
+     "escanos": 2,
+     "faltan": 23078,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "PP",
+    "votos": 22117,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 483469,
+      "divisor": 6,
+      "cociente": 80578.2
+     },
+     "gana": {
+      "votos": 461353,
+      "divisor": 6,
+      "cociente": 76892.2,
+      "puesto": 17
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "47": {
+   "code": "47",
+   "slug": "valladolid",
+   "nombre": "Valladolid",
+   "nombreOficial": "Valladolid",
+   "escanos2026": 5,
+   "escanos2023": 5,
+   "mayoritaria": false,
+   "poblacion": 528841,
+   "habPorEscano": 105768,
+   "peso": 1.327,
+   "rankPeso": 21,
+   "rankMas": 32,
+   "difMedia": -25,
+   "censo": 431381,
+   "votantes": 319312,
+   "participacion": 74.0,
+   "validos": 316309,
+   "blanco": 2419,
+   "pctSinEscano": 10.5,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 129170,
+     "pct": 40.8,
+     "escanos": 2,
+     "faltan": 14674,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 103596,
+     "pct": 32.8,
+     "escanos": 2,
+     "faltan": 40248,
+     "quitaria": "Vox"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 47948,
+     "pct": 15.2,
+     "escanos": 1,
+     "faltan": 55649,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 28049,
+     "pct": 8.9,
+     "escanos": 0,
+     "faltan": 19900,
+     "quitaria": "Vox"
+    }
+   ],
+   "ajustado": {
+    "gana": "PP",
+    "pierde": "Vox",
+    "votos": 14674,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 47948,
+      "divisor": 1,
+      "cociente": 47948.0
+     },
+     "gana": {
+      "votos": 129170,
+      "divisor": 3,
+      "cociente": 43056.7,
+      "puesto": 6
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "48": {
+   "code": "48",
+   "slug": "bizkaia",
+   "nombre": "Bizkaia",
+   "nombreOficial": "Bizkaia",
+   "escanos2026": 8,
+   "escanos2023": 8,
+   "mayoritaria": false,
+   "poblacion": 1166816,
+   "habPorEscano": 145852,
+   "peso": 0.962,
+   "rankPeso": 41,
+   "rankMas": 12,
+   "difMedia": 4,
+   "censo": 942983,
+   "votantes": 614944,
+   "participacion": 65.2,
+   "validos": 609693,
+   "blanco": 3391,
+   "pctSinEscano": 3.6,
+   "partidos": [
+    {
+     "codigo": "000075",
+     "siglas": "EAJ-PNV",
+     "nombre": "PNV",
+     "art": "el",
+     "color": "#2E8B57",
+     "votos": 164188,
+     "pct": 26.9,
+     "escanos": 2,
+     "faltan": 24613,
+     "quitaria": "EH Bildu"
+    },
+    {
+     "codigo": "000076",
+     "siglas": "PSE-EE (PSOE)",
+     "nombre": "PSE-EE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 157448,
+     "pct": 25.8,
+     "escanos": 2,
+     "faltan": 31353,
+     "quitaria": "EH Bildu"
+    },
+    {
+     "codigo": "000071",
+     "siglas": "EH Bildu",
+     "nombre": "EH Bildu",
+     "art": "",
+     "color": "#B5CF18",
+     "votos": 125867,
+     "pct": 20.6,
+     "escanos": 2,
+     "faltan": 73909,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 70533,
+     "pct": 11.6,
+     "escanos": 1,
+     "faltan": 55335,
+     "quitaria": "EH Bildu"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 66592,
+     "pct": 10.9,
+     "escanos": 1,
+     "faltan": 59276,
+     "quitaria": "EH Bildu"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 16069,
+     "pct": 2.6,
+     "escanos": 0,
+     "faltan": 46865,
+     "quitaria": "EH Bildu"
+    }
+   ],
+   "ajustado": {
+    "gana": "PNV",
+    "pierde": "EH Bildu",
+    "votos": 24613,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 125867,
+      "divisor": 2,
+      "cociente": 62933.5
+     },
+     "gana": {
+      "votos": 164188,
+      "divisor": 3,
+      "cociente": 54729.3,
+      "puesto": 9
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "49": {
+   "code": "49",
+   "slug": "zamora",
+   "nombre": "Zamora",
+   "nombreOficial": "Zamora",
+   "escanos2026": 3,
+   "escanos2023": 3,
+   "mayoritaria": false,
+   "poblacion": 165275,
+   "habPorEscano": 55092,
+   "peso": 2.547,
+   "rankPeso": 6,
+   "rankMas": 47,
+   "difMedia": -61,
+   "censo": 162998,
+   "votantes": 104671,
+   "participacion": 64.2,
+   "validos": 103410,
+   "blanco": 922,
+   "pctSinEscano": 21.9,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 46196,
+     "pct": 44.7,
+     "escanos": 2,
+     "faltan": 54607,
+     "quitaria": "PSOE"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 33601,
+     "pct": 32.5,
+     "escanos": 1,
+     "faltan": 12596,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 13652,
+     "pct": 13.2,
+     "escanos": 0,
+     "faltan": 9447,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 5839,
+     "pct": 5.6,
+     "escanos": 0,
+     "faltan": 17260,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000046",
+     "siglas": "Zsi",
+     "nombre": "Zsi",
+     "art": "",
+     "color": null,
+     "votos": 1843,
+     "pct": 1.8,
+     "escanos": 0,
+     "faltan": 21256,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "Vox",
+    "pierde": "PP",
+    "votos": 9447,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 46196,
+      "divisor": 2,
+      "cociente": 23098.0
+     },
+     "gana": {
+      "votos": 13652,
+      "divisor": 1,
+      "cociente": 13652.0,
+      "puesto": 6
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "50": {
+   "code": "50",
+   "slug": "zaragoza",
+   "nombre": "Zaragoza",
+   "nombreOficial": "Zaragoza",
+   "escanos2026": 7,
+   "escanos2023": 7,
+   "mayoritaria": false,
+   "poblacion": 991991,
+   "habPorEscano": 141713,
+   "peso": 0.99,
+   "rankPeso": 37,
+   "rankMas": 16,
+   "difMedia": 1,
+   "censo": 740060,
+   "votantes": 523410,
+   "participacion": 70.7,
+   "validos": 518705,
+   "blanco": 4693,
+   "pctSinEscano": 3.5,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 186776,
+     "pct": 36.0,
+     "escanos": 3,
+     "faltan": 92924,
+     "quitaria": "Sumar"
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 159858,
+     "pct": 30.8,
+     "escanos": 2,
+     "faltan": 26919,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 79376,
+     "pct": 15.3,
+     "escanos": 1,
+     "faltan": 45142,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000021",
+     "siglas": "SUMAR ARAGÓN",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 69925,
+     "pct": 13.5,
+     "escanos": 1,
+     "faltan": 54593,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000023",
+     "siglas": "EXISTE",
+     "nombre": "Teruel Existe",
+     "art": "",
+     "color": "#2F9E6E",
+     "votos": 7780,
+     "pct": 1.5,
+     "escanos": 0,
+     "faltan": 54479,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "PP",
+    "votos": 26919,
+    "barrera": false,
+    "duelo": {
+     "pierde": {
+      "votos": 186776,
+      "divisor": 3,
+      "cociente": 62258.7
+     },
+     "gana": {
+      "votos": 159858,
+      "divisor": 3,
+      "cociente": 53286.0,
+      "puesto": 8
+     },
+     "ultimoEscano": true
+    },
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "51": {
+   "code": "51",
+   "slug": "ceuta",
+   "nombre": "Ceuta",
+   "nombreOficial": "Ceuta",
+   "escanos2026": 1,
+   "escanos2023": 1,
+   "mayoritaria": true,
+   "poblacion": 83595,
+   "habPorEscano": 83595,
+   "peso": 1.679,
+   "rankPeso": 13,
+   "rankMas": 40,
+   "difMedia": -40,
+   "censo": 63310,
+   "votantes": 33674,
+   "participacion": 53.2,
+   "validos": 33321,
+   "blanco": 328,
+   "pctSinEscano": 60.2,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 12918,
+     "pct": 38.8,
+     "escanos": 1,
+     "faltan": null,
+     "quitaria": null
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 11332,
+     "pct": 34.0,
+     "escanos": 0,
+     "faltan": 1587,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 7752,
+     "pct": 23.3,
+     "escanos": 0,
+     "faltan": 5167,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 821,
+     "pct": 2.5,
+     "escanos": 0,
+     "faltan": 12098,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "PP",
+    "votos": 1587,
+    "barrera": false,
+    "duelo": null,
+    "umbral": null
+   },
+   "reparto2026": []
+  },
+  "52": {
+   "code": "52",
+   "slug": "melilla",
+   "nombre": "Melilla",
+   "nombreOficial": "Melilla",
+   "escanos2026": 1,
+   "escanos2023": 1,
+   "mayoritaria": true,
+   "poblacion": 86780,
+   "habPorEscano": 86780,
+   "peso": 1.617,
+   "rankPeso": 15,
+   "rankMas": 38,
+   "difMedia": -38,
+   "censo": 61118,
+   "votantes": 27649,
+   "participacion": 45.2,
+   "validos": 27349,
+   "blanco": 253,
+   "pctSinEscano": 49.9,
+   "partidos": [
+    {
+     "codigo": "000005",
+     "siglas": "PP",
+     "nombre": "PP",
+     "art": "el",
+     "color": "#1D84CE",
+     "votos": 13446,
+     "pct": 49.2,
+     "escanos": 1,
+     "faltan": null,
+     "quitaria": null
+    },
+    {
+     "codigo": "000002",
+     "siglas": "PSOE",
+     "nombre": "PSOE",
+     "art": "el",
+     "color": "#E30613",
+     "votos": 6943,
+     "pct": 25.4,
+     "escanos": 0,
+     "faltan": 6504,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000006",
+     "siglas": "VOX",
+     "nombre": "Vox",
+     "art": "",
+     "color": "#63BE21",
+     "votos": 4359,
+     "pct": 15.9,
+     "escanos": 0,
+     "faltan": 9088,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000084",
+     "siglas": "CpM",
+     "nombre": "CpM",
+     "art": "",
+     "color": null,
+     "votos": 1298,
+     "pct": 4.7,
+     "escanos": 0,
+     "faltan": 12149,
+     "quitaria": "PP"
+    },
+    {
+     "codigo": "000010",
+     "siglas": "SUMAR",
+     "nombre": "Sumar",
+     "art": "",
+     "color": "#E51C55",
+     "votos": 827,
+     "pct": 3.0,
+     "escanos": 0,
+     "faltan": 12620,
+     "quitaria": "PP"
+    }
+   ],
+   "ajustado": {
+    "gana": "PSOE",
+    "pierde": "PP",
+    "votos": 6504,
+    "barrera": false,
+    "duelo": null,
+    "umbral": null
+   },
+   "reparto2026": []
+  }
+ }
+}

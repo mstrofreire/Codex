@@ -344,13 +344,13 @@
    "circ": "Castelló/Castellón",
    "gana": "SUMAR",
    "pierde": "VOX",
-   "votos": 4726
+   "votos": 4727
   },
   {
    "circ": "Soria",
    "gana": "SY",
    "pierde": "PSOE",
-   "votos": 5269
+   "votos": 5270
   },
   {
    "circ": "Huesca",
@@ -458,7 +458,7 @@
    "circ": "Huelva",
    "gana": "SUMAR",
    "pierde": "VOX",
-   "votos": 10820
+   "votos": 10821
   },
   {
    "circ": "León",
@@ -548,7 +548,7 @@
    "circ": "Jaén",
    "gana": "SUMAR",
    "pierde": "VOX",
-   "votos": 24939
+   "votos": 24940
   },
   {
    "circ": "Zaragoza",
@@ -612,7 +612,7 @@
    "bloque": "PSOE + Sumar",
    "escanos": 152,
    "faltan": 24,
-   "votos": 137136,
+   "votos": 137138,
    "donde": [
     [
      "A Coruña",
@@ -652,8 +652,8 @@
     [
      "Castelló/Castellón",
      1,
-     4726,
-     "SUMAR 4726",
+     4727,
+     "SUMAR 4727",
      "VOX"
     ],
     [
@@ -694,8 +694,8 @@
     [
      "Huelva",
      1,
-     10820,
-     "SUMAR 10820",
+     10821,
+     "SUMAR 10821",
      "VOX"
     ],
     [

@@ -4,10 +4,16 @@
   "scripts": {
     "studio": "remotion studio",
     "render": "remotion render Demo out/demo.mp4",
-    "map": "node scripts/build-galicia.mjs"
+    "map": "node scripts/build-galicia.mjs",
+    "datos": "cd src/voto/congreso2023 && python3 -B provincias.py",
+    "kit": "node kit/render.mjs",
+    "radar": "node kit/radar.mjs",
+    "test": "node --test \"kit/test/*.test.mjs\""
   },
   "dependencies": {
+    "@remotion/bundler": "4.0.536",
     "@remotion/cli": "4.0.536",
+    "@remotion/renderer": "4.0.536",
     "@types/d3-geo": "^3.1.0",
     "@types/topojson-client": "^3.1.5",
     "d3-composite-projections": "^1.4.0",

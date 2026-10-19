@@ -25,7 +25,7 @@ export const dhondt = (code: string, rows = 5, cols = 3) => {
 };
 
 // Integer quotients as-is; fractional ones to one decimal (e.g. 31.625,5 · 31.149,3).
-const qfmt = (q: number) => {
+export const qfmt = (q: number) => {
   if (Number.isInteger(q)) return fmt(q);
   const [i, d] = q.toFixed(1).split(".");
   return `${fmt(Number(i))},${d}`;
@@ -94,7 +94,7 @@ const Row = ({ name, color, cells, seats, lit, s }: { name: string; color: strin
                 opacity: interpolate(t, [0.4, 1], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
               }}
             >
-              {next ? "7.º fuera" : `${c.rank}.º`}
+              {next ? `${seats + 1}.º fuera` : `${c.rank}.º`}
             </span>
           )}
         </div>

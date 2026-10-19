@@ -10,13 +10,13 @@ const B = "#D95926";
 export const HANDLE = "@tucuenta";
 export const SRC = "Fuente: INE, cifras oficiales del Padrón a 1-1-2025 · Escaños: Real Decreto de convocatoria del 29-N";
 
-export const Frame = ({ children, kicker = "ELECCIONES 29-N · DATOS", src = SRC }: { children: React.ReactNode; kicker?: string; src?: string }) => (
+export const Frame = ({ children, kicker = "ELECCIONES 29-N · DATOS", src = SRC, brand = HANDLE }: { children: React.ReactNode; kicker?: string; src?: string; brand?: string }) => (
   <AbsoluteFill style={{ background: V.bg, padding: "80px 80px 0", fontFamily: FONT, color: V.text }}>
     <div style={{ fontSize: 28, fontWeight: 600, letterSpacing: 6, color: V.dim }}>{kicker}</div>
     {children}
     <div style={{ position: "absolute", left: 80, right: 80, bottom: 60, display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 40 }}>
       <div style={{ fontSize: 21, lineHeight: 1.4, color: V.dim, maxWidth: 700 }}>{src}</div>
-      <div style={{ fontSize: 28, fontWeight: 600, color: V.text, whiteSpace: "nowrap" }}>{HANDLE}</div>
+      <div style={{ fontSize: 28, fontWeight: 600, color: V.text, whiteSpace: "nowrap" }}>{brand}</div>
     </div>
   </AbsoluteFill>
 );
