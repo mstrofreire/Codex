@@ -85,16 +85,16 @@
    "pct": 31.94
   },
   {
-   "partido": "SUMAR",
-   "real": 31,
-   "proporcional": 45,
-   "pct": 12.43
-  },
-  {
    "partido": "VOX",
    "real": 33,
    "proporcional": 45,
    "pct": 12.48
+  },
+  {
+   "partido": "SUMAR",
+   "real": 31,
+   "proporcional": 45,
+   "pct": 12.43
   },
   {
    "partido": "ERC",
@@ -568,37 +568,43 @@
      "Albacete",
      1,
      1412,
-     "VOX 1412"
+     "VOX 1412",
+     "PSOE"
     ],
     [
      "Girona",
      1,
      285,
-     "PP 285"
+     "PP 285",
+     "JUNTS"
     ],
     [
      "Lleida",
      1,
      3509,
-     "PP 3509"
+     "PP 3509",
+     "PSOE"
     ],
     [
      "Murcia",
      1,
      7378,
-     "PP 7378"
+     "PP 7378",
+     "PSOE"
     ],
     [
      "Sevilla",
      1,
      7659,
-     "VOX 7659"
+     "VOX 7659",
+     "SUMAR"
     ],
     [
      "Tarragona",
      1,
      2753,
-     "VOX 2753"
+     "VOX 2753",
+     "JUNTS"
     ]
    ]
   },
@@ -612,145 +618,169 @@
      "A Coruña",
      1,
      12062,
-     "PSOE 12062"
+     "PSOE 12062",
+     "BNG"
     ],
     [
      "Araba/Álava",
      1,
      6515,
-     "SUMAR 6515"
+     "SUMAR 6515",
+     "EAJ-PNV"
     ],
     [
      "Asturias",
      1,
      7768,
-     "PSOE 7768"
+     "PSOE 7768",
+     "PP"
     ],
     [
      "Badajoz",
      1,
      7003,
-     "PSOE 7003"
+     "PSOE 7003",
+     "VOX"
     ],
     [
      "Cádiz",
      1,
      10504,
-     "PSOE 10504"
+     "PSOE 10504",
+     "PP"
     ],
     [
      "Castelló/Castellón",
      1,
      4726,
-     "SUMAR 4726"
+     "SUMAR 4726",
+     "VOX"
     ],
     [
      "Ceuta",
      1,
      1587,
-     "PSOE 1587"
+     "PSOE 1587",
+     "PP"
     ],
     [
      "Cuenca",
      1,
      2728,
-     "PSOE 2728"
+     "PSOE 2728",
+     "PP"
     ],
     [
      "Gipuzkoa",
      1,
      2433,
-     "SUMAR 2433"
+     "SUMAR 2433",
+     "EAJ-PNV"
     ],
     [
      "Girona",
      1,
      1429,
-     "PSOE 1429"
+     "PSOE 1429",
+     "JUNTS"
     ],
     [
      "Guadalajara",
      1,
      7773,
-     "PSOE 7773"
+     "PSOE 7773",
+     "VOX"
     ],
     [
      "Huelva",
      1,
      10820,
-     "SUMAR 10820"
+     "SUMAR 10820",
+     "VOX"
     ],
     [
      "Huesca",
      1,
      5477,
-     "PSOE 5477"
+     "PSOE 5477",
+     "PP"
     ],
     [
      "Las Palmas",
      1,
      6805,
-     "PSOE 6805"
+     "PSOE 6805",
+     "PP"
     ],
     [
      "Lugo",
      1,
      6350,
-     "PSOE 6350"
+     "PSOE 6350",
+     "PP"
     ],
     [
      "Madrid",
      1,
      1340,
-     "PSOE 1340"
+     "PSOE 1340",
+     "PP"
     ],
     [
      "Málaga",
      1,
      2429,
-     "PSOE 2429"
+     "PSOE 2429",
+     "PP"
     ],
     [
      "Melilla",
      1,
      6504,
-     "PSOE 6504"
+     "PSOE 6504",
+     "PP"
     ],
     [
      "Ourense",
      1,
      6087,
-     "PSOE 6087"
+     "PSOE 6087",
+     "PP"
     ],
     [
      "Palencia",
      1,
      7097,
-     "PSOE 7097"
+     "PSOE 7097",
+     "PP"
     ],
     [
      "Salamanca",
      1,
      1495,
-     "PSOE 1495"
+     "PSOE 1495",
+     "PP"
     ],
     [
      "Tarragona",
      1,
      1247,
-     "PSOE 1247"
+     "PSOE 1247",
+     "JUNTS"
     ],
     [
      "Teruel",
      1,
      4361,
-     "PSOE 4361"
+     "PSOE 4361",
+     "PP"
     ],
     [
      "Zamora",
      1,
      12596,
-     "PSOE 12596"
+     "PSOE 12596",
+     "PP"
     ]
    ]
   }
