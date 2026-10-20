@@ -1,0 +1,39 @@
+name: Publicar en X
+
+on:
+  schedule:
+    # 09:15, 14:15 y 20:15 en Madrid (horario de invierno, UTC+1)
+    - cron: "15 8,13,19 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar-x
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Publicar borradores aprobados
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: python3 herramientas/publicar_x.py
+      - name: Guardar el registro de publicados
+        run: |
+          git config user.name "agente-x"
+          git config user.email "agente-x@users.noreply.github.com"
+          git add -A x/
+          if ! git diff --cached --quiet; then
+            git commit -m "Registrar posts publicados en X"
+            git push
+          fi
