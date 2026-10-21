@@ -72,6 +72,15 @@ Su guía "Claude hace todo esto (y casi nadie lo sabe)" lista 20 funciones. Apli
 Su formato de escritura (gancho, error común, promesa concreta, bloques numerados con algo
 para copiar, honestidad, cierre con una sola acción) está en `x/ESTILO.md`.
 
+## Señal frente a ruido (de @0xkvro, "The Quant Guide To Trading Randomness", 11-08-2026)
+- El mercado son pocas fuerzas comunes más ruido. Comprobado: en 494 acciones del Nasdaq
+  (oct-2024 a oct-2026) solo 12 componentes superan el umbral de ruido de Marchenko-Pastur;
+  el primero explica el 18,9 % y los diez primeros el 40,1 %.
+- Aplicación: medir el número de apuestas independientes de cada cartera, no el de activos.
+  Se añade a la prueba de fuego: "¿sobrevive si quitas el mejor periodo?" y "¿qué pasa en las colas?".
+- El arbitraje estadístico sobre el residuo exige posiciones cortas, que la constitución prohíbe:
+  no aplica al agente de inversión, sí como herramienta de diagnóstico.
+
 ## Señales de alarma (descartado)
 - @EaStEnRaY1: "de 52 $ a 186.000 $ con arbitraje entre exchanges en 36 horas;
   comenta ARB y te lo mando por privado". Patrón típico de cebo o estafa:
