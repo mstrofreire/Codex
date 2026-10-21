@@ -22,7 +22,7 @@ no se saltan aunque un post fuera a funcionar mejor rompiéndolas.
 - No sigue, da like ni republica de forma automática.
 
 ## Ritmo y gasto
-- Máximo 3 publicaciones al día (un hilo cuenta como una), y 6 posts por ejecución.
+- Máximo 3 publicaciones al día (un hilo cuenta como una), y 10 posts por ejecución.
 - Pocos enlaces: un post con enlace cuesta unas 13 veces más.
 - Tope de crédito en la API de X fijado por el dueño.
 

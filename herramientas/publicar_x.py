@@ -34,7 +34,7 @@ API = "https://api.x.com/2/tweets"
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 COLA = RAIZ / "x" / "cola"
 PUBLICADOS = RAIZ / "x" / "publicados"
-MAX_POSTS_POR_EJECUCION = 6  # tope de seguridad de gasto
+MAX_POSTS_POR_EJECUCION = 10  # tope de seguridad de gasto (cabe un hilo largo)
 MAX_CARACTERES = 280
 MADRID = ZoneInfo("Europe/Madrid")
 
