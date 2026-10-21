@@ -59,6 +59,19 @@ Lección general: buscar ventajas **estructurales** (de ejecución o de diseño 
 no de predicción. Pendiente de investigar: legalidad y acceso desde España, competencia
 y capital necesario. Es una observación, no una tesis.
 
+## Funciones de Claude que aprovechamos (de @angeldot_, 11-10-2026)
+Su guía "Claude hace todo esto (y casi nadie lo sabe)" lista 20 funciones. Aplicadas aquí:
+- **CLAUDE.md**: reglas que Claude lee siempre → creado en la raíz del repo.
+- **Skills**: instrucciones empaquetadas para una tarea repetida → `.claude/skills/el-filtro/`.
+- **Tareas programadas**: ya en uso (rutina diaria del agente).
+- **Artifacts**: El Filtro Nº 1 publicado como página.
+- **Abogado del diablo / mentor sin filtro**: se usa antes de cada decisión importante.
+- **Conectores** (Gmail, Calendar, Drive) y **Claude en Chrome**: los activa el dueño desde
+  su cuenta si quiere que el agente trabaje con su correo o su navegador.
+- **Prompt caching**: solo aplica si algún día usamos la API de Claude directamente.
+Su formato de escritura (gancho, error común, promesa concreta, bloques numerados con algo
+para copiar, honestidad, cierre con una sola acción) está en `x/ESTILO.md`.
+
 ## Señales de alarma (descartado)
 - @EaStEnRaY1: "de 52 $ a 186.000 $ con arbitraje entre exchanges en 36 horas;
   comenta ARB y te lo mando por privado". Patrón típico de cebo o estafa:
