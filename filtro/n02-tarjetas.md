@@ -24,3 +24,30 @@ e infraestructura, y que se ha erosionado con los años.
 
 **Llévate:** antes de creer que estás diversificado, cuenta tus apuestas independientes,
 no tus tickers. Y pregunta a cada resultado cómo de difícil es romperlo, no cómo de bonito se ve.
+
+## Hilo viral sobre TradingAgents · oct 2026 · Útil
+Repositorio: https://github.com/TauricResearch/TradingAgents · Paper: https://arxiv.org/abs/2412.20138
+
+**Afirma:** "alguien reemplazó todo el piso de una firma de trading con agentes de IA que
+discuten entre sí", 112k estrellas, nº 1 en GitHub, "GRATIS al 100 %".
+
+**Comprobado leyendo el código** (v0.7.0, 16-10-2026):
+- El proyecto es real y activo. Agentes: 4 analistas (fundamentales, noticias, sentimiento,
+  técnico), investigador alcista y bajista, trader, 3 de riesgo y gestor de cartera.
+- **No envía órdenes a ningún bróker**: trabaja con "unidades genéricas". Decide, no opera.
+- Sus propios autores dicen que es para investigación y "no es asesoramiento financiero",
+  y que el backtest no tiene por qué reproducir ninguna cifra publicada.
+- El propio README admite que, al analizar una fecha pasada, las noticias y redes sociales
+  "siguen reflejando el ahora": un backtest así puede ver el futuro.
+- Y no hay forma de evitar que el modelo (Claude, GPT…) ya "recuerde" lo que pasó en esas fechas.
+- Las estrellas no las pude verificar.
+
+**El paper** (v7, junio 2025): 3 meses (enero a marzo de 2024), 3 acciones con resultados,
+una sola ejecución, sin deslizamiento. Sharpe de 8,21 en AAPL, una cifra que no se ve
+en ningún gestor real. Cada decisión necesitó 11 llamadas al modelo y más de 20 a herramientas.
+
+**"Gratis":** el código sí. Cada decisión cuesta llamadas a la API del modelo.
+
+**Llévate:** la estructura de debate (alcista contra bajista, y un equipo de riesgo que ataca
+la decisión) es buena idea para pensar mejor. Lo único que vale como prueba es lo que el
+propio hilo dice en su paso 8: semanas de paper trading antes de confiar en una sola llamada.

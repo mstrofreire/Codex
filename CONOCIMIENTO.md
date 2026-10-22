@@ -81,6 +81,13 @@ para copiar, honestidad, cierre con una sola acción) está en `x/ESTILO.md`.
 - El arbitraje estadístico sobre el residuo exige posiciones cortas, que la constitución prohíbe:
   no aplica al agente de inversión, sí como herramienta de diagnóstico.
 
+## TradingAgents (TauricResearch), revisado el 22-10-2026
+- Código leído (v0.7.0): 12 agentes que debaten; no ejecuta órdenes; avisa de que es para investigación.
+- Problemas para evaluarlo con el pasado: el README admite que noticias y redes reflejan "el ahora"
+  en fechas históricas, y el modelo recuerda lo que pasó. El paper usa 3 meses de 2024 y una sola ejecución.
+- Uso posible aquí: solo como un jugador más del modo sombra, evaluado hacia delante, y si el coste
+  de API cabe en el presupuesto. Ya adoptamos su idea del debate alcista/bajista.
+
 ## Señales de alarma (descartado)
 - @EaStEnRaY1: "de 52 $ a 186.000 $ con arbitraje entre exchanges en 36 horas;
   comenta ARB y te lo mando por privado". Patrón típico de cebo o estafa:
