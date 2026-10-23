@@ -1,7 +1,8 @@
 // Provincial kit: four cards for any of the 52 constituencies (props: INE code + brand handle).
 // Every number comes from congreso2023/provincias.json (official data, computed by provincias.py).
-import { Still } from "remotion";
-import { MONO } from "../theme";
+import { Composition, Sequence, Still, interpolate, useCurrentFrame } from "remotion";
+import { Scene, useEnter } from "../Scene";
+import { DISPLAY, MONO } from "../theme";
 import P from "./congreso2023/provincias.json";
 import { Frame, Headline, HANDLE, SRC, Seats } from "./cards";
 import { Note, SRC23, pct } from "./cards2";
@@ -131,19 +132,14 @@ const DueloRow = ({ x, q, tag, win }: { x: Partido; q: Cociente; tag: string; wi
   </div>
 );
 
-// 2 · The cheapest seat to flip in 2023 (D'Hondt duel, 3 % barrier or plurality seat)
-export const ProvAjustado = ({ code, marca = HANDLE }: KitProps) => {
-  const p = PROVS[code];
+// The body of the closest-seat card: D'Hondt duel, 3 % barrier or plurality seat.
+const AjustadoDetalle = ({ p }: { p: Prov }) => {
   const a = p.ajustado;
   const g = party(p, a.gana);
   const l = party(p, a.pierde);
   const top = [...p.partidos].sort((x, y) => y.votos - x.votos).slice(0, 4);
   return (
-    <Frame kicker={kicker(p, "23-J 2023")} src={src23(p)} brand={marca}>
-      <Headline size={70}>
-        En {p.nombre}, {con("a", g)} le faltaron <span style={{ color: ACCENT }}>{fmt(a.votos)} votos</span> para {a.barrera ? "superar el 3 % y " : ""}quitarle{" "}
-        {p.mayoritaria ? "el" : "un"} diputado {con("a", l)}.
-      </Headline>
+    <>
       {a.duelo && (
         <>
           <div style={{ fontSize: 28, lineHeight: 1.4, marginTop: 34 }}>
@@ -193,6 +189,23 @@ export const ProvAjustado = ({ code, marca = HANDLE }: KitProps) => {
           </div>
         </>
       )}
+    </>
+  );
+};
+
+// 2 · The cheapest seat to flip in 2023 (D'Hondt duel, 3 % barrier or plurality seat)
+export const ProvAjustado = ({ code, marca = HANDLE }: KitProps) => {
+  const p = PROVS[code];
+  const a = p.ajustado;
+  const g = party(p, a.gana);
+  const l = party(p, a.pierde);
+  return (
+    <Frame kicker={kicker(p, "23-J 2023")} src={src23(p)} brand={marca}>
+      <Headline size={70}>
+        En {p.nombre}, {con("a", g)} le faltaron <span style={{ color: ACCENT }}>{fmt(a.votos)} votos</span> para {a.barrera ? "superar el 3 % y " : ""}quitarle{" "}
+        {p.mayoritaria ? "el" : "un"} diputado {con("a", l)}.
+      </Headline>
+      <AjustadoDetalle p={p} />
       <Note>{en29N(p)}</Note>
     </Frame>
   );
@@ -258,8 +271,102 @@ export const ProvReparto = ({ code, marca = HANDLE }: KitProps) => {
   );
 };
 
+// 5 · Closest seat as a 4:5 video (≈17 s): hook, the number, why (D'Hondt), what is at stake on 29-N.
+const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+const up = (v: number, d = 40) => ({ opacity: v, transform: `translateY(${interpolate(v, [0, 1], [d, 0])}px)` });
+const V_HOOK = 80;
+const V_NUM = 150;
+const V_WHY = 210;
+const V_END = 90;
+export const AJUSTADO_VIDEO = V_HOOK + V_NUM + V_WHY + V_END;
+
+const VHook = ({ p, marca }: { p: Prov; marca: string }) => {
+  const a = useEnter(4);
+  const b = useEnter(34);
+  return (
+    <Scene>
+      <Frame kicker={kicker(p, "29-N")} src="" brand={marca}>
+        <div style={{ fontFamily: DISPLAY, fontSize: 120, fontWeight: 700, lineHeight: 1, letterSpacing: -4, marginTop: 260, ...up(a, 50) }}>
+          ¿Tu voto no cuenta en {p.nombre}?
+        </div>
+        <div style={{ fontSize: 46, color: V.dim, marginTop: 40, ...up(b) }}>Mira lo que pasó en 2023.</div>
+      </Frame>
+    </Scene>
+  );
+};
+
+const VNumero = ({ p, marca }: { p: Prov; marca: string }) => {
+  const frame = useCurrentFrame();
+  const a = p.ajustado;
+  const t = useEnter(0);
+  const n = interpolate(frame, [14, 64], [0, a.votos], clamp);
+  const end = useEnter(70);
+  return (
+    <Scene>
+      <Frame kicker={kicker(p, "23-J 2023")} src={src23(p)} brand={marca}>
+        <div style={{ fontFamily: DISPLAY, fontSize: 76, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2.5, marginTop: 120, ...up(t) }}>
+          En 2023, {con("a", party(p, a.gana))} le faltaron
+        </div>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 24, marginTop: 10 }}>
+          <span style={{ fontFamily: DISPLAY, fontSize: 250, fontWeight: 700, letterSpacing: -10, lineHeight: 1, color: ACCENT }}>{fmt(n)}</span>
+          <span style={{ fontSize: 60, color: V.dim }}>votos</span>
+        </div>
+        <div style={{ fontFamily: DISPLAY, fontSize: 76, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2.5, marginTop: 30, ...up(end) }}>
+          para {a.barrera ? "superar el 3 % y " : ""}quitarle {p.mayoritaria ? "el" : "un"} diputado {con("a", party(p, a.pierde))}.
+        </div>
+      </Frame>
+    </Scene>
+  );
+};
+
+const VPorque = ({ p, marca }: { p: Prov; marca: string }) => {
+  const t = useEnter(0);
+  const d = useEnter(20);
+  return (
+    <Scene>
+      <Frame kicker={kicker(p, "23-J 2023")} src={src23(p)} brand={marca}>
+        <div style={{ fontFamily: DISPLAY, fontSize: 70, fontWeight: 700, letterSpacing: -2.5, marginTop: 28, ...up(t) }}>¿Cómo se decidió?</div>
+        <div style={up(d, 60)}>
+          <AjustadoDetalle p={p} />
+        </div>
+      </Frame>
+    </Scene>
+  );
+};
+
+const VFinal = ({ p, marca }: { p: Prov; marca: string }) => {
+  const a = useEnter(4);
+  const b = useEnter(30);
+  return (
+    <Scene>
+      <Frame kicker={kicker(p, "29-N")} src={SRC} brand={marca}>
+        <div style={{ fontFamily: DISPLAY, fontSize: 96, fontWeight: 700, lineHeight: 1.05, letterSpacing: -3, marginTop: 220, ...up(a, 50) }}>{en29N(p)}</div>
+        <div style={{ fontFamily: DISPLAY, fontSize: 96, fontWeight: 700, lineHeight: 1.05, letterSpacing: -3, marginTop: 40, color: ACCENT, ...up(b, 50) }}>Cada voto cuenta.</div>
+      </Frame>
+    </Scene>
+  );
+};
+
+export const ProvAjustadoVideo = ({ code, marca = HANDLE }: KitProps) => {
+  const p = PROVS[code];
+  const parts = [VHook, VNumero, VPorque, VFinal];
+  const lens = [V_HOOK, V_NUM, V_WHY, V_END];
+  return (
+    <>
+      {parts.map((C, i) => (
+        <Sequence key={i} from={lens.slice(0, i).reduce((s, x) => s + x, 0)} durationInFrames={lens[i]}>
+          <C p={p} marca={marca} />
+        </Sequence>
+      ))}
+    </>
+  );
+};
+
 export const KIT = { Escanos: ProvEscanos, Ajustado: ProvAjustado, Faltan: ProvFaltan, Reparto: ProvReparto };
 // Render with --props='{"code":"17","marca":"@medio"}' (INE code; marca = handle shown in the corner).
 export const KIT_STILLS = Object.entries(KIT).map(([id, component]) => (
   <Still key={id} id={`Prov-${id}`} component={component} defaultProps={{ code: "17" }} width={1080} height={1350} />
 ));
+export const KIT_VIDEO = (
+  <Composition id="Prov-AjustadoVideo" component={ProvAjustadoVideo} defaultProps={{ code: "17" }} durationInFrames={AJUSTADO_VIDEO} fps={30} width={1080} height={1350} />
+);
