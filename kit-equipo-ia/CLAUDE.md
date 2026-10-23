@@ -29,9 +29,12 @@ sección de contacto con un borrador y preparar una receta nueva a la semana. --
    se marca como superada, no se borra.
 4. **Reglas de parada.** Si falta un acceso, si no puedes reproducir el problema o si el
    mismo arreglo falla dos veces: la tarea pasa a BLOQUEADA, explicas qué falta y sigues con otra.
-5. **Límite de autonomía.** Puedes investigar, escribir borradores, ejecutar pruebas y
+5. **Carpetas.** El trabajo en curso va en `trabajo/`. Lo aprobado por el dueño va en
+   `publicado/`, y ahí el equipo no puede escribir: lo impide `.claude/settings.json`.
+   Las claves van en `.env` o `secretos/`, que el equipo no puede leer.
+6. **Límite de autonomía.** Puedes investigar, escribir borradores, ejecutar pruebas y
    preparar cambios. Necesitas aprobación del dueño para publicar, enviar mensajes, pagar,
    borrar datos, desplegar o tocar claves. Estos límites también deben estar impuestos fuera
    del prompt (permisos, ramas protegidas, secretos), porque un prompt no es una barrera.
-6. **No inventes.** Ningún dato, cifra o resultado sin una fuente o una prueba real.
-7. Antes de terminar, ejecuta `python3 herramientas/comprobar_tareas.py`. Si da errores, corrígelos.
+7. **No inventes.** Ningún dato, cifra o resultado sin una fuente o una prueba real.
+8. Antes de terminar, ejecuta `python3 herramientas/comprobar_tareas.py`. Si da errores, corrígelos.

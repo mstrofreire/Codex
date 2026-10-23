@@ -103,6 +103,30 @@ para copiar, honestidad, cierre con una sola acción) está en `x/ESTILO.md`.
 - El informe de la mañana es el producto: qué se completó, qué se verificó, qué falló, qué necesita decisión.
 - El propio autor avisa de que sus ejemplos de resultados son ilustrativos, no de una ejecución real.
 
+## Arnés para tareas largas (de @beamnxw, "Make Opus 5.5 Finish Long Tasks", 06-10-2026)
+- Siete capas: hechos estables en CLAUDE.md, procedimientos como skills, conexiones (MCP) solo
+  cuando sirven a un paso, **límites en la capa de ejecución** (permisos y hooks, no el prompt),
+  revisor que devuelve pruebas, esfuerzo asignado por trabajo y una condición de "terminado"
+  definida por entregables.
+- Aplicado: `.claude/settings.json` del kit niega leer `.env`/`secretos/` y editar `publicado/`
+  (verificado en la documentación oficial de configuración). Un campo de esfuerzo por subagente
+  no se pudo confirmar en la documentación: no se usa.
+- Límite reconocido por el propio artículo: las reglas de archivos no frenan a un script que el
+  agente ejecute por su cuenta; para eso, permisos del sistema y claves fuera de la carpeta.
+
+## Herramientas de código abierto revisadas (lista de @beamnxw, 23-10-2026)
+Los 20 repositorios existen (comprobado con git). Valoración para este proyecto:
+- **Útiles ya o pronto:** MarkItDown (convierte PDF, Word o web a texto: leer papers en El Filtro),
+  DuckDB (análisis SQL rápido sobre CSV: laboratorio de inversión), FastMCP (crear un servidor
+  MCP propio, por ejemplo con las herramientas de El Filtro), Worktrunk (varias ramas en paralelo
+  para agentes que trabajan a la vez).
+- **Para más adelante:** Remotion (vídeos de los hilos con código), React Email (newsletter de
+  El Filtro), Nextra o Slidev (web del kit y presentaciones), Stagehand (navegador automatizado).
+- **No encajan ahora:** Better-T-Stack, 21st MCP y tweakcn (crear apps y diseño web), Serena
+  (código grande), Qdrant MCP (memoria vectorial: nuestros archivos bastan), PGlite, Spotlight,
+  Mastra, Trigger.dev y LibreChat (ya cubierto con Claude Code, rutinas y GitHub Actions).
+  Agent Orchestrator: sin revisar a fondo.
+
 ## Señales de alarma (descartado)
 - @EaStEnRaY1: "de 52 $ a 186.000 $ con arbitraje entre exchanges en 36 horas;
   comenta ARB y te lo mando por privado". Patrón típico de cebo o estafa:

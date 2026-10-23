@@ -19,6 +19,7 @@ que trabaje sola, aparecen siempre los mismos fallos:
 | Memoria con tipo, fuente y fecha | `MEMORIA.md` | Decidir con información caducada |
 | Cuatro especialistas | `.claude/agents/` | Que un solo agente se dé el visto bueno a sí mismo |
 | Procedimiento del turno | `.claude/skills/turno-de-noche/` | Turnos sin orden ni reglas de parada |
+| Permisos de Claude Code | `.claude/settings.json` | Que el equipo lea tus claves o toque lo ya aprobado, aunque se lo pidan |
 | Comprobador en código | `herramientas/comprobar_tareas.py` | Tareas "hechas" sin pruebas ni revisión |
 | Control en GitHub | `.github/workflows/` | Que alguien se salte el comprobador |
 | La rutina para pegar | `RUTINA.md` | Tener que pedirle cada día que trabaje |
@@ -40,6 +41,16 @@ que trabaje sola, aparecen siempre los mismos fallos:
 
 Requisitos: Claude Code (web, escritorio o terminal) y un plan de Claude que permita rutinas.
 Para el control automático, un repositorio en GitHub. Para el comprobador, Python 3, nada más.
+
+## Comprobar que los límites funcionan
+Antes de dejarlo trabajar solo, haz esta prueba en Claude Code: crea un archivo cualquiera en
+`publicado/` y pídele que lo edite. Debe negarse porque se lo impide la configuración.
+Con `/permissions` ves las reglas que están activas.
+
+Ojo: estas reglas frenan las herramientas de Claude para leer y editar archivos. Un programa
+que el equipo ejecute por su cuenta (un script de Python, por ejemplo) no pasa por ellas;
+para eso están los permisos de tu sistema y que las claves de verdad vivan fuera de la carpeta
+(secretos de GitHub, variables de entorno).
 
 ## Lo que no hace
 - No es magia: el equipo es tan bueno como las tareas que le describas.

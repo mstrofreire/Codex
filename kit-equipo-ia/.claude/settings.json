@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secretos/**)",
+      "Edit(./secretos/**)",
+      "Edit(./publicado/**)",
+      "Edit(./.claude/settings.json)"
+    ]
+  }
+}

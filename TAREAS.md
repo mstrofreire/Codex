@@ -54,9 +54,9 @@ X03 · Kit "tu equipo de IA en Claude Code"
 ESTADO: VERIFICANDO
 OBJETIVO: plantilla en español, lista para copiar, con reglas, registro de tareas, memoria con fecha, 4 especialistas, procedimiento de turno, comprobador en código y rutina.
 HECHO: carpeta kit-equipo-ia/ con README, CLAUDE.md, TAREAS.md, MEMORIA.md, BITACORA.md, RUTINA.md, 4 subagentes, skill turno-de-noche, comprobador y control de GitHub.
-VERIFICADO: el comprobador detecta 6 de 6 errores provocados y aprueba la plantilla y nuestro TAREAS.md; los 5 archivos de .claude tienen cabecera válida.
+VERIFICADO: el comprobador detecta 6 de 6 errores provocados y aprueba la plantilla y nuestro TAREAS.md; los 5 archivos de .claude tienen cabecera válida. Añadido .claude/settings.json con reglas deny (JSON válido; sintaxis según la documentación oficial).
 REVISIÓN:
-PENDIENTE: prueba de punta a punta en una sesión nueva de Claude Code (tarea T01 del kit) y revisión independiente.
+PENDIENTE: prueba de punta a punta en una sesión nueva de Claude Code (tarea T01 del kit), comprobar que editar publicado/ se deniega de verdad, y revisión independiente.
 APROBACIÓN: el dueño decide si se publica gratis, de pago o como imán de la cuenta de X.
 SIGUIENTE: ejecutar la tarea T01 del kit en una sesión limpia y guardar su informe.
 
