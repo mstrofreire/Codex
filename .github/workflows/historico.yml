@@ -15,7 +15,7 @@ permissions:
 jobs:
   descargar:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - name: Conectividad
@@ -26,6 +26,7 @@ jobs:
       - name: Descargar y extraer
         run: python3 .github/puente/historico.py motion-demo/src/voto/historico/infoelectoral
       - name: Guardar en la rama
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
