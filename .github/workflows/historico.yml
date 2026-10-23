@@ -1,13 +1,13 @@
-# Descarga los resultados oficiales del Congreso (Infoelectoral, Ministerio del Interior) de todas las
-# generales desde 1977 y guarda en la rama los ficheros pequeños que hacen falta: 03 (candidaturas),
-# 07 (datos por circunscripción) y 08 (votos y escaños por candidatura y circunscripción).
+# Descarga los resultados oficiales del Congreso (Infoelectoral) de todas las generales desde 1977 y guarda
+# en la rama los ficheros pequeños por circunscripción (03, 07, 08) con su procedencia. Corre en GitHub
+# porque Infoelectoral no responde desde el entorno de trabajo.
 name: Datos históricos (Infoelectoral)
 
 on:
   workflow_dispatch:
   push:
     branches: [ccr-a535fa35-odfdkn]
-    paths: [.github/workflows/historico.yml]
+    paths: [.github/workflows/historico.yml, .github/puente/**]
 
 permissions:
   contents: write
@@ -15,27 +15,16 @@ permissions:
 jobs:
   descargar:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
-      - name: Descargar y extraer
+      - name: Conectividad
         run: |
-          set -u
-          out=motion-demo/src/voto/historico/infoelectoral
-          mkdir -p "$out"
-          : > "$out/descarga.log"
-          for f in 197706 197903 198210 198606 198910 199306 199603 200003 200403 200803 201111 201512 201606 201904 201911 202307; do
-            url="https://infoelectoral.interior.gob.es/estaticos/docxl/apliextr/02${f}_TOTA.zip"
-            if curl -fsSL --retry 4 --retry-delay 5 --max-time 300 -A "Mozilla/5.0" -o "/tmp/$f.zip" "$url"; then
-              (cd /tmp && sha256sum "$f.zip") >> "$out/SHA256SUMS"
-              unzip -l "/tmp/$f.zip" > "$out/$f.contenido.txt"
-              mkdir -p "$out/$f"
-              unzip -o -j "/tmp/$f.zip" '03*' '07*' '08*' 'FICHEROS*' -d "$out/$f" >/dev/null || unzip -o -j "/tmp/$f.zip" -x '*0[459]*' '*1[0-9]*' -d "$out/$f" >/dev/null || true
-              echo "OK $f $(stat -c %s /tmp/$f.zip) bytes" | tee -a "$out/descarga.log"
-            else
-              echo "FALLO $f $url" | tee -a "$out/descarga.log"
-            fi
+          for u in https://infoelectoral.interior.gob.es/ https://web.archive.org/ http://www.infoelectoral.mir.es/; do
+            printf '%s ' "$u"; curl -sS -o /dev/null --connect-timeout 15 --max-time 30 -w '%{http_code}\n' "$u" || true
           done
-          ls -la "$out"/*/ | head -80
+      - name: Descargar y extraer
+        run: python3 .github/puente/historico.py motion-demo/src/voto/historico/infoelectoral
       - name: Guardar en la rama
         run: |
           git config user.name "github-actions[bot]"
