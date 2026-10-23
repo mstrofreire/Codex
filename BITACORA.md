@@ -22,3 +22,10 @@ de cada sesión: qué se hizo y por qué.
   algo por hecho. Motivo: una bitácora narrativa no dice qué está verificado y qué no.
 - Decisión: la memoria distingue reglas, observaciones con fecha, estado de tareas y evidencia actual.
 - Sigue: X01 e I01 dependen del dueño; T01 es la siguiente tarea del agente.
+
+### 2026-10-23 (tarde)
+- El dueño no puede cambiar ajustes de GitHub ni de rutinas desde el móvil.
+- Decisión: la rutina diaria pasa a ejecutarse dentro de la conversación principal, que tiene
+  acceso de escritura; la rutina antigua queda desactivada. Motivo: desbloquear sin pedir nada al dueño.
+- Decisión: no cambiar la rama principal de mstrofreire/codex, porque contiene otro proyecto del
+  dueño (vídeos electorales por provincia y NEGOCIO-GROK.md). El Filtro irá a su propio repositorio.

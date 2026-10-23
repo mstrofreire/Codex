@@ -37,7 +37,7 @@ ESTADO: BLOQUEADA (depende del dueño)
 OBJETIVO: cuenta "El Filtro" con etiqueta de automatizada, claves de API guardadas en secretos de GitHub y publicación programada funcionando.
 HECHO: programa de publicación (herramientas/publicar_x.py), flujo de GitHub Actions, reglas (x/REGLAS.md), estilo (x/ESTILO.md).
 VERIFICADO: firma OAuth igual al ejemplo oficial de X; simulación de publicación correcta; los 5 hilos de la cola pasan el límite de 280 caracteres.
-PENDIENTE: crear la cuenta, sacar las 4 claves, guardarlas en GitHub, poner `claude/kronos-repo-9qxm1t` como rama principal (los flujos programados solo corren en la rama principal).
+PENDIENTE: crear la cuenta, sacar las 4 claves y guardarlas en GitHub (necesita navegador en modo escritorio u ordenador). No se cambia la rama principal de mstrofreire/codex: contiene otro proyecto del dueño (vídeos electorales). Alternativa decidida el 23-10-2026: El Filtro tendrá su propio repositorio cuando se cree la cuenta.
 APROBACIÓN: cada hilo necesita `aprobado: si` durante la primera semana.
 SIGUIENTE: cuando haya claves, lanzar el flujo a mano una vez y comprobar el primer post publicado.
 
@@ -85,8 +85,11 @@ T11 · Investigar ventajas de estructura (Polymarket y similares): legalidad en 
 ## Infraestructura
 
 I01 · Rutina diaria con acceso de escritura al repositorio
-ESTADO: BLOQUEADA (depende del dueño)
-OBJETIVO: que la rutina diaria pueda guardar su trabajo en GitHub.
-VERIFICADO: la prueba del 20-10-2026 falló al hacer push (error 403, repositorio no autorizado en la rutina).
-PENDIENTE: añadir `mstrofreire/codex` a la rutina en claude.ai/code → Routines.
-SIGUIENTE: lanzar la rutina a mano y comprobar que el commit llega a GitHub.
+ESTADO: VERIFICANDO
+OBJETIVO: que el agente diario pueda guardar su trabajo en GitHub sin que el dueño tenga que tocar ajustes (desde el móvil no puede).
+HECHO: 23-10-2026: la rutina antigua (sesión nueva sin acceso al repo) queda desactivada. Nueva rutina "Agente diario (en esta conversación)" a las 8:52 de Madrid, que se ejecuta dentro de la sesión que sí tiene acceso de escritura.
+VERIFICADO: rutina creada y activa, próxima ejecución 24-10-2026 08:52 (Madrid). La rutina antigua se paró a los 24 s el 23-10 por falta de acceso (observación superada por este cambio).
+REVISIÓN:
+PENDIENTE: confirmar que la primera ejecución hace push de verdad.
+APROBACIÓN: no.
+SIGUIENTE: revisar el commit de la ejecución del 24-10-2026.
