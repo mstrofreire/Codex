@@ -1,4 +1,4 @@
-aprobado: no
+aprobado: si
 publicar_desde: 2026-10-25T09:00
 ===
 Te habrá llegado esta semana: "alguien reemplazó una firma de trading entera con agentes de IA que debaten, y es gratis".

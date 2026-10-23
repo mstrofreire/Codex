@@ -1,4 +1,4 @@
-aprobado: no
+aprobado: si
 publicar_desde: 2026-10-23T14:00
 ===
 "Le di 58 $ a mi bot de IA y en 20 horas tenía 13.299 $."

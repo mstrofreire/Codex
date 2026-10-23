@@ -45,3 +45,10 @@ de cada sesión: qué se hizo y por qué.
   solo avisa). Corregidas. Segunda: FALLA por falta de pruebas guardadas de la lectura de .env.
   Repetida con prompt, ruta y llamada exactas. Tercera: PASA.
 - Lección: la revisión independiente funciona; encontró errores del propio autor que él no vio.
+
+### 2026-10-23 (noche): aprobaciones y publicación del kit
+- El dueño aprobó de forma explícita los 5 hilos de la cola ("Apruebo los 5 hilos de la cola
+  para publicarlos en X"). Marcados con aprobado: si. Saldrán cuando exista la cuenta y sus claves.
+- El dueño creó el repositorio público mstrofreire/equipo-ia. Publicado el kit con licencia MIT
+  y las pruebas. Decisión: MIT para que se pueda usar sin trabas, también comercialmente.
+- Hilo de lanzamiento del kit escrito y en la cola, pendiente de aprobación.
