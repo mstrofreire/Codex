@@ -2,7 +2,7 @@
 // Every number comes from congreso2023/provincias.json (official data, computed by provincias.py).
 import { Composition, Sequence, Still, interpolate, useCurrentFrame } from "remotion";
 import { Scene, useEnter } from "../Scene";
-import { DISPLAY, MONO } from "../theme";
+import { DISPLAY, FONT, MONO } from "../theme";
 import P from "./congreso2023/provincias.json";
 import { Frame, Headline, HANDLE, SRC, Seats } from "./cards";
 import { Note, SRC23, pct } from "./cards2";
@@ -37,7 +37,6 @@ const party = (p: Prov, nombre: string) => p.partidos.find((x) => x.nombre === n
 // "a" + "el PP" -> "al PP"; "de" + "el PP" -> "del PP"; "la CUP"/"Vox" keep their form.
 const con = (prep: "a" | "de", x: Partido) => (x.art === "el" ? `${prep}l ${x.nombre}` : `${prep} ${x.art ? x.art + " " : ""}${x.nombre}`);
 const art = (x: Partido) => (x.art ? `${x.art} ${x.nombre}` : x.nombre);
-const Cap = (x: Partido) => art(x)[0].toUpperCase() + art(x).slice(1);
 const dip = (n: number) => `${n} ${n === 1 ? "diputado" : "diputados"}`;
 const esc = (n: number) => `${n} ${n === 1 ? "escaño" : "escaños"}`;
 const color = (x: Partido) => x.color ?? V.dim;
@@ -120,14 +119,24 @@ export const ProvEscanos = ({ code, marca = HANDLE }: KitProps) => {
   );
 };
 
-const DueloRow = ({ x, q, tag, win }: { x: Partido; q: Cociente; tag: string; win: boolean }) => (
-  <div style={{ background: V.panel, borderRadius: 20, padding: "26px 30px", border: win ? `3px solid ${ACCENT}` : "3px dashed #E66767" }}>
+const nth = (n: number) => (n === 1 ? "primer" : `${n}.º`);
+// Votes per seat if the party takes this seat (the D'Hondt quotient); whole votes unless rounding would hide the gap.
+const porEscano = (q: number, other: number) => (Math.round(q) === Math.round(other) ? qfmt(q) : fmt(q));
+
+const DueloRow = ({ x, q, other, tag, win }: { x: Partido; q: Cociente; other: number; tag: string; win: boolean }) => (
+  <div style={{ background: V.panel, borderRadius: 20, padding: "18px 28px", border: win ? `3px solid ${ACCENT}` : "3px dashed #E66767" }}>
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-      <Name x={x} size={36} />
+      <span>
+        <Name x={x} size={36} />
+        <span style={{ fontSize: 26, color: V.dim, marginLeft: 14 }}>a por su {nth(q.divisor)} escaño</span>
+      </span>
       <span style={{ fontSize: 24, fontWeight: 700, padding: "4px 12px", borderRadius: 8, background: win ? V.text : "#E66767", color: V.bg }}>{tag}</span>
     </div>
-    <div style={{ fontFamily: MONO, fontSize: 38, marginTop: 18, color: V.text }}>
-      {fmt(q.votos)} ÷ {q.divisor} = <span style={{ color: win ? ACCENT : V.text }}>{qfmt(q.cociente)}</span>
+    <div style={{ fontSize: 28, color: V.dim, marginTop: 10 }}>
+      {fmt(q.votos)} votos ÷ {q.divisor} {q.divisor === 1 ? "escaño" : "escaños"} =
+    </div>
+    <div style={{ fontFamily: MONO, fontSize: 42, marginTop: 4, color: win ? ACCENT : V.text }}>
+      {porEscano(q.cociente, other)} <span style={{ fontFamily: FONT, fontSize: 28, color: V.dim }}>votos por escaño</span>
     </div>
   </div>
 );
@@ -143,15 +152,14 @@ const AjustadoDetalle = ({ p }: { p: Prov }) => {
       {a.duelo && (
         <>
           <div style={{ fontSize: 28, lineHeight: 1.4, marginTop: 34 }}>
-            La ley D'Hondt divide los votos de cada partido entre 1, 2, 3… Los <b>{p.escanos2023} cocientes más altos</b> se llevan los {esc(p.escanos2023)}.
+            Con la ley D'Hondt, cada escaño va al partido que, al sumarlo, sale a <b>más votos por escaño</b>.
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 18, marginTop: 34 }}>
-            <DueloRow x={l} q={a.duelo.pierde} tag={`${p.escanos2023}.º y último escaño`} win />
-            <DueloRow x={g} q={a.duelo.gana} tag="se quedó fuera" win={false} />
+            <DueloRow x={l} q={a.duelo.pierde} other={a.duelo.gana.cociente} tag={`se llevó el último (${p.escanos2023}.º)`} win />
+            <DueloRow x={g} q={a.duelo.gana} other={a.duelo.pierde.cociente} tag="se quedó fuera" win={false} />
           </div>
           <Note>
-            <span style={{ color: V.text }}>{Cap(l)}</span> competía con sus votos ÷ {a.duelo.pierde.divisor}; <span style={{ color: V.text }}>{art(g)}</span>, con sus votos ÷ {a.duelo.gana.divisor}
-            {a.duelo.gana.divisor === 1 ? " (enteros)" : ""}.
+            Con {fmt(a.votos)} votos más, <span style={{ color: V.text }}>{art(g)}</span> habría salido a más votos por escaño que {art(l)} y se lo habría llevado.
           </Note>
         </>
       )}
@@ -167,8 +175,8 @@ const AjustadoDetalle = ({ p }: { p: Prov }) => {
           </div>
           {a.umbral && (
             <div style={{ display: "flex", flexDirection: "column", gap: 18, marginTop: 10 }}>
-              <DueloRow x={l} q={a.umbral.pierde} tag={`${p.escanos2023}.º y último escaño`} win />
-              <DueloRow x={g} q={{ votos: a.umbral.conVotos, divisor: 1, cociente: a.umbral.conVotos }} tag={`con ${fmt(a.votos)} votos más`} win={false} />
+              <DueloRow x={l} q={a.umbral.pierde} other={a.umbral.conVotos} tag={`se llevó el último (${p.escanos2023}.º)`} win />
+              <DueloRow x={g} q={{ votos: a.umbral.conVotos, divisor: 1, cociente: a.umbral.conVotos }} other={a.umbral.pierde.cociente} tag={`con ${fmt(a.votos)} votos más`} win={false} />
             </div>
           )}
         </>
