@@ -29,3 +29,19 @@ de cada sesión: qué se hizo y por qué.
   acceso de escritura; la rutina antigua queda desactivada. Motivo: desbloquear sin pedir nada al dueño.
 - Decisión: no cambiar la rama principal de mstrofreire/codex, porque contiene otro proyecto del
   dueño (vídeos electorales por provincia y NEGOCIO-GROK.md). El Filtro irá a su propio repositorio.
+
+### 2026-10-23 (noche): decisiones del dueño
+- Cripto: sí. La tarea T06 (estrategia BTC/ETH frente a euros) pasa de BLOQUEADA a PENDIENTE,
+  con las mismas reglas de laboratorio que el resto.
+- Kit: gratis por ahora.
+- Hilos de la cola: el dueño contestó "vale"; la aprobación queda pendiente de confirmación
+  explícita hilo a hilo antes de marcarlos como aprobados.
+
+### 2026-10-23 (noche): kit verificado
+- Prueba de punta a punta del kit en una sesión limpia de Claude Code: funcionó el turno completo
+  y los bloqueos de editar publicado/ y leer .env.
+- Primera revisión independiente: FALLA por afirmaciones exageradas en el README (los permisos no
+  cubren la consola; el revisor tiene consola; "probado en un proyecto real"; el control de GitHub
+  solo avisa). Corregidas. Segunda: FALLA por falta de pruebas guardadas de la lectura de .env.
+  Repetida con prompt, ruta y llamada exactas. Tercera: PASA.
+- Lección: la revisión independiente funciona; encontró errores del propio autor que él no vio.

@@ -4,9 +4,13 @@ on:
   push:
     paths:
       - "TAREAS.md"
+      - "herramientas/**"
+      - ".github/workflows/**"
   pull_request:
     paths:
       - "TAREAS.md"
+      - "herramientas/**"
+      - ".github/workflows/**"
 
 jobs:
   comprobar:

@@ -1,0 +1,31 @@
+FALLA
+
+La versión actual corrige los cinco puntos de la revisión anterior. Queda un único bloqueo, que es una afirmación de prueba sin respaldo en la evidencia.
+
+**Lo que impide el PASA**
+- **`README.md`, «Comprobar que los límites funcionan» y «Qué se ha probado»:** ambos dicen que se comprobó que se rechaza «leer `.env`».
+  - `pruebas/kit-e2e/salida_permisos_env.txt` solo contiene el error `File is in a directory that is denied by your permission settings` y la respuesta del agente.
+  - No muestra qué ruta se intentó leer, ni el prompt, ni el comando.
+  - El propio texto del agente habla de «`.env` ni `secretos/`», y el error dice «directory». Eso encaja mejor con `secretos/**` que con un archivo `.env` en la raíz.
+  - No puedo confirmar con esa evidencia que se probara `.env`.
+- **Cómo arreglarlo:** guardar en esa prueba la ruta exacta y el prompt usado, o cambiar el README a «leer archivos de `secretos/`» (o «de las rutas protegidas») hasta repetirla con `.env`.
+- **Archivo vacío:** `pruebas/kit-e2e/revision-independiente-2.txt` mide 0 bytes. Si se espera como evidencia de una segunda revisión, falta. Debería contener esta revisión o borrarse.
+
+**Puntos de la revisión anterior, ya corregidos**
+1. **Permisos y consola:** el README aclara que las reglas frenan solo las herramientas de leer y editar, y que Bash no queda cubierto (tabla y apartado «Lo que cubren y lo que no»). `CLAUDE.md` regla 5 lo dice igual: «Estos bloqueos no cubren la consola».
+2. **Revisor:** el README dice que «no modificar nada es una norma de su papel, no un límite técnico». `revisor.md` mantiene `tools: Read, Grep, Glob, Bash` y lo declara como norma («no la uses para crear, cambiar ni borrar»).
+3. **«Probado en un proyecto real»:** ahora es «Montado para un proyecto real», con la sección «Qué se ha probado» y la lista «Aún no probado» (rutina de varios días, tarea BLOQUEADA, `git push`).
+4. **Control de GitHub:** la tabla y el apartado «Para que el control de GitHub bloquee de verdad» explican que sin rama protegida solo avisa. El flujo (`comprobar-tareas.yml`) ya se activa también con `herramientas/**` y `.github/workflows/**`.
+5. **Rutas del flujo:** el paso 1 del README avisa de que `.github/` solo funciona en la raíz del repositorio, que es donde el flujo usa sus rutas.
+6. **Plantilla:** el paso 2 del README explica el marcador «(pon la fecha de hoy)» de `MEMORIA.md`.
+
+**Comprobador**
+- `python3 kit-equipo-ia/herramientas/comprobar_tareas.py kit-equipo-ia/TAREAS.md` da `1 tareas · PENDIENTE: 1 · Todo en orden.`, código de salida 0.
+- El script no escribe nada, así que ejecutarlo no modificó ningún archivo.
+
+**Mejoras opcionales (no impiden el PASA)**
+- **Casos negativos del comprobador:** «con errores provocados» (README, «Qué se ha probado») solo consta en el texto de la revisión anterior. No hay un archivo de salida en `pruebas/kit-e2e/`. Conviene guardar uno.
+- **Frases sin verificar:** «unos 15 minutos», «claude.ai/code → Routines» y los avisos al móvil o email (`RUTINA.md`), y «plan que permita rutinas».
+- **Bloqueo de `settings.json`:** la regla `Edit(./.claude/settings.json)` existe, pero no se probó. El README no la promete.
+- **Descripción de `revisor.md`:** dice «No modifica nada» sin matizar que es una norma. Se sugiere alinearla con el README.
+- **`salida_turno.txt`:** el informe supera las 10 líneas de `informador.md` y el coordinador añadió comentarios. Esto viene de la revisión anterior y no se ha corregido.

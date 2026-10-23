@@ -1,0 +1,20 @@
+Warning: no stdin data received in 3s, proceeding without it. If piping from a slow command, redirect stdin explicitly: < /dev/null to skip, or wait longer.
+El constructor sigue trabajando; no tengo su resultado todavía. Espero su notificación antes de pasar a la revisión.
+
+El revisor está trabajando. Espero su veredicto.
+
+Estoy esperando el informe del informador.
+
+**Informe del turno de noche (2026-10-23)**
+
+**Hecho:** T01 pasó a HECHA. La prueba es `trabajo/T01-archivos.md`, con el comando exacto y la salida real de los 5 archivos más grandes. El mayor es `herramientas/comprobar_tareas.py`, con 4201 B.
+
+**Verificado:**
+- El revisor repitió el comando y la salida coincide con la tabla (5 filas, orden descendente). Veredicto: PASA.
+- El 6.º archivo, `.claude/agents/constructor.md`, pesa 1099 B, menos que los 1318 B del 5.º, así que no quedó fuera ninguno mayor.
+- `publicado/` no cambió.
+- `python3 herramientas/comprobar_tareas.py` dio "Todo en orden". Esto lo ejecuté yo; el informador no lo hizo.
+
+**Falló o bloqueado:** nada. No hice la comprobación `git push --dry-run` ni el push, porque dijiste que no hay remoto. El commit local es `0d5910f`. Incluye `TAREAS.md`, `MEMORIA.md`, `BITACORA.md` y `trabajo/T01-archivos.md`.
+
+**Necesito de ti:** nada obligatorio. Opcional: `salida_turno.txt` sigue sin seguimiento en la raíz. No es de este turno y no lo incluí en el commit. Dime si se conserva.

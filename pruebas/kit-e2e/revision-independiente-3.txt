@@ -1,0 +1,35 @@
+PASA
+
+La prueba nueva de `.env` y la del comprobador respaldan lo que dicen el README y el CLAUDE.md del kit. No encuentro afirmaciones sin respaldo. Todo lo que sigue se hizo solo con lecturas y con el comprobador, que no escribe nada.
+
+## Lo que respalda el PASA
+
+- **Prueba de `.env`** (`pruebas/kit-e2e/salida_permisos_env.txt`): ahora guarda lo que faltaba en la segunda revisión.
+  - Muestra el prompt, que pide Read y no Bash, y la ruta exacta, `.../kit-e2e/.env`.
+  - Muestra el archivo, de 27 bytes, y la llamada `Read {"file_path": ".../.env"}`.
+  - El resultado es `denied by your permission settings`.
+  - Las reglas deny que lista coinciden con `kit-equipo-ia/.claude/settings.json`, incluida `Read(./.env)`.
+- **Prueba del comprobador** (`pruebas/kit-e2e/salida_comprobador_errores.txt`): da los 6 errores esperados y el código de salida 1.
+  - Los errores caen en A01 (sin pruebas), A02 (sin revisión PASA), A03, A04, A05 y el A01 repetido.
+  - A06 y A07, los casos correctos de `casos-con-errores-TAREAS.md`, no generan error.
+- **Comprobador sobre el kit:** `python3 kit-equipo-ia/herramientas/comprobar_tareas.py kit-equipo-ia/TAREAS.md` da `1 tareas · PENDIENTE: 1 · Todo en orden.` y código 0.
+- **Afirmaciones de `kit-equipo-ia/README.md`:**
+  - «Comprobado: editar en `publicado/` y leer `.env`» se apoya en `salida_permisos.txt` y `salida_permisos_env.txt`.
+  - «Comprobador con errores provocados» se apoya en la salida anterior.
+  - «Un turno completo» se apoya en `salida_turno.txt`, `TAREAS-tras-turno.md`, `MEMORIA-tras-turno.md`, `git-log.txt` y `T01-archivos.md`. `TAREAS-tras-turno.md` pasa el comprobador.
+  - «Aún no probado» (rutina de varios días, tarea BLOQUEADA, `git push`) coincide con la decisión de la memoria de no hacer push.
+  - Las advertencias sobre la consola, la rama protegida y el revisor que «no modifica» por norma no prometen nada que las pruebas desmientan.
+- **`kit-equipo-ia/CLAUDE.md`, regla 5:** dice que `.env` y `secretos/` están bloqueados para la herramienta de lectura y que los bloqueos no cubren la consola. Eso coincide con las reglas deny y con las pruebas.
+- **Segunda revisión:** `revision-independiente-2.txt` ya no está vacío (3555 bytes).
+
+## Mejoras opcionales (no impiden el PASA)
+
+1. No hay una prueba de contraste: sin la regla deny, Read sí leería `.env`. Hoy se atribuye el rechazo a la regla por el mensaje de error.
+2. La cabecera «Reglas deny activas» de `salida_permisos_env.txt` la escribió el script de prueba. Sería mejor volcar `settings.json` o la salida de `/permissions`. Ahora coincide con el real.
+3. El README no distingue qué reglas se probaron. Falta probar `Read(./secretos/**)`, `Edit(./secretos/**)` y `Edit(./.claude/settings.json)`, aunque el texto no promete esto de forma específica. Una frase tipo «probadas: `publicado/` y `.env`; el resto, configuradas pero sin probar» lo dejaría claro.
+4. Falta guardar la salida del comprobador con casos correctos. Hoy solo consta por omisión en la salida de errores y por `TAREAS-tras-turno.md`.
+5. Siguen sin verificarse las frases «unos 15 minutos», «plan que incluya rutinas» y los avisos de `RUTINA.md`.
+6. El informe de `salida_turno.txt` incluye mensajes de espera del coordinador y supera el límite de 10 líneas de `informador.md`.
+7. La descripción de `kit-equipo-ia/.claude/agents/revisor.md` debería decir, como el README, que «no modifica» es una norma y no un límite técnico.
+
+Esta revisión es independiente: no modifiqué ningún archivo. No he escrito el archivo del plan porque la tarea no pedía cambios.

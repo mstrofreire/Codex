@@ -51,14 +51,19 @@ APROBACIÓN: no requerida para preparar; sí para publicar en X.
 SIGUIENTE: añadir los enlaces que pase el dueño.
 
 X03 · Kit "tu equipo de IA en Claude Code"
-ESTADO: VERIFICANDO
-OBJETIVO: plantilla en español, lista para copiar, con reglas, registro de tareas, memoria con fecha, 4 especialistas, procedimiento de turno, comprobador en código y rutina.
-HECHO: carpeta kit-equipo-ia/ con README, CLAUDE.md, TAREAS.md, MEMORIA.md, BITACORA.md, RUTINA.md, 4 subagentes, skill turno-de-noche, comprobador y control de GitHub.
-VERIFICADO: el comprobador detecta 6 de 6 errores provocados y aprueba la plantilla y nuestro TAREAS.md; los 5 archivos de .claude tienen cabecera válida. Añadido .claude/settings.json con reglas deny (JSON válido; sintaxis según la documentación oficial).
-REVISIÓN:
-PENDIENTE: prueba de punta a punta en una sesión nueva de Claude Code (tarea T01 del kit), comprobar que editar publicado/ se deniega de verdad, y revisión independiente.
-APROBACIÓN: el dueño decide si se publica gratis, de pago o como imán de la cuenta de X.
-SIGUIENTE: ejecutar la tarea T01 del kit en una sesión limpia y guardar su informe.
+ESTADO: HECHA
+OBJETIVO: plantilla en español, lista para copiar, con reglas, registro de tareas, memoria con fecha, 4 especialistas, procedimiento de turno, comprobador en código, permisos y rutina.
+HECHO: carpeta kit-equipo-ia/. Prueba de punta a punta el 23-10-2026 en una sesión limpia de Claude Code: turno completo (constructor, revisor PASA, informador, commit), bloqueo de editar publicado/ y de leer .env. Textos corregidos tras dos revisiones con FALLA (afirmaciones exageradas sobre permisos, revisor y pruebas).
+VERIFICADO: pruebas/kit-e2e/ (salida_turno.txt, git-log.txt, TAREAS y MEMORIA tras el turno, salida_permisos.txt, salida_permisos_env.txt con prompt, ruta y llamada exactas, salida_comprobador_errores.txt con 6 de 6 errores detectados).
+REVISIÓN: PASA (pruebas/kit-e2e/revision-independiente-3.txt, sesión independiente de solo lectura, 23-10-2026). Las anteriores, con FALLA, en revision-independiente.txt y -2.txt.
+PENDIENTE: nada para la tarea. Sin probar todavía: varios días como rutina, una tarea BLOQUEADA y el push a un remoto (dicho en el README).
+APROBACIÓN: el dueño decidió el 23-10-2026 publicarlo gratis.
+SIGUIENTE: X04.
+
+X04 · Publicar el kit gratis
+ESTADO: BLOQUEADA: falta un repositorio público propio (por ejemplo mstrofreire/equipo-ia), que tiene que crear el dueño
+OBJETIVO: el kit en un repositorio público con licencia y un hilo de lanzamiento en la cola de X.
+PENDIENTE: que el dueño cree el repositorio vacío y público; después, copiar el kit, añadir licencia y preparar el hilo.
 
 ## Proyecto agente de inversión (laboratorio)
 
@@ -75,7 +80,7 @@ T02 · Motor de backtest con costes e impuestos españoles · PENDIENTE
 T03 · Validar el motor reproduciendo el filtro de 10 meses de Faber · PENDIENTE
 T04 · Estrategia núcleo: tendencia multiactivo frente a VWCE · PENDIENTE
 T05 · Prueba de fuego estadística (ver CONOCIMIENTO.md) · PENDIENTE
-T06 · Estrategia cripto (BTC/ETH) · BLOQUEADA: el dueño aún no ha decidido si incluir cripto
+T06 · Estrategia cripto (BTC/ETH) · PENDIENTE
 T07 · Estrategia IA en modo sombra · PENDIENTE
 T08 · Motor de riesgo y ejecutor simulado · PENDIENTE
 T09 · Asignador de capital y reglas de supervivencia · PENDIENTE

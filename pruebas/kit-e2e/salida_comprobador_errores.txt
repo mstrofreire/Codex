@@ -1,0 +1,10 @@
+Comando: python3 kit-equipo-ia/herramientas/comprobar_tareas.py pruebas/kit-e2e/casos-con-errores-TAREAS.md
+pruebas/kit-e2e/casos-con-errores-TAREAS.md: 8 tareas · BLOQUEADA: 2, CASI: 1, EN_CURSO: 1, HECHA: 3, PENDIENTE: 1
+ERROR A01 (línea 3): HECHA sin pruebas en VERIFICADO
+ERROR A02 (línea 8): HECHA sin REVISIÓN: PASA del revisor
+ERROR A03 (línea 12): EN_CURSO sin SIGUIENTE (una sesión nueva no sabría cómo seguir)
+ERROR A04 (línea 15): BLOQUEADA sin decir qué falta
+ERROR A05 (línea 17): estado 'CASI' no válido (usa BLOQUEADA, EN_CURSO, HECHA, PENDIENTE, VERIFICANDO)
+ERROR A01 (línea 19): identificador repetido
+6 errores.
+Código de salida: 1

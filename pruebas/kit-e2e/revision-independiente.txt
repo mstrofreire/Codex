@@ -1,0 +1,32 @@
+FALLA
+
+El kit está completo y funciona, pero tiene promesas falsas en los textos. Tu objetivo exigía que el README no prometiera nada falso. No he modificado nada.
+
+**Lo que está bien**
+- **Comprobador:** las dos ejecuciones dan "Todo en orden", con código de salida 0. `kit-equipo-ia/TAREAS.md` tiene T01 PENDIENTE, y `pruebas/kit-e2e/TAREAS-tras-turno.md` tiene T01 HECHA con VERIFICADO y REVISIÓN: PASA.
+- **Casos negativos:** probé el comprobador con entradas inventadas en memoria, sin escribir archivos. Detecta HECHA con REVISIÓN: FALLA, EN_CURSO sin SIGUIENTE, BLOQUEADA sin motivo e identificadores repetidos.
+- **Piezas del objetivo:** todas existen: `CLAUDE.md`, `TAREAS.md`, `MEMORIA.md`, los 4 subagentes en `.claude/agents/`, `.claude/skills/turno-de-noche/SKILL.md`, `.claude/settings.json`, `RUTINA.md` y `.github/workflows/comprobar-tareas.yml`.
+- **Prueba real del turno:** es coherente. `salida_turno.txt`, `git-log.txt` (commit `0d5910f`), `T01-archivos.md` y `MEMORIA-tras-turno.md` cuadran entre sí. Los tamaños (por ejemplo `README.md` con 3959 B) coinciden con los archivos actuales.
+- **Prueba de permisos:** `salida_permisos.txt` muestra que escribir en `publicado/` fue rechazado por la configuración.
+
+**Motivos del FALLA: afirmaciones que el kit no sostiene**
+1. **`README.md`, tabla "Permisos de Claude Code":** dice que evita "que el equipo lea tus claves o toque lo ya aprobado, aunque se lo pidan". Las reglas de `.claude/settings.json` solo frenan las herramientas Read y Edit. El `constructor` y el `revisor` tienen Bash y pueden hacer `cat .env` o escribir en `publicado/` por consola. El apartado "Comprobar que los límites funcionan" avisa de esto solo para "un script de Python". No menciona Bash, y `salida_permisos.txt` dice que el agente decidió no usarlo, no que no pudiera.
+2. **`CLAUDE.md`, regla 5:** dice "el equipo no puede escribir" en `publicado/` y "no puede leer" las claves. Es el mismo problema.
+3. **`README.md`, sección "El equipo":** dice que el revisor "No puede modificar nada". Pero `.claude/agents/revisor.md` le da `tools: Read, Grep, Glob, Bash`, así que sí puede. Solo el investigador y el informador son realmente de solo lectura.
+4. **`README.md`, sección "Origen":** dice "Montado y probado en un proyecto real". La única prueba aportada es una tarea trivial (T01) en una copia de trabajo. El turno no se probó como rutina y no se probaron ni la parada por BLOQUEADA ni el `git push`.
+5. **`README.md`, tabla "Control en GitHub":** promete evitar "que alguien se salte el comprobador". El flujo `.github/workflows/comprobar-tareas.yml` solo avisa; para bloquear hace falta una rama protegida con comprobación obligatoria, y el README no lo explica. Además solo se activa al cambiar `TAREAS.md`, así que editar `herramientas/comprobar_tareas.py` o el propio flujo no lo dispara. Y `settings.json` no impide al equipo editar esos archivos.
+
+**Fallos menores**
+- `pruebas/kit-e2e/revision-independiente.txt` está vacío (0 bytes). Si se esperaba como evidencia de la revisión, falta.
+- La prueba de permisos solo cubrió escribir en `publicado/`. No se probó el bloqueo de leer `.env` ni el de editar `settings.json`.
+- El flujo de GitHub ejecuta `python3 herramientas/comprobar_tareas.py TAREAS.md` con rutas desde la raíz. Si se copia el kit a una subcarpeta (el paso 1 del README lo permite), `.github/` no se detecta y las rutas fallan. Habría que avisarlo.
+- Sin verificar:
+  - La ruta "claude.ai/code → Routines" y los avisos al móvil o por email (`RUTINA.md`).
+  - "Unos 15 minutos" y "plan que permita rutinas" (`README.md`).
+- El informe de `salida_turno.txt` es algo más largo que el máximo de 10 líneas de `informador.md`. Además el coordinador le añadió comentarios propios, aunque la skill dice "devuélvelo tal cual".
+- `MEMORIA.md` deja el marcador "(pon la fecha de hoy)", que no sigue el formato AAAA-MM-DD. Es aceptable en una plantilla, pero el README no lo menciona.
+
+**Cómo pasaría a PASA**
+- Corregir las frases 1 a 3: decir que las reglas frenan las herramientas Read y Edit y que Bash las esquiva. Para lo segundo, quitar Bash al revisor o decir que su solo-lectura es una norma, no un límite técnico.
+- Suavizar la frase 4, y explicar la rama protegida (y ampliar `paths` del flujo) para la frase 5.
+- Rellenar o eliminar `revision-independiente.txt`.

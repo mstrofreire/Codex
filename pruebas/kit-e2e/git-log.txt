@@ -1,0 +1,39 @@
+commit 0d5910f2dfd58d2012ddfaecf85daf875dc912be
+Author: Claude <noreply@anthropic.com>
+Date:   Fri Oct 23 19:12:15 2026 +0000
+
+    T01: lista de los 5 archivos más grandes, verificada por el revisor
+    
+    Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+    Claude-Session: https://claude.ai/code/session_014PzVAmrd4uMFUmX9nmx4h2
+
+ BITACORA.md             |  7 +++++++
+ MEMORIA.md              |  6 +++++-
+ TAREAS.md               | 12 ++++++------
+ trabajo/T01-archivos.md | 35 +++++++++++++++++++++++++++++++++++
+ 4 files changed, 53 insertions(+), 7 deletions(-)
+
+commit cf1f54413672ec5bd86b7f4e9a34c62954ff1389
+Author: test <test@test>
+Date:   Fri Oct 23 19:10:40 2026 +0000
+
+    inicial
+
+ .claude/agents/constructor.md          | 23 ++++++++
+ .claude/agents/informador.md           | 20 +++++++
+ .claude/agents/investigador.md         | 21 ++++++++
+ .claude/agents/revisor.md              | 21 ++++++++
+ .claude/settings.json                  | 12 +++++
+ .claude/skills/turno-de-noche/SKILL.md | 29 ++++++++++
+ .github/workflows/comprobar-tareas.yml | 19 +++++++
+ BITACORA.md                            | 12 +++++
+ CLAUDE.md                              | 41 ++++++++++++++
+ MEMORIA.md                             | 25 +++++++++
+ README.md                              | 64 ++++++++++++++++++++++
+ RUTINA.md                              | 31 +++++++++++
+ TAREAS.md                              | 35 ++++++++++++
+ herramientas/comprobar_tareas.py       | 99 ++++++++++++++++++++++++++++++++++
+ publicado/.gitkeep                     |  0
+ publicado/aprobado.md                  |  1 +
+ trabajo/.gitkeep                       |  0
+ 17 files changed, 453 insertions(+)

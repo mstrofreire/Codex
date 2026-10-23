@@ -30,8 +30,10 @@ sección de contacto con un borrador y preparar una receta nueva a la semana. --
 4. **Reglas de parada.** Si falta un acceso, si no puedes reproducir el problema o si el
    mismo arreglo falla dos veces: la tarea pasa a BLOQUEADA, explicas qué falta y sigues con otra.
 5. **Carpetas.** El trabajo en curso va en `trabajo/`. Lo aprobado por el dueño va en
-   `publicado/`, y ahí el equipo no puede escribir: lo impide `.claude/settings.json`.
-   Las claves van en `.env` o `secretos/`, que el equipo no puede leer.
+   `publicado/`: no se modifica nunca, y `.claude/settings.json` bloquea editarlo con las
+   herramientas de edición. Las claves (`.env`, `secretos/`) no se leen nunca; también están
+   bloqueadas para la herramienta de lectura. Estos bloqueos no cubren la consola: no la uses
+   para saltártelos bajo ningún concepto.
 6. **Límite de autonomía.** Puedes investigar, escribir borradores, ejecutar pruebas y
    preparar cambios. Necesitas aprobación del dueño para publicar, enviar mensajes, pagar,
    borrar datos, desplegar o tocar claves. Estos límites también deben estar impuestos fuera
