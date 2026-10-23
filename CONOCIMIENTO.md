@@ -94,6 +94,9 @@ para copiar, honestidad, cierre con una sola acción) está en `x/ESTILO.md`.
   cifra imposible de verificar, urgencia y captación por mensaje privado.
   El arbitraje entre exchanges con 52 $ no cubre comisiones ni retiradas.
 - Cualquier fuente que prometa rentabilidades sin pruebas verificables se archiva aquí.
+- @igus_ai (22-08-2026, 1.063 likes): plantilla del "profeta". Predijo techo parabólico en bolsa y
+  rally de cripto en 6-12 meses y dice haber acertado "todos los techos y suelos en 15 años".
+  Dos meses después: S&P 500 −0,6 %, Bitcoin +6 % (77.075 $ → 81.664 $). Historial sin pruebas.
 
 ## Fuera de alcance de este proyecto (anotado por si interesa)
 - @humzaakhalid, "7 Ways to Make Money With AI": servicios (auditorías de IA, configuración

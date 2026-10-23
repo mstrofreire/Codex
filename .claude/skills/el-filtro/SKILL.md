@@ -25,6 +25,9 @@ description: Analiza una o varias publicaciones de X sobre IA, dinero o trading 
 - **Cebo**: promesa imposible o no verificable cuyo objetivo es captar clics, contactos o referidos.
   Plantilla típica: cifra mínima de partida, multiplicación imposible en horas, IA autónoma
   "bajo amenaza", detalles imposibles de comprobar y salida por enlace o mensaje privado.
+  Segunda plantilla, el **profeta**: urgencia ("no pierdas el tiempo"), predicción tan amplia que
+  casi todo encaja, historial perfecto sin enlaces que lo prueben y "sígueme / activa notificaciones".
+  Si la predicción tiene fecha, compárala con los precios reales desde el día del post.
 
 ## 5. Lo que merece la pena llevarse
 - Una o dos frases, accionables. Si es cebo, la lección es reconocer el patrón.

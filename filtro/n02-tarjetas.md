@@ -51,3 +51,28 @@ en ningún gestor real. Cada decisión necesitó 11 llamadas al modelo y más de
 **Llévate:** la estructura de debate (alcista contra bajista, y un equipo de riesgo que ataca
 la decisión) es buena idea para pensar mejor. Lo único que vale como prueba es lo que el
 propio hilo dice en su paso 8: semanas de paper trading antes de confiar en una sola llamada.
+
+## @igus_ai · 22 ago 2026 · Cebo
+https://x.com/igus_ai/status/2091290223757922789
+
+**Título:** "Los próximos 6-12 meses podrían cambiar tu vida financiera" (1.063 likes)
+
+**Afirma:** primero un techo parabólico en bolsa, luego un rally de cripto y después una recesión;
+"un número récord de millonarios". Y: "he acertado todos los techos y suelos del mercado durante
+los últimos 15 años, incluido el suelo de Bitcoin en 16.000 $ y el techo en 126.000 $".
+
+**Comprobado con datos** (23-10-2026, dos meses después del post):
+- S&P 500: 7.674 → 7.629 (−0,6 %); máximo 7.819 el 6 de octubre. Nasdaq: −0,7 %. Ningún techo parabólico.
+- Bitcoin: 77.075 $ el día del post → 81.664 $ (+6 %), entre 74.968 $ y 87.396 $. Ningún rally eufórico.
+- Los niveles que cita son reales (mínimo de 15.476 $ en noviembre de 2022 y máximo de 126.200 $ en
+  octubre de 2025), pero no enlaza ni una publicación que demuestre que los anticipó.
+  Cualquiera puede citar techos y suelos una vez ocurridos.
+- La cuenta existe desde 2009 y tiene 160.000 seguidores. Su biografía ofrece un correo de contacto.
+
+**Análisis:** es la plantilla del "profeta": urgencia ("NO PIERDAS EL TIEMPO", "pero no por mucho
+tiempo"), una predicción tan amplia que casi cualquier resultado encaja (sube, sube más, luego baja,
+en un plazo de 6 a 12 meses), un historial perfecto sin pruebas y una llamada a seguir y activar
+notificaciones. El producto es tu atención.
+
+**Llévate:** un pronóstico que no se puede fallar no informa de nada. Pide siempre la fecha,
+el nivel y el enlace de la predicción anterior antes de creerte un historial.
