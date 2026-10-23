@@ -88,6 +88,21 @@ para copiar, honestidad, cierre con una sola acción) está en `x/ESTILO.md`.
 - Uso posible aquí: solo como un jugador más del modo sombra, evaluado hacia delante, y si el coste
   de API cabe en el presupuesto. Ya adoptamos su idea del debate alcista/bajista.
 
+## Equipo de agentes que trabaja de noche (de @0xkvro, 23-10-2026)
+- Un coordinador que es dueño del resultado, especialistas con trabajos distintos
+  (investigar, construir, revisar, informar) y trabajo que deja **pruebas**, no promesas.
+- El estado vive fuera de la conversación: tareas con identificador, un dueño y un punto de
+  control (hecho, verificado, pendiente, aprobación, siguiente). Aplicado en `TAREAS.md`.
+- Estados con transiciones que exigen pruebas; un revisor independiente devuelve PASA, FALLA o BLOQUEADA.
+- Memoria que sabe olvidar: "el test falló el lunes" caduca cuando pasa el miércoles.
+  Cada recuerdo lleva tipo, fuente y fecha. Aplicado en `CLAUDE.md`.
+- La IA prepara acciones con consecuencias; no recibe permiso automático para ejecutarlas.
+  Y un prompt no es una barrera de seguridad: los límites se imponen en los sistemas
+  (secretos de GitHub, aprobación de hilos).
+- Reglas de parada: falta acceso, no se reproduce el problema, el mismo arreglo falla dos veces.
+- El informe de la mañana es el producto: qué se completó, qué se verificó, qué falló, qué necesita decisión.
+- El propio autor avisa de que sus ejemplos de resultados son ilustrativos, no de una ejecución real.
+
 ## Señales de alarma (descartado)
 - @EaStEnRaY1: "de 52 $ a 186.000 $ con arbitraje entre exchanges en 36 horas;
   comenta ARB y te lo mando por privado". Patrón típico de cebo o estafa:

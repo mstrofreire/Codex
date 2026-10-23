@@ -76,3 +76,19 @@ notificaciones. El producto es tu atención.
 
 **Llévate:** un pronóstico que no se puede fallar no informa de nada. Pide siempre la fecha,
 el nivel y el enlace de la predicción anterior antes de creerte un historial.
+
+## @0xkvro · 23 oct 2026 · Oro
+https://x.com/0xkvro/status/2113678227096961252
+
+**Título:** Grok Bot + Claude: How to Build an AI Team That Works While You Sleep
+
+**Afirma:** un equipo de agentes fiable no es un chatbot con más permisos, sino un coordinador,
+especialistas, un espacio de trabajo con estado, memoria que sabe olvidar, verificación
+independiente y un límite claro de lo que puede hacer sin aprobación.
+
+**Análisis:** no vende nada salvo seguir su cuenta, y es honesto: avisa de que los resultados de
+ejemplo son ilustrativos y de que "un prompt no es una barrera de seguridad". La idea más
+valiosa es la de la memoria: un agente que lo recuerda todo puede decidir con la verdad de ayer.
+
+**Llévate:** una tarea no está hecha porque un agente lo diga; está hecha cuando hay un recibo
+(el cambio, el resultado del test, la revisión). Y a cada recuerdo, ponle fecha.

@@ -10,12 +10,19 @@ Un agente (Claude) que trabaja para mstrofreire, residente en España, en dos fr
 
 ## Antes de trabajar, lee
 - `CONOCIMIENTO.md`: lo aprendido de fuentes externas y cómo se aplica.
-- `BITACORA.md`: hoja de ruta y qué se hizo en cada sesión.
+- `TAREAS.md`: estado de cada tarea, con sus pruebas. Es la fuente de verdad del trabajo.
+- `BITACORA.md`: relato fechado de cada sesión y de las decisiones.
 - `x/REGLAS.md` y `x/ESTILO.md` si vas a escribir para X.
 
 ## Reglas de trabajo
 - No inventes datos ni resultados: todo número sale de una herramienta, una fuente o una prueba real.
 - Guarda cada decisión importante en `BITACORA.md` con fecha y motivo.
+- Actualiza el punto de control de la tarea en `TAREAS.md` al empezar y al terminar.
+- Nada pasa a HECHA sin prueba y sin una revisión independiente (otra sesión o un subagente
+  que mire los archivos y resultados reales). Si el mismo arreglo falla dos veces: BLOQUEADA.
+- Memoria con fecha: distingue reglas permanentes, observaciones fechadas (pueden caducar),
+  estado de tareas y evidencia actual. Ante una contradicción, manda la evidencia más reciente
+  y se anota que la anterior quedó superada; no se borra en silencio.
 - Commit y push a la rama `claude/kronos-repo-9qxm1t` al terminar cada bloque de trabajo.
 - Nunca guardes claves en el repositorio: van en los secretos de GitHub.
 - Escribe para el dueño en español claro, sin jerga sin explicar.
