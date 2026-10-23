@@ -6,7 +6,7 @@ import { DISPLAY, FONT, MONO } from "../theme";
 import P from "./congreso2023/provincias.json";
 import { Frame, Headline, HANDLE, SRC, Seats } from "./cards";
 import { Note, SRC23, pct } from "./cards2";
-import { qfmt } from "./DhondtTable";
+import { DhondtTable, qfmt } from "./DhondtTable";
 import { fmt } from "./fmt";
 import { V } from "./theme";
 
@@ -37,6 +37,7 @@ const party = (p: Prov, nombre: string) => p.partidos.find((x) => x.nombre === n
 // "a" + "el PP" -> "al PP"; "de" + "el PP" -> "del PP"; "la CUP"/"Vox" keep their form.
 const con = (prep: "a" | "de", x: Partido) => (x.art === "el" ? `${prep}l ${x.nombre}` : `${prep} ${x.art ? x.art + " " : ""}${x.nombre}`);
 const art = (x: Partido) => (x.art ? `${x.art} ${x.nombre}` : x.nombre);
+const Cap = (x: Partido) => art(x)[0].toUpperCase() + art(x).slice(1);
 const dip = (n: number) => `${n} ${n === 1 ? "diputado" : "diputados"}`;
 const esc = (n: number) => `${n} ${n === 1 ? "escaño" : "escaños"}`;
 const color = (x: Partido) => x.color ?? V.dim;
@@ -119,6 +120,11 @@ export const ProvEscanos = ({ code, marca = HANDLE }: KitProps) => {
   );
 };
 
+// "ya tenía 1 escaño, así que competía con sus votos ÷ 2 (31.625,5)" / "con sus votos enteros (31.341)"
+const siguiente = (q: Cociente) =>
+  q.divisor === 1
+    ? `competía con sus votos enteros (${qfmt(q.cociente)})`
+    : `ya tenía ${q.divisor - 1} ${q.divisor === 2 ? "escaño" : "escaños"}, así que competía con sus votos ÷ ${q.divisor} (${qfmt(q.cociente)})`;
 const nth = (n: number) => (n === 1 ? "primer" : `${n}.º`);
 // Votes per seat if the party takes this seat (the D'Hondt quotient); whole votes unless rounding would hide the gap.
 const porEscano = (q: number, other: number) => (Math.round(q) === Math.round(other) ? qfmt(q) : fmt(q));
@@ -147,9 +153,26 @@ const AjustadoDetalle = ({ p }: { p: Prov }) => {
   const g = party(p, a.gana);
   const l = party(p, a.pierde);
   const top = [...p.partidos].sort((x, y) => y.votos - x.votos).slice(0, 4);
+  // Full quotient table when it fits (up to 6 parties × 4 divisors); otherwise votes per seat.
+  const elig = p.partidos.filter((x) => x.votos * 100 >= 3 * p.validos);
+  const need = a.duelo && { rows: Math.max(5, elig.indexOf(g) + 1, elig.indexOf(l) + 1), cols: Math.max(3, a.duelo.gana.divisor, a.duelo.pierde.divisor) };
+  const tabla = need && need.rows <= 6 && need.cols <= 4 ? need : null;
   return (
     <>
-      {a.duelo && (
+      {a.duelo && tabla && (
+        <>
+          <div style={{ fontSize: 28, lineHeight: 1.4, marginTop: 30 }}>
+            Cada partido divide sus votos entre 1, 2, 3… Los <b>{p.escanos2023} resultados más altos</b> se llevan los {esc(p.escanos2023)}.
+          </div>
+          <div style={{ marginTop: 36 }}>
+            <DhondtTable code={p.code} lit={() => 1} scale={0.86} rows={tabla.rows} cols={tabla.cols} out={{ votes: g.votos, div: a.duelo.gana.divisor }} />
+          </div>
+          <Note>
+            <span style={{ color: V.text }}>{Cap(l)}</span> {siguiente(a.duelo.pierde)}. <span style={{ color: V.text }}>{Cap(g)}</span>, {siguiente(a.duelo.gana).replace("competía ", "")}. Le faltaron {fmt(a.votos)}.
+          </Note>
+        </>
+      )}
+      {a.duelo && !tabla && (
         <>
           <div style={{ fontSize: 28, lineHeight: 1.4, marginTop: 34 }}>
             Con la ley D'Hondt, cada escaño va al partido que, al sumarlo, sale a <b>más votos por escaño</b>.
