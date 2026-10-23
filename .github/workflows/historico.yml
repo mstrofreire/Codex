@@ -23,13 +23,13 @@ jobs:
           for u in https://infoelectoral.interior.gob.es/ https://web.archive.org/ http://www.infoelectoral.mir.es/; do
             printf '%s ' "$u"; curl -sS -o /dev/null --connect-timeout 15 --max-time 30 -w '%{http_code}\n' "$u" || true
           done
-      - name: Descargar y extraer
-        run: python3 .github/puente/historico.py motion-demo/src/voto/historico/infoelectoral
+      - name: Sondeo de fuentes alternativas
+        run: python3 .github/puente/sondeo.py motion-demo/src/voto/historico/puente
       - name: Guardar en la rama
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add motion-demo/src/voto/historico
-          git commit -m "Add official Infoelectoral Congress files (03/07/08) for 1977-2023" || echo "nada que guardar"
+          git commit -m "Bridge: responses fetched from the GitHub runner" || echo "nada que guardar"
           git push
