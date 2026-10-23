@@ -66,9 +66,9 @@ OBJETIVO: el kit en un repositorio público con licencia y un hilo de lanzamient
 HECHO: 23-10-2026: repositorio público github.com/mstrofreire/equipo-ia (creado por el dueño) con el kit, licencia MIT, manual adaptado y la carpeta pruebas/ con los registros y las tres revisiones. Hilo de lanzamiento de 7 posts en x/cola/2026-10-27-kit-equipo-ia.md.
 VERIFICADO: commit a8ab0a0 en main; README accesible sin sesión (HTTP 200); comprobador del kit "Todo en orden"; settings.json válido; búsqueda de datos privados (correos, claves, .env) sin resultados; los 7 posts del hilo están dentro del límite de 280 caracteres.
 REVISIÓN:
-PENDIENTE: aprobación del hilo por el dueño y revisión independiente del repositorio público.
-APROBACIÓN: el hilo necesita "aprobado: si" del dueño.
-SIGUIENTE: pedir al dueño que apruebe el hilo; revisión independiente del repositorio.
+PENDIENTE: revisión independiente del repositorio público.
+APROBACIÓN: hilo aprobado por el dueño el 23-10-2026 ("Apruebo el hilo del kit si").
+SIGUIENTE: revisión independiente del repositorio público.
 
 ## Proyecto agente de inversión (laboratorio)
 

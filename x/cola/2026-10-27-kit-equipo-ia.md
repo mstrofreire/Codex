@@ -1,4 +1,4 @@
-aprobado: no
+aprobado: si
 publicar_desde: 2026-10-27T09:00
 ===
 La mayoría de "agentes de IA autónomos" tienen el mismo fallo: dicen que han terminado y no es verdad.
