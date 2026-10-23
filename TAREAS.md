@@ -50,6 +50,16 @@ PENDIENTE: más publicaciones; maquetar la página.
 APROBACIÓN: no requerida para preparar; sí para publicar en X.
 SIGUIENTE: añadir los enlaces que pase el dueño.
 
+X03 · Kit "tu equipo de IA en Claude Code"
+ESTADO: VERIFICANDO
+OBJETIVO: plantilla en español, lista para copiar, con reglas, registro de tareas, memoria con fecha, 4 especialistas, procedimiento de turno, comprobador en código y rutina.
+HECHO: carpeta kit-equipo-ia/ con README, CLAUDE.md, TAREAS.md, MEMORIA.md, BITACORA.md, RUTINA.md, 4 subagentes, skill turno-de-noche, comprobador y control de GitHub.
+VERIFICADO: el comprobador detecta 6 de 6 errores provocados y aprueba la plantilla y nuestro TAREAS.md; los 5 archivos de .claude tienen cabecera válida.
+REVISIÓN:
+PENDIENTE: prueba de punta a punta en una sesión nueva de Claude Code (tarea T01 del kit) y revisión independiente.
+APROBACIÓN: el dueño decide si se publica gratis, de pago o como imán de la cuenta de X.
+SIGUIENTE: ejecutar la tarea T01 del kit en una sesión limpia y guardar su informe.
+
 ## Proyecto agente de inversión (laboratorio)
 
 T01 · Universo de ETFs y datos con historia larga

@@ -27,3 +27,4 @@ Un agente (Claude) que trabaja para mstrofreire, residente en España, en dos fr
 - Nunca guardes claves en el repositorio: van en los secretos de GitHub.
 - Escribe para el dueño en español claro, sin jerga sin explicar.
 - Para analizar posts de X usa la skill `el-filtro` (`.claude/skills/el-filtro/SKILL.md`).
+- Antes de terminar, ejecuta `python3 herramientas/comprobar_tareas.py` y corrige lo que señale.
