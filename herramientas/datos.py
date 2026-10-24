@@ -6,7 +6,9 @@ euros). Un día es sospechoso si el ETF se mueve mucho y su referencia no:
 
     |rentabilidad ETF| > UMBRAL_MOVIMIENTO  y  |ETF - referencia| > UMBRAL_DIFERENCIA
 
-Además comprueba precios no positivos, huecos largos y precios repetidos (serie congelada).
+Además comprueba precios no positivos, huecos largos, precios sin actualizar (el mismo cierre
+que la sesión anterior mientras el mercado se movía, que se tratan como huecos) y la cobertura
+por año frente a un calendario aproximado de Xetra.
 
 Correcciones, siempre registradas en el informe:
 - Arranque defectuoso: si en el primer año hay un tramo de precios congelados (el mismo cierre
@@ -35,8 +37,10 @@ UMBRAL_MOVIMIENTO = 0.08
 UMBRAL_DIFERENCIA = 0.06
 DIAS_PRIMER_AÑO = 365
 HUECO_MAXIMO_DIAS = 7
-COBERTURA_MINIMA = 0.95  # fracción de sesiones de Xetra con precio en un año
-CALENDARIO = "EXSA.DE"   # serie de referencia para el calendario de sesiones de Xetra
+COBERTURA_MINIMA = 0.95  # fracción de sesiones con precio válido en un año
+UMBRAL_OBSOLETO = 0.002  # si la referencia se mueve más que esto, un precio repetido es sospechoso
+MAYORIA_PARADA = 0.6     # fracción del universo que repite precio el mismo día para considerarlo fallo común
+FESTIVOS_FIJOS_XETRA = ["01-01", "12-24", "12-25", "12-26", "12-31"]
 REPETIDOS_MAXIMO = 5
 
 # ticker de Xetra (euros), clase de activo, referencia y divisa de la referencia
@@ -127,57 +131,105 @@ def corregir(serie, sospechosos, r):
     return serie, acciones, sin_resolver
 
 
+def dias_obsoletos(serie, ref, dias_mercado_parado):
+    """Días con el mismo cierre que la sesión anterior mientras el mercado se movió.
+
+    Con referencia: el ETF no cambia y su referencia en euros se mueve más de UMBRAL_OBSOLETO.
+    Sin referencia: días en que la mayoría del universo repite el precio a la vez (fallo de Yahoo).
+    """
+    sin_cambio = serie.diff() == 0
+    if ref is not None:
+        rr = ref.reindex(serie.index).ffill().pct_change().abs()
+        obsoleto = sin_cambio & (rr > UMBRAL_OBSOLETO)
+    else:
+        obsoleto = sin_cambio & serie.index.isin(dias_mercado_parado)
+    return obsoleto | (sin_cambio & serie.index.isin(dias_mercado_parado))
+
+
 def main():
     (SALIDA / "precios").mkdir(parents=True, exist_ok=True)
     eurusd = bajar("EURUSD=X")
     if eurusd is None:
         print("No se pudo descargar EURUSD=X: sin él no se pueden validar los ETFs con referencia en dólares.")
         return 1
-    filas, informe = [], []
-    calendario = bajar(CALENDARIO)
+    # 1. Descarga de todo el universo y de las referencias
+    brutos, refs = {}, {}
     for ticker, clase, ref_ticker, ref_div in UNIVERSO:
         serie = bajar(ticker)
+        if serie is not None:
+            serie = serie[~serie.index.strftime("%m-%d").isin(FESTIVOS_FIJOS_XETRA)]
+            serie = serie[serie.index.dayofweek < 5]
+        brutos[ticker] = serie
+        refs[ticker] = en_euros(bajar(ref_ticker), ref_div, eurusd) if ref_ticker else None
+    disponibles = [s for s in brutos.values() if s is not None]
+    # 2. Días en que la mayoría del universo repite el precio a la vez
+    sin_cambio = pd.concat([(s.diff() == 0).rename(i) for i, s in enumerate(disponibles)], axis=1)
+    con_dato = sin_cambio.notna().sum(axis=1)
+    parados = sin_cambio.fillna(False).sum(axis=1)
+    dias_mercado_parado = sin_cambio.index[(con_dato >= 5) & (parados >= MAYORIA_PARADA * con_dato)]
+    # 3. Calendario aproximado de Xetra: días laborables con precio en al menos 3 series del universo
+    presencia = pd.concat([s.rename(i) for i, s in enumerate(disponibles)], axis=1).notna().sum(axis=1)
+    calendario = presencia.index[presencia >= 3]
+
+    filas, informe = [], []
+    for ticker, clase, ref_ticker, ref_div in UNIVERSO:
+        serie, ref = brutos[ticker], refs[ticker]
         if serie is None:
             informe.append(f"## {ticker}\n- Sin datos en Yahoo Finance.\n")
             filas.append({"ticker": ticker, "clase": clase, "estado": "sin datos"})
             continue
-        ref = en_euros(bajar(ref_ticker), ref_div, eurusd) if ref_ticker else None
         bruto_inicio, bruto_n = serie.index[0].date(), len(serie)
         serie, notas, sospechosos, r = validar(ticker, serie, ref)
         serie, acciones, sin_resolver = corregir(serie, sospechosos, r)
+        obsoleto = dias_obsoletos(serie, ref, dias_mercado_parado)
+        por_año_obsoletos = obsoleto.groupby(serie.index.year).sum()
+        serie = serie[~obsoleto]
+        if obsoleto.any():
+            acciones.append(f"{int(obsoleto.sum())} días con el precio sin actualizar (igual al día anterior mientras el mercado se movía) "
+                            "tratados como huecos: " + ", ".join(f"{a}: {int(n)}" for a, n in por_año_obsoletos.items() if n))
         serie.rename("cierre_ajustado").to_frame().to_csv(SALIDA / "precios" / f"{ticker}.csv", index_label="fecha")
-        sesiones = calendario[(calendario.index >= serie.index[0]) & (calendario.index <= serie.index[-1])].index
+        sesiones = calendario[(calendario >= serie.index[0]) & (calendario <= serie.index[-1])]
         cobertura = pd.Series(sesiones.isin(serie.index), index=sesiones).groupby(sesiones.year).mean()
         años_flojos = {int(a): round(float(v), 3) for a, v in cobertura.items() if v < COBERTURA_MINIMA}
-        estado = "revisar" if sin_resolver else "ok"
+        estado = "revisar" if sin_resolver else ("ok con avisos" if años_flojos else "ok")
         filas.append({
             "ticker": ticker, "clase": clase,
-            "referencia": f"{ref_ticker} en euros" if ref_ticker else "ninguna (solo umbral de movimiento)",
+            "referencia": f"{ref_ticker} en euros" if ref_ticker else "ninguna: solo umbral de movimiento y fallos comunes a todo el universo",
             "desde": str(serie.index[0].date()), "hasta": str(serie.index[-1].date()),
             "sesiones": len(serie), "estado": estado,
+            "dias_obsoletos_eliminados": int(obsoleto.sum()),
             "años_con_cobertura_baja": años_flojos,
         })
         bloque = [f"## {ticker} · {clase}",
                   f"- Descargado: {bruto_n} sesiones desde {bruto_inicio}. Final: {len(serie)} sesiones, {serie.index[0].date()} a {serie.index[-1].date()}.",
-                  f"- Referencia: {filas[-1]['referencia']}. Días sospechosos detectados: {len(sospechosos)}."]
+                  f"- Referencia: {filas[-1]['referencia']}. Días con movimiento sospechoso: {len(sospechosos)}."]
         bloque += [f"- Corrección: {a}" for a in acciones]
         bloque += [f"- Aviso: {n}" for n in notas]
         if años_flojos:
-            bloque.append("- Cobertura baja (sesiones de Xetra con precio): " + ", ".join(f"{a}: {v:.0%}" for a, v in años_flojos.items())
+            bloque.append("- Cobertura baja (sesiones con precio válido frente al calendario aproximado): "
+                          + ", ".join(f"{a}: {v:.0%}" for a, v in años_flojos.items())
                           + ". En esos años la serie tiene huecos y los movimientos de varios días parecen de uno; mejor no usarlos para medir volatilidad.")
         if sin_resolver:
             bloque.append(f"- **Sin resolver, revisar a mano:** {', '.join(sin_resolver)}")
         informe.append("\n".join(bloque) + "\n")
-        print(f"{ticker}: {estado} · {serie.index[0].date()} a {serie.index[-1].date()} · sospechosos {len(sospechosos)} · correcciones {len(acciones)} · sin resolver {len(sin_resolver)}")
+        print(f"{ticker}: {estado} · {serie.index[0].date()} a {serie.index[-1].date()} · obsoletos {int(obsoleto.sum())} · años flojos {list(años_flojos)} · sin resolver {len(sin_resolver)}")
     (SALIDA / "universo.json").write_text(json.dumps(filas, ensure_ascii=False, indent=1), encoding="utf-8")
     cabecera = [
         "# Informe de calidad de datos",
         "",
         "Generado por `herramientas/datos.py`. Fuente: Yahoo Finance, cierre ajustado diario.",
-        f"Regla de sospecha: movimiento diario mayor del {UMBRAL_MOVIMIENTO:.0%} que se separa más de un "
-        f"{UMBRAL_DIFERENCIA:.0%} de su referencia en euros.",
         "",
-        "Pendiente de confirmar por el dueño: que estos ETFs estén disponibles en Trading 212 (su web no es accesible desde el entorno del agente).",
+        "Reglas:",
+        f"- Movimiento sospechoso: más del {UMBRAL_MOVIMIENTO:.0%} en un día y más de un {UMBRAL_DIFERENCIA:.0%} de diferencia con su referencia en euros "
+        "(sin referencia, solo el umbral del movimiento).",
+        f"- Precio sin actualizar: mismo cierre que la sesión anterior mientras la referencia se movió más de un {UMBRAL_OBSOLETO:.1%}, "
+        f"o en un día en que al menos el {MAYORIA_PARADA:.0%} del universo repitió precio a la vez. Se trata como hueco.",
+        "- Calendario aproximado de Xetra: días laborables con precio en al menos 3 series del universo, sin festivos fijos "
+        "(1 de enero, 24, 25, 26 y 31 de diciembre). No es el calendario oficial.",
+        f"- Días de mercado parado detectados en todo el universo: {len(dias_mercado_parado)}"
+        + (f" ({', '.join(str(d.date()) for d in dias_mercado_parado[:10])}{'…' if len(dias_mercado_parado) > 10 else ''})." if len(dias_mercado_parado) else "."),
+        "",
+        "Pendiente de confirmar por el dueño: que estos ETFs estén disponibles en Trading 212 (tarea T12).",
         "",
     ]
     (SALIDA / "informe_calidad.md").write_text("\n".join(cabecera + informe), encoding="utf-8")

@@ -5,8 +5,9 @@
   "referencia": "^GSPC en euros",
   "desde": "2019-07-29",
   "hasta": "2026-10-22",
-  "sesiones": 1840,
+  "sesiones": 1831,
   "estado": "ok",
+  "dias_obsoletos_eliminados": 9,
   "años_con_cobertura_baja": {}
  },
  {
@@ -15,9 +16,14 @@
   "referencia": "^GSPC en euros",
   "desde": "2009-10-21",
   "hasta": "2026-10-22",
-  "sesiones": 4318,
-  "estado": "ok",
-  "años_con_cobertura_baja": {}
+  "sesiones": 4240,
+  "estado": "ok con avisos",
+  "dias_obsoletos_eliminados": 77,
+  "años_con_cobertura_baja": {
+   "2009": 0.918,
+   "2010": 0.914,
+   "2011": 0.945
+  }
  },
  {
   "ticker": "SXR8.DE",
@@ -25,9 +31,13 @@
   "referencia": "^GSPC en euros",
   "desde": "2010-11-01",
   "hasta": "2026-10-22",
-  "sesiones": 4056,
-  "estado": "ok",
-  "años_con_cobertura_baja": {}
+  "sesiones": 4010,
+  "estado": "ok con avisos",
+  "dias_obsoletos_eliminados": 45,
+  "años_con_cobertura_baja": {
+   "2010": 0.814,
+   "2011": 0.91
+  }
  },
  {
   "ticker": "SXRV.DE",
@@ -35,8 +45,9 @@
   "referencia": "^NDX en euros",
   "desde": "2010-11-01",
   "hasta": "2026-10-22",
-  "sesiones": 4011,
-  "estado": "ok",
+  "sesiones": 3987,
+  "estado": "ok con avisos",
+  "dias_obsoletos_eliminados": 24,
   "años_con_cobertura_baja": {
    "2010": 0.93,
    "2011": 0.836
@@ -48,8 +59,9 @@
   "referencia": "^STOXX en euros",
   "desde": "2008-01-02",
   "hasta": "2026-10-22",
-  "sesiones": 4776,
+  "sesiones": 4761,
   "estado": "ok",
+  "dias_obsoletos_eliminados": 15,
   "años_con_cobertura_baja": {}
  },
  {
@@ -58,18 +70,20 @@
   "referencia": "EEM en euros",
   "desde": "2014-06-11",
   "hasta": "2026-10-22",
-  "sesiones": 3140,
+  "sesiones": 3113,
   "estado": "ok",
+  "dias_obsoletos_eliminados": 27,
   "años_con_cobertura_baja": {}
  },
  {
   "ticker": "EUNH.DE",
   "clase": "bonos de gobiernos euro",
-  "referencia": "ninguna (solo umbral de movimiento)",
+  "referencia": "ninguna: solo umbral de movimiento y fallos comunes a todo el universo",
   "desde": "2009-04-17",
   "hasta": "2026-10-22",
-  "sesiones": 4451,
+  "sesiones": 4444,
   "estado": "ok",
+  "dias_obsoletos_eliminados": 7,
   "años_con_cobertura_baja": {}
  },
  {
@@ -78,18 +92,20 @@
   "referencia": "GC=F en euros",
   "desde": "2009-11-13",
   "hasta": "2026-10-22",
-  "sesiones": 4299,
+  "sesiones": 4266,
   "estado": "ok",
+  "dias_obsoletos_eliminados": 33,
   "años_con_cobertura_baja": {}
  },
  {
   "ticker": "XEON.DE",
   "clase": "monetario en euros",
-  "referencia": "ninguna (solo umbral de movimiento)",
+  "referencia": "ninguna: solo umbral de movimiento y fallos comunes a todo el universo",
   "desde": "2008-01-02",
   "hasta": "2026-10-22",
-  "sesiones": 4779,
+  "sesiones": 4771,
   "estado": "ok",
+  "dias_obsoletos_eliminados": 7,
   "años_con_cobertura_baja": {}
  }
 ]
