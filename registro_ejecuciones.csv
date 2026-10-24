@@ -2,3 +2,4 @@ fecha,tarea,estado,nota
 2026-10-24,I01,VERIFICANDO,push desde la rutina correcto
 2026-10-24,X04,VERIFICANDO,revisión FALLA: correo en commit inicial y post exagerado
 2026-10-24,T01,VERIFICANDO,datos descargados y validados; revisión en curso
+2026-10-24,T01,BLOQUEADA,segunda revisión FALLA: 6 días sin actualizar; regla de parada

@@ -62,3 +62,15 @@ de cada sesión: qué se hizo y por qué.
   "aprobado: no") y las mejoras técnicas del kit. Lo del correo lo decide el dueño.
 - Lección: el comprobador mejorado detectó un identificador de tarea mal formado ("T01b") escrito
   por el propio agente. Renombrado a T12.
+
+### 2026-10-24 · turno diario: T01 bloqueada
+- T01, primera revisión: FALLA (precios repetidos sin actualizar no detectados; dos frases
+  exageradas). Decisión: tratar esos días como huecos, no rellenarlos. Motivo: inventar un precio
+  falsearía el backtest; un hueco se ve.
+- T01, segunda revisión: FALLA. Quedan 6 días sin actualizar en 3 series, por dos causas
+  concretas (comparación con el día anterior del bruto y festivos de EE. UU.). Los datos coinciden
+  con una descarga independiente.
+- Decisión: T01 pasa a BLOQUEADA por la regla "si el mismo arreglo falla dos veces". Motivo: la
+  regla existe para no seguir parcheando lo mismo. El siguiente intento será un enfoque distinto
+  (quitar rachas enteras y referencia sobre la unión de calendarios), anotado en TAREAS.md.
+- Efecto práctico: 6 días de unas 35.000 sesiones. No bloquea pensar el motor de backtest (T02).

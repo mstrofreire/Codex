@@ -1,0 +1,69 @@
+FALLA
+
+Lo que falla es poco y está acotado: quedan 6 días con precio sin actualizar en 3 series (EUNL, SXR8, 4GLD). Las comprobaciones 2, 3, 4 y 5 pasan, y la mitad de la 1 (el 4, 5 y 6 de diciembre de 2023) también.
+
+Cómo lo he comprobado: he descargado de nuevo, por mi cuenta, las 6 referencias, EURUSD=X y los 9 ETF en bruto. Los CSV del repositorio coinciden con mi descarga: la mayor diferencia relativa es de 1e-6, ruido de los ajustes de Yahoo. Mis scripts y descargas están en /tmp/claude-0/-home-user/a8640ba4-4df9-578b-b987-f1f33e79df47/scratchpad/ (c1.py a c8.py y descargas/). No he tocado el repositorio. `comprobar_tareas.py` da "Todo en orden".
+
+## Lo que impide el PASA
+
+**1. Quedan días con el precio repetido mientras su referencia en euros se movió más de un 0,2 %.** Comparo cada día con la sesión anterior que queda en la serie limpia:
+- Con la referencia en euros solo en los días en que cotiza:
+  - EUNL 2011-05-25: igual que el 05-23; la referencia subió un 0,28 %.
+  - 4GLD 2018-10-05: igual que el 10-02; la referencia subió un 0,42 %.
+  - SXR8 2011-09-05: igual que el 09-01, contando el movimiento del 09-02 (que se eliminó) hasta el último cierre del índice.
+- Contando también el movimiento del EURUSD en los festivos de EE. UU., aparecen además:
+  - EUNL 2009-11-26 (1,03 %)
+  - EUNL 2011-05-30 (1,14 %)
+  - EUNL 2023-09-04 (0,63 %)
+  - SXR8 2011-09-05 (1,03 %)
+- Total: 6 días.
+
+Hay dos causas, las dos en /home/user/Codex/herramientas/datos.py:
+- **Bordes de racha.** `dias_obsoletos` compara cada día con el día anterior del bruto, no con el último precio que se conserva. Si hay tres cierres idénticos seguidos y la referencia se mueve poco en uno de ellos, se quita un día y el otro se queda. Ejemplos: EUNL 21,12 el 23, 24 y 25 de mayo de 2011; 4GLD 33,568 el 2, 4 y 5 de octubre de 2018; SXR8 73,89 el 1, 2 y 5 de septiembre de 2011. Tres cierres idénticos seguidos en un ETF de bolsa o de oro no son creíbles.
+- **Festivos de EE. UU.** `en_euros` solo calcula la referencia en euros en los días en que cotiza el índice. En festivos de EE. UU. el movimiento del EURUSD se ignora y un ETF en euros parado ese día no se marca.
+
+La parte de diciembre de 2023 sí está bien: el 4, 5 y 6 de diciembre no están en ninguna de las 9 series.
+
+Su efecto en un backtest es pequeño: 6 días de unas 35.000 sesiones. Pero la comprobación pedida no se cumple y el punto de control de T01 dice que los precios sin actualizar se tratan como huecos. Es el segundo FALLA seguido sobre la detección de precios sin actualizar. CLAUDE.md dice: "Si el mismo arreglo falla dos veces: BLOQUEADA". Tú decides si se aplica; yo creo que sí encaja.
+
+## Lo que pasa
+
+**2. Cobertura baja.** He rehecho el calendario aproximado con mis descargas y salen exactamente los mismos valores, tanto en /home/user/Codex/datos/universo.json como en /home/user/Codex/datos/informe_calidad.md:
+- EUNL: 2009 92 %, 2010 91 %, 2011 94 %.
+- SXR8: 2010 81 %, 2011 91 %.
+- SXRV: 2010 93 %, 2011 84 %.
+
+**3. El informe y el punto de control son ciertos:**
+- SXR8 está congelado en 96,95 del 2010-10-04 al 2010-10-29 y salta a 73,06 el 11-01.
+- EUNL está congelado en 17,21 del 2009-09-25 al 2009-10-20.
+- SXRV cae un −27,8 % el 2010-11-01 mientras el Nasdaq 100 en euros solo baja un −1,2 %. La relación entre SXRV y el índice pasa de 0,0696 a 0,0528, lo que confirma el cambio de nivel.
+- Los 7 días de mercado parado son reales: las 9 series (o todas las que tienen dato) repiten precio mientras ^GSPC o el oro se mueven.
+- Las dos frases corregidas ya no exageran: dice que 7 series tienen referencia y 2 no, y que el calendario es aproximado y "no es el calendario oficial".
+
+**4. Los días eliminados son razonables, no masivos:**
+
+| Serie | Días eliminados | Comentario |
+|---|---|---|
+| VWCE | 9 | |
+| EUNL | 77 | 40 en 2009-2011 |
+| SXR8 | 45 | 31 en 2010-2011 |
+| SXRV | 24 | |
+| EXSA | 15 | |
+| IS3N | 27 | |
+| EUNH | 7 | solo los 7 días comunes |
+| 4GLD | 33 | |
+| XEON | 7 | solo los 7 días comunes |
+
+- En las series con referencia, la mediana del movimiento de la referencia en los días quitados va del 0,28 % (EXSA) al 1,01 % (SXR8).
+- XEON conserva 475 días repetidos, concentrados en 2012-2014 (75, 101 y 94 al año). Es lo esperable con tipos casi cero: su movimiento diario mediano esos años es del 0,0007 %. No se borran en bloque.
+- EUNH conserva 44 días repetidos, como mucho 7 en un año.
+
+**5. Las 9 series están bien formadas:** ningún precio ≤ 0, ninguna fecha duplicada, todas ordenadas, sin valores vacíos y sin fines de semana.
+
+## Mejoras opcionales (no impiden el PASA)
+
+- **Pendiente del proceso.** /home/user/Codex/BITACORA.md no recoge el primer FALLA de T01 ni la decisión de tratar los precios sin actualizar como huecos (solo constan en TAREAS.md y en el commit 68c2bd8). CLAUDE.md pide anotar las decisiones importantes con fecha y motivo. No es un fallo de los datos, pero conviene hacerlo antes de pasar a HECHA.
+- En el informe, SXRV avisa de un "hueco de 10.0 días antes de 2010-09-30". Ese tramo queda antes del inicio final (2010-11-01), así que el aviso describe datos descartados. Además, "10.0" sale como decimal.
+- En TAREAS.md, "Correcciones: … picos aislados" puede leerse como algo que se aplicó; en estos datos no se corrigió ningún pico.
+- Llamar a los 7 días "fallo común de Yahoo" es una interpretación. Algunos son festivos alemanes o el lunes de Pentecostés. Quitarlos es correcto igualmente, pero el informe los describe de forma más neutra ("días de mercado parado").
+- Formato: el informe usa punto decimal ("0.2%", "-27.8%") y TAREAS.md usa coma ("−27,8 %").
