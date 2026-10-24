@@ -52,3 +52,13 @@ de cada sesión: qué se hizo y por qué.
 - El dueño creó el repositorio público mstrofreire/equipo-ia. Publicado el kit con licencia MIT
   y las pruebas. Decisión: MIT para que se pueda usar sin trabas, también comercialmente.
 - Hilo de lanzamiento del kit escrito y en la cola, pendiente de aprobación.
+
+### 2026-10-24 · turno diario (primer turno automático)
+- I01: el push desde la rutina funciona (commit e6e89c3). Rutina diaria operativa.
+- T01: universo de 9 ETFs y validador de datos. Detecta y corrige solo los errores conocidos.
+  Pendiente de revisión independiente. La disponibilidad en Trading 212 pasa a T12 (dueño).
+- X04: la revisión independiente dio FALLA. (1) El correo personal del dueño aparece en el commit
+  inicial del repositorio público. (2) El post 1 del hilo exageraba. Corregido el hilo (vuelve a
+  "aprobado: no") y las mejoras técnicas del kit. Lo del correo lo decide el dueño.
+- Lección: el comprobador mejorado detectó un identificador de tarea mal formado ("T01b") escrito
+  por el propio agente. Renombrado a T12.

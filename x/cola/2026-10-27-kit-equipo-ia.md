@@ -1,9 +1,9 @@
-aprobado: si
+aprobado: no
 publicar_desde: 2026-10-27T09:00
 ===
 La mayoría de "agentes de IA autónomos" tienen el mismo fallo: dicen que han terminado y no es verdad.
 
-He montado un equipo de IA en Claude Code que trabaja solo y no puede darse el visto bueno a sí mismo.
+He montado un equipo de IA en Claude Code que trabaja solo y está diseñado para no darse el visto bueno a sí mismo.
 
 Es gratis y está en español 🧵
 ---
@@ -12,13 +12,13 @@ El equipo son cuatro especialistas y un coordinador:
 · Investigador: averigua antes de construir
 · Constructor: hace el trabajo y guarda pruebas
 · Revisor: repite las comprobaciones y dice PASA o FALLA
-· Informador: te deja un informe cada mañana
+· Informador: te deja un informe de cada turno
 ---
 La regla clave: ninguna tarea pasa a "hecha" sin un recibo.
 
 Un archivo, la salida de un test, un commit. Y el visto bueno de un revisor que no hizo el trabajo.
 
-Hay un pequeño programa que rechaza cualquier tarea marcada como hecha sin esas dos cosas.
+Un pequeño programa revisa el registro y marca como error toda tarea "hecha" a la que le falte una de las dos.
 ---
 Memoria con fecha. "El test falló el lunes" caduca cuando pasa el miércoles.
 

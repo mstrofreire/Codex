@@ -8,6 +8,7 @@ Reglas:
 - HECHA exige VERIFICADO con contenido y REVISIÓN que empiece por PASA.
 - EN_CURSO y VERIFICANDO exigen SIGUIENTE.
 - BLOQUEADA exige decir qué falta (en la misma línea del estado o en PENDIENTE).
+- Debe haber al menos una tarea, y cada línea ESTADO debe ir debajo de una cabecera 'ID · título'.
 
 Uso: python3 herramientas/comprobar_tareas.py [ruta/a/TAREAS.md]
 Sale con código 1 si hay errores.
@@ -30,7 +31,7 @@ def separar_estado(texto):
 
 
 def leer_tareas(texto):
-    tareas, actual, en_codigo = [], None, False
+    tareas, actual, en_codigo, huerfanos = [], None, False, []
     for n, linea in enumerate(texto.splitlines(), 1):
         if linea.strip().startswith("```"):
             en_codigo = not en_codigo
@@ -49,12 +50,15 @@ def leer_tareas(texto):
             tareas.append(actual)
             continue
         campo = CAMPO.match(linea.strip())
+        if campo and campo.group(1) == "ESTADO" and (actual is None or "ESTADO" in actual["campos"]):
+            huerfanos.append(n)
+            continue
         if actual and campo and campo.group(1) in CAMPOS:
             clave = campo.group(1).replace("REVISION", "REVISIÓN").replace("APROBACION", "APROBACIÓN")
             actual["campos"][clave] = campo.group(2).strip()
             if clave == "ESTADO":
                 actual["estado"], actual["motivo"] = separar_estado(campo.group(2))
-    return tareas
+    return tareas, huerfanos
 
 
 def comprobar(tareas):
@@ -83,8 +87,12 @@ def comprobar(tareas):
 
 def main():
     ruta = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "TAREAS.md")
-    tareas = leer_tareas(ruta.read_text(encoding="utf-8"))
+    tareas, huerfanos = leer_tareas(ruta.read_text(encoding="utf-8"))
     errores = comprobar(tareas)
+    if not tareas:
+        errores.append("no se ha encontrado ninguna tarea con el formato 'ID · título' (por ejemplo 'T01 · Mi tarea')")
+    for n in huerfanos:
+        errores.append(f"línea {n}: ESTADO sin una cabecera de tarea reconocida justo antes (revisa el formato 'ID · título')")
     resumen = {}
     for t in tareas:
         resumen[t.get("estado")] = resumen.get(t.get("estado"), 0) + 1

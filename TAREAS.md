@@ -63,12 +63,12 @@ SIGUIENTE: X04.
 X04 · Publicar el kit gratis
 ESTADO: VERIFICANDO
 OBJETIVO: el kit en un repositorio público con licencia y un hilo de lanzamiento en la cola de X.
-HECHO: 23-10-2026: repositorio público github.com/mstrofreire/equipo-ia (creado por el dueño) con el kit, licencia MIT, manual adaptado y la carpeta pruebas/ con los registros y las tres revisiones. Hilo de lanzamiento de 7 posts en x/cola/2026-10-27-kit-equipo-ia.md.
-VERIFICADO: commit a8ab0a0 en main; README accesible sin sesión (HTTP 200); comprobador del kit "Todo en orden"; settings.json válido; búsqueda de datos privados (correos, claves, .env) sin resultados; los 7 posts del hilo están dentro del límite de 280 caracteres.
-REVISIÓN:
-PENDIENTE: revisión independiente del repositorio público.
-APROBACIÓN: hilo aprobado por el dueño el 23-10-2026 ("Apruebo el hilo del kit si").
-SIGUIENTE: revisión independiente del repositorio público.
+HECHO: 23-10-2026: repositorio público github.com/mstrofreire/equipo-ia con el kit, licencia MIT y pruebas. 24-10-2026: corregido lo que señaló la revisión (comprobador más estricto, flujo de GitHub sin filtro de rutas, nombre real de la comprobación, archivo compilado eliminado, .gitignore), commit fd7e179. Hilo reescrito sin la afirmación exagerada.
+VERIFICADO: revisión independiente del 24-10-2026 con FALLA por dos motivos que dependen del dueño; el resto de criterios cumple (kit completo, MIT reconocida por GitHub, comprobador y ajustes válidos, sin datos privados en los archivos, README respaldado por pruebas, flujo de GitHub ejecutado con éxito).
+REVISIÓN: FALLA (24-10-2026): (1) el commit inicial del repositorio, creado por el dueño desde la web de GitHub, muestra su correo personal; (2) el post 1 del hilo decía "no puede darse el visto bueno a sí mismo", que es una norma, no un límite técnico.
+PENDIENTE: decisión del dueño sobre su correo en el commit inicial; nueva aprobación del hilo corregido; después, nueva revisión independiente.
+APROBACIÓN: el hilo corregido necesita una nueva aprobación del dueño; reescribir el historial público necesita su permiso.
+SIGUIENTE: preguntar al dueño en el informe del turno.
 
 ## Proyecto agente de inversión (laboratorio)
 
@@ -80,9 +80,9 @@ VERIFICADO: los dos errores conocidos se detectan y corrigen solos (SXR8: precio
 REVISIÓN:
 PENDIENTE: revisión independiente.
 APROBACIÓN: no.
-SIGUIENTE: revisión independiente; la disponibilidad en Trading 212 pasa a T01b.
+SIGUIENTE: revisión independiente; la disponibilidad en Trading 212 pasa a T12.
 
-T01b · Confirmar qué ETFs del universo están disponibles en Trading 212 · BLOQUEADA: su web no es accesible desde el entorno del agente; lo puede mirar el dueño en la app (lista en datos/universo.json)
+T12 · Confirmar qué ETFs del universo están disponibles en Trading 212 · BLOQUEADA: su web no es accesible desde el entorno del agente; lo puede mirar el dueño en la app (lista en datos/universo.json)
 
 T02 · Motor de backtest con costes e impuestos españoles · PENDIENTE
 T03 · Validar el motor reproduciendo el filtro de 10 meses de Faber · PENDIENTE

@@ -60,7 +60,8 @@ criterio, no una barrera. Por eso:
 - Si quieres más dureza, quita Bash al revisor y al constructor y dales solo los comandos exactos que necesiten.
 
 **Para que el control de GitHub bloquee de verdad:** en tu repositorio, protege la rama
-principal (*Settings → Branches*) y marca "Comprobar tareas" como comprobación obligatoria.
+principal (*Settings → Branches*) y marca como obligatoria la comprobación `comprobar` (es el
+nombre con el que GitHub muestra el trabajo del flujo "Comprobar tareas").
 Sin eso, el control solo avisa con una marca roja.
 
 ## Lo que no hace
