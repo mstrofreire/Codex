@@ -1,0 +1,95 @@
+[
+ {
+  "ticker": "VWCE.DE",
+  "clase": "bolsa mundial (todas las capitalizaciones)",
+  "referencia": "^GSPC en euros",
+  "desde": "2019-07-29",
+  "hasta": "2026-10-22",
+  "sesiones": 1840,
+  "estado": "ok",
+  "años_con_cobertura_baja": {}
+ },
+ {
+  "ticker": "EUNL.DE",
+  "clase": "bolsa mundial desarrollada",
+  "referencia": "^GSPC en euros",
+  "desde": "2009-10-21",
+  "hasta": "2026-10-22",
+  "sesiones": 4318,
+  "estado": "ok",
+  "años_con_cobertura_baja": {}
+ },
+ {
+  "ticker": "SXR8.DE",
+  "clase": "bolsa EE. UU. (S&P 500)",
+  "referencia": "^GSPC en euros",
+  "desde": "2010-11-01",
+  "hasta": "2026-10-22",
+  "sesiones": 4056,
+  "estado": "ok",
+  "años_con_cobertura_baja": {}
+ },
+ {
+  "ticker": "SXRV.DE",
+  "clase": "bolsa EE. UU. (Nasdaq 100)",
+  "referencia": "^NDX en euros",
+  "desde": "2010-11-01",
+  "hasta": "2026-10-22",
+  "sesiones": 4011,
+  "estado": "ok",
+  "años_con_cobertura_baja": {
+   "2010": 0.93,
+   "2011": 0.836
+  }
+ },
+ {
+  "ticker": "EXSA.DE",
+  "clase": "bolsa Europa (STOXX 600)",
+  "referencia": "^STOXX en euros",
+  "desde": "2008-01-02",
+  "hasta": "2026-10-22",
+  "sesiones": 4776,
+  "estado": "ok",
+  "años_con_cobertura_baja": {}
+ },
+ {
+  "ticker": "IS3N.DE",
+  "clase": "bolsa emergente",
+  "referencia": "EEM en euros",
+  "desde": "2014-06-11",
+  "hasta": "2026-10-22",
+  "sesiones": 3140,
+  "estado": "ok",
+  "años_con_cobertura_baja": {}
+ },
+ {
+  "ticker": "EUNH.DE",
+  "clase": "bonos de gobiernos euro",
+  "referencia": "ninguna (solo umbral de movimiento)",
+  "desde": "2009-04-17",
+  "hasta": "2026-10-22",
+  "sesiones": 4451,
+  "estado": "ok",
+  "años_con_cobertura_baja": {}
+ },
+ {
+  "ticker": "4GLD.DE",
+  "clase": "oro físico",
+  "referencia": "GC=F en euros",
+  "desde": "2009-11-13",
+  "hasta": "2026-10-22",
+  "sesiones": 4299,
+  "estado": "ok",
+  "años_con_cobertura_baja": {}
+ },
+ {
+  "ticker": "XEON.DE",
+  "clase": "monetario en euros",
+  "referencia": "ninguna (solo umbral de movimiento)",
+  "desde": "2008-01-02",
+  "hasta": "2026-10-22",
+  "sesiones": 4779,
+  "estado": "ok",
+  "años_con_cobertura_baja": {}
+ }
+]

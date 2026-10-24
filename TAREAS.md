@@ -73,13 +73,16 @@ SIGUIENTE: revisión independiente del repositorio público.
 ## Proyecto agente de inversión (laboratorio)
 
 T01 · Universo de ETFs y datos con historia larga
-ESTADO: PENDIENTE
-OBJETIVO: lista de ETFs UCITS en euros disponibles en Trading 212 y series de precios largas y limpias.
-HECHO: una ejecución de prueba descargó 31 series, pero no pudo guardarlas (sin acceso de escritura).
-VERIFICADO: errores de datos detectados en esa prueba: tickers de Londres mezclan libras y peniques; SXR8 tiene un −24,6 % falso en noviembre de 2010.
-PENDIENTE: repetir la descarga y corregir esos errores; confirmar qué ETFs ofrece Trading 212 (su web está bloqueada desde aquí).
+ESTADO: VERIFICANDO
+OBJETIVO: lista de ETFs UCITS en euros candidatos y series de precios diarias largas, limpias y validadas, con un informe de calidad.
+HECHO: 24-10-2026: herramientas/datos.py descarga 9 ETFs de Xetra en euros (bolsa mundial, EE. UU., Nasdaq 100, Europa, emergentes, bonos euro, oro, monetario) y los valida contra referencias independientes en euros. Reglas de corrección: arranque congelado, anomalía en el primer año y picos aislados; cobertura anual frente al calendario de Xetra. Resultado en datos/precios/, datos/universo.json y datos/informe_calidad.md.
+VERIFICADO: los dos errores conocidos se detectan y corrigen solos (SXR8: precio congelado hasta 2010-10-29; SXRV: cambio de nivel del −27,8 % el 2010-11-01; EUNL: congelado hasta 2009-10-20). Tras la limpieza, los mayores movimientos diarios son días reales de crisis (marzo de 2020, octubre de 2008, oro en abril de 2013). SXRV tiene cobertura baja en 2010 (93 %) y 2011 (84 %), señalada en el informe.
+REVISIÓN:
+PENDIENTE: revisión independiente.
 APROBACIÓN: no.
-SIGUIENTE: repetir la descarga con validación de datos.
+SIGUIENTE: revisión independiente; la disponibilidad en Trading 212 pasa a T01b.
+
+T01b · Confirmar qué ETFs del universo están disponibles en Trading 212 · BLOQUEADA: su web no es accesible desde el entorno del agente; lo puede mirar el dueño en la app (lista en datos/universo.json)
 
 T02 · Motor de backtest con costes e impuestos españoles · PENDIENTE
 T03 · Validar el motor reproduciendo el filtro de 10 meses de Faber · PENDIENTE
